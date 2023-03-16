@@ -1,0 +1,29 @@
+export const NIcon = ({ width, height }) => {
+  return (
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 15 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M11.4089 7.39534C11.4089 4.66999 9.92207 3.26089 7.6749 3.26089C5.42774 3.26089 3.91554 4.66999 3.91554 7.39534V15.7148H0.832031V0.83088H3.91554V2.53527C4.9124 1.32025 6.56821 0.586182 8.35073 0.586182C11.8397 0.586182 14.4671 2.77151 14.4671 6.93125V15.7148H11.4089V7.39534Z"
+        fill="url(#paint0_linear_132_1992)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_132_1992"
+          x1="7.64956"
+          y1="-5.08389"
+          x2="7.64956"
+          y2="16.2379"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#48A4CB" />
+          <stop offset="1" stopColor="#006F96" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};

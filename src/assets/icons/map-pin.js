@@ -1,4 +1,4 @@
-export const MapPinIcon = ({ width, height, idPath }) => {
+export const MapPinIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

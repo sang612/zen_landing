@@ -1,4 +1,4 @@
-export const JSIcon = ({ width, height, idPath }) => {
+export const JSIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

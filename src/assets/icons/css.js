@@ -1,4 +1,4 @@
-export const CSSIcon = ({ width, height, idPath }) => {
+export const CSSIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

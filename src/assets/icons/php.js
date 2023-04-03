@@ -1,4 +1,4 @@
-export const PHPIcon = ({ width, height, idPath }) => {
+export const PHPIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

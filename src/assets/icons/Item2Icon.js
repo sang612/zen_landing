@@ -1,4 +1,4 @@
-export const Item2Icon = ({ width, height, idPath }) => {
+export const Item2Icon = ({ width, height }) => {
   return (
     <svg
       width={width}

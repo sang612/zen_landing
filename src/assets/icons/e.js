@@ -1,4 +1,4 @@
-export const EIcon = ({ width, height, idPath }) => {
+export const EIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

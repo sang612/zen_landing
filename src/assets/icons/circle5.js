@@ -1,4 +1,4 @@
-export const Circle5Icon = ({ width, height, idPath }) => {
+export const Circle5Icon = ({ width, height }) => {
   return (
     <svg
       width={width}

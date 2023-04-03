@@ -42,7 +42,7 @@ export const BigHeader = () => {
   const parentSlickRef = useRef(null);
   const childSlickRef = useRef(null);
 
-  const handleBeforeChange = useCallback((currentSlide, nextSlide) => {
+  const handleBeforeChange = useCallback(() => {
     if (childSlickRef.current && childSlickRef.current.innerSlider) {
       const target = childSlickRef.current.innerSlider.list;
       if (target && target.closest(".slick-list")) {
@@ -77,7 +77,12 @@ export const BigHeader = () => {
   };
 
   return (
-    <Slider {...settings} afterChange={handleAfterChange} ref={parentSlickRef} beforeChange={handleBeforeChange}>
+    <Slider
+      {...settings}
+      afterChange={handleAfterChange}
+      ref={parentSlickRef}
+      beforeChange={handleBeforeChange}
+    >
       <Banner
         firstBannerAnimationsStarted={firstBannerAnimationsStarted}
         setFirstBannerAnimationsStarted={setFirstBannerAnimationsStarted}

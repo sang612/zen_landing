@@ -1,4 +1,4 @@
-export const PhoneIcon = ({ width, height, idPath }) => {
+export const PhoneIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

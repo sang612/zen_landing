@@ -1,4 +1,4 @@
-export const LoadingIcon = ({ width, height, idPath }) => {
+export const LoadingIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

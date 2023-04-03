@@ -1,4 +1,4 @@
-export const Gear7Icon = ({ width, height, idPath }) => {
+export const Gear7Icon = ({ width, height }) => {
   return (
     <svg
       width={width}

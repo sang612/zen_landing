@@ -6,7 +6,6 @@ import {
   YoutubeIcon,
 } from "@/assets/icons";
 import Image from "next/image";
-import { useState } from "react";
 
 export const Header = ({ showLogo, showButtonGroup }) => {
   return (

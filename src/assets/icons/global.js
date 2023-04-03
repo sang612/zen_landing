@@ -1,4 +1,4 @@
-export const GlobalIcon = ({ width, height, idPath }) => {
+export const GlobalIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

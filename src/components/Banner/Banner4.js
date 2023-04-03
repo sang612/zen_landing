@@ -7,24 +7,26 @@ import { Header } from "./Header";
 export const Banner4 = ({ beforeChange, slickRef }) => {
   return (
     <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] w-full relative overflow-hidden">
-      <Header showLogo />
-      <div className="-z-10">
-        <Icon className="top-[141.27px] left-[929px]">
-          <Gear5Icon width={68.1} height={79.65} />
-        </Icon>
-        <Icon className="top-[155.43px] left-[980.99px]">
-          <Gear6Icon width={116.39} height={136.08} />
-        </Icon>
-        <Icon className="top-[200.17px] left-[1092.28px]">
-          <Gear7Icon width={69.08} height={80.78} />
-        </Icon>
-      </div>
-      <div
-        className="mt-[182px] ml-[80px]"
-        onMouseDown={(event) => event?.stopPropagation()}
-        ref={slickRef}
-      >
-        <FounderSlider beforeChange={beforeChange} />
+      <div className="relative xl:max-w-[1440px] mx-auto">
+        <Header showLogo />
+        <div className="-z-10">
+          <Icon className="top-[141.27px] left-[929px]">
+            <Gear5Icon width={68.1} height={79.65} />
+          </Icon>
+          <Icon className="top-[155.43px] left-[980.99px]">
+            <Gear6Icon width={116.39} height={136.08} />
+          </Icon>
+          <Icon className="top-[200.17px] left-[1092.28px]">
+            <Gear7Icon width={69.08} height={80.78} />
+          </Icon>
+        </div>
+        <div
+          className="mt-[182px] ml-[80px]"
+          onMouseDown={(event) => event?.stopPropagation()}
+          ref={slickRef}
+        >
+          <FounderSlider beforeChange={beforeChange} />
+        </div>
       </div>
     </div>
   );

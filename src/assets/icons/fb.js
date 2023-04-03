@@ -1,4 +1,4 @@
-export const FacebookIcon = ({ width, height, idPath }) => {
+export const FacebookIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

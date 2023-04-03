@@ -1,4 +1,4 @@
-export const BigCircleIcon = ({ width, height, idPath }) => {
+export const BigCircleIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

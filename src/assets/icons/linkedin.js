@@ -1,4 +1,4 @@
-export const LinkedinIcon = ({ width, height, idPath }) => {
+export const LinkedinIcon = ({ width, height }) => {
   return (
     <svg
       width={width}

@@ -43,3 +43,5 @@ export { Item2Icon } from "./Item2Icon";
 export { Item3Icon } from "./Item3Icon";
 export { Item4Icon } from "./Item4Icon";
 export { BlueCircleIcon } from "./blue-circle";
+export { FlyLineIcon } from "./fly-line";
+export { FlyIcon } from "./fly";

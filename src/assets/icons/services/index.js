@@ -1,0 +1,13 @@
+export { WebServiceIcon } from "./web-service";
+export { AIIcon } from "./ai";
+export { CloudIcon } from "./cloud";
+export { MobileIcon } from "./mobile";
+export { SharePointIcon } from "./share-point";
+export { Hearing } from "./hearing";
+export { Proposal } from "./proposal";
+export { HumanResource } from "./human-resource";
+export { LabContract } from "./lab-contract";
+export { Hearing2 } from "./hearing2";
+export { Proposal2 } from "./proposal2";
+export { StartingDevelopment } from "./starting-development";
+export { Delivery } from "./delivery";

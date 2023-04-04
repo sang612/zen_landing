@@ -20,6 +20,7 @@ module.exports = {
       sub: "#707172",
       secondary: "#F1673A",
       primary: "#25C2E8",
+      body: "#0B2337",
     },
   },
   plugins: [],

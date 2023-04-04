@@ -7,7 +7,6 @@ import { PersonIcon } from "@/assets/icons/about-us/person";
 import { SolutionsIcon } from "@/assets/icons/about-us/solutions";
 import { WikiIcon } from "@/assets/icons/about-us/wiki";
 import { AboutUsItem } from "@/components/AboutUs/AboutUsItem";
-import { BigHeader } from "@/components/BigHeader/BigHeader";
 import { Icon } from "@/components/Icon/Icon";
 import anime from "animejs";
 import Image from "next/image";
@@ -80,7 +79,6 @@ export default function AboutUsPage() {
 
   return (
     <div className="relative overflow-hidden">
-      <BigHeader />
       <div className="relative xl:max-w-[1440px] mx-auto">
         <div className="px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
           <div className="flex items-center justify-center py-[88px]">

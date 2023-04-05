@@ -45,3 +45,4 @@ export { Item4Icon } from "./Item4Icon";
 export { BlueCircleIcon } from "./blue-circle";
 export { FlyLineIcon } from "./fly-line";
 export { FlyIcon } from "./fly";
+export { SearchIcon } from "./search";

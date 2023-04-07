@@ -46,3 +46,5 @@ export { BlueCircleIcon } from "./blue-circle";
 export { FlyLineIcon } from "./fly-line";
 export { FlyIcon } from "./fly";
 export { SearchIcon } from "./search";
+export { LocationIcon } from "./location";
+export { CategoryIcon } from "./category";

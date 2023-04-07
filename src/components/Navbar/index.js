@@ -7,7 +7,7 @@ export const Navbar = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="flex items-center justify-center mb-[51px]">
+    <nav className="flex items-center justify-center mb-[100px]">
       <Link
         href="/about-us"
         className={`${

@@ -95,7 +95,5 @@ export const BigHeader = () => {
       <Banner3 />
       <Banner4 beforeChange={handleBeforeChange} slickRef={childSlickRef} />
     </Slider>
-
-    // <Banner />
   );
 };

@@ -8,3 +8,11 @@
     scroll-behavior: smooth;
   }
 }
+
+input:checked + div {
+  @apply bg-primary;
+  @apply border-none
+}
+input:checked + div svg {
+  @apply block;
+}

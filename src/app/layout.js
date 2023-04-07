@@ -1,6 +1,7 @@
 "use client";
 import { FlyIcon } from "@/assets/icons";
 import { BigHeader } from "@/components/BigHeader/BigHeader";
+import { Footer } from "@/components/Footer";
 import { Icon } from "@/components/Icon/Icon";
 import { Navbar } from "@/components/Navbar";
 import anime from "animejs";
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
             <FlyIcon width={32} height={38} />
           </Icon>
         </div>
+        <Footer />
       </body>
     </html>
   );

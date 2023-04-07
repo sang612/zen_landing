@@ -11,8 +11,27 @@
 
 input:checked + div {
   @apply bg-primary;
-  @apply border-none
+  @apply border-none;
 }
 input:checked + div svg {
   @apply block;
+}
+
+.swiper {
+  width: 100% !important;
+  transform: translateX(-85px) !important;
+}
+.swiper-slide {
+  background-position: center !important;
+  background-size: cover !important;
+  width: 15% !important;
+  height: 540px !important;
+  filter: blur(1.5px) !important;
+}
+.swiper-slide-active {
+  filter: blur(0px) !important;
+}
+.swiper-slide img {
+  display: block !important;
+  width: 100% !important;
 }

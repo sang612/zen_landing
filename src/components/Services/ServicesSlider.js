@@ -1,42 +1,76 @@
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "../../pages/styles/globals.css";
+
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 import { ServicesSliderItem } from "./ServicesSliderItem";
-import { useState } from "react";
+import { useRef } from "react";
+import { useCallback } from "react";
+import { NextButton, PreviousButton } from "@/assets/icons/services";
 
 export const ServicesSlider = ({ servicesList }) => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const settings = {
-    dots: true,
-    arrows: true,
-    infinite: false,
-    autoplay: false,
-    pauseOnHover: true,
-    pauseOnFocus: false,
-    autoplaySpeed: 1000,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "33%",
-    beforeChange: (current, next) => {
-      setCurrentSlide(next);
-    },
-  };
+  const sliderRef = useRef(null);
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
 
   return (
-      <Slider {...settings} className="min-h-[540px]">
+    <div className="relative">
+      <Swiper
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        initialSlide={2}
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: false,
+        }}
+        pagination={false}
+        modules={[Autoplay, EffectCoverflow, Pagination]}
+        className="mySwiper"
+        ref={sliderRef}
+      >
         {servicesList.map((item, index) => {
           return (
-            <ServicesSliderItem
-              icon={item.icon}
-              listDesc={item.listDesc}
-              title={item.title}
-              isCurrent={currentSlide === index}
-              key={item.id}
-            />
+            <SwiperSlide key={index}>
+              <ServicesSliderItem
+                icon={item.icon}
+                listDesc={item.listDesc}
+                title={item.title}
+                key={item.id}
+              />
+            </SwiperSlide>
           );
         })}
-      </Slider>
+      </Swiper>
+      <div
+        className="absolute left-[11%] top-[44%] -translate-y-1/2 z-10 hover:cursor-pointer"
+        onClick={handlePrev}
+      >
+        <PreviousButton />
+      </div>
+      <div
+        className="absolute right-[15%] top-[44%] -translate-y-1/2 z-10 hover:cursor-pointer"
+        onClick={handleNext}
+      >
+        <NextButton />
+      </div>
+    </div>
   );
 };

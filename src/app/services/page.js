@@ -176,9 +176,9 @@ export default function AboutUsPage() {
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <div className="px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
-          <div className="py-[88px]">
+          <div className="pb-[88px]">
             <ServicesSlider servicesList={servicesList} />
-            <p className="max-w-[824px] mx-auto text-center">
+            <p className="max-w-[824px] mx-auto text-center -mt-10">
               We provide full-cycle services that cover all aspects of software
               engineering, from web and mobile app development to software
               testing and quality assurance.

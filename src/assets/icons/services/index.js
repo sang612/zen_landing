@@ -11,3 +11,5 @@ export { Hearing2 } from "./hearing2";
 export { Proposal2 } from "./proposal2";
 export { StartingDevelopment } from "./starting-development";
 export { Delivery } from "./delivery";
+export { PreviousButton } from "./previous-button";
+export { NextButton } from "./next-button";

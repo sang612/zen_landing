@@ -40,11 +40,18 @@ import {
 } from "@/assets/icons";
 import { Header } from "./Header";
 
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
 export const Banner = ({
   firstBannerAnimationsStarted,
   setFirstBannerAnimationsStarted,
 }) => {
-  // const svgPath = document.querySelectorAll(".tag-anime");
 
   const [isPlaying, setIsPlaying] = useState(false);
   const animationInstanceRef = useRef(null);
@@ -61,11 +68,14 @@ export const Banner = ({
 
   useEffect(() => {
     let motion_path = anime.path("#circle6");
+    const targets = document.querySelectorAll(".tag-anime");
+    const shuffledTargets = shuffleArray([...targets]);
+
     animationInstanceRef.current = anime({
       autoplay: false,
       targets: ".logo-animate",
       opacity: [0, 1],
-      duration: 1000,
+      duration: 800,
       elasticity: 600,
       easing: "linear",
       complete: () => {
@@ -74,16 +84,50 @@ export const Banner = ({
           opacity: [0, 1],
           rotate: 360,
           scale: [2, 1],
-          duration: 1000,
+          duration: 800,
           elasticity: 600,
           easing: "linear",
           complete: () => {
+            animationInstanceRef.current = anime({
+              targets: ".explain-logo-animate",
+              opacity: [0, 1],
+              duration: 500,
+              elasticity: 600,
+              easing: "linear",
+              complete: () => {
+                animationInstanceRef.current = anime({
+                  targets: ".explain-logo-animate-2",
+                  opacity: [0, 1],
+                  duration: 500,
+                  elasticity: 600,
+                  easing: "linear",
+                  complete: () => {
+                    animationInstanceRef.current = anime({
+                      targets: ".explain-logo-animate-3",
+                      opacity: [0, 1],
+                      duration: 500,
+                      elasticity: 600,
+                      easing: "linear",
+                      complete: () => {
+                        animationInstanceRef.current = anime({
+                          targets: ".explain-logo-animate-4",
+                          opacity: [0, 1],
+                          duration: 500,
+                          elasticity: 600,
+                          easing: "linear",
+                        });
+                      },
+                    });
+                  },
+                });
+              },
+            });
             animationInstanceRef.current = anime({
               targets: ".z-letter-animate",
               opacity: [0, 1],
               rotate: 360,
               scale: [2, 1],
-              duration: 1000,
+              duration: 500,
               elasticity: 600,
               easing: "linear",
               complete: () => {
@@ -92,7 +136,7 @@ export const Banner = ({
                   opacity: [0, 1],
                   rotate: 360,
                   scale: [2, 1],
-                  duration: 1000,
+                  duration: 500,
                   elasticity: 600,
                   easing: "linear",
                   complete: () => {
@@ -101,7 +145,7 @@ export const Banner = ({
                       opacity: [0, 1],
                       rotate: 360,
                       scale: [2, 1],
-                      duration: 1000,
+                      duration: 500,
                       elasticity: 600,
                       easing: "linear",
                       complete: () => {
@@ -110,7 +154,7 @@ export const Banner = ({
                           opacity: [0, 1],
                           rotate: 360,
                           scale: [2, 1],
-                          duration: 1000,
+                          duration: 500,
                           elasticity: 600,
                           easing: "linear",
                           complete: () => {
@@ -119,120 +163,53 @@ export const Banner = ({
                               opacity: [0, 1],
                               rotate: 360,
                               scale: [2, 1],
-                              duration: 1000,
+                              duration: 500,
                               elasticity: 600,
                               easing: "linear",
                               complete: () => {
                                 animationInstanceRef.current = anime({
-                                  targets: ".explain-logo-animate",
+                                  targets: ".orange-circle-animate",
                                   opacity: [0, 1],
-                                  duration: 1000,
+                                  duration: 500,
                                   elasticity: 600,
                                   easing: "linear",
                                   complete: () => {
                                     animationInstanceRef.current = anime({
-                                      targets: ".explain-logo-animate-2",
-                                      opacity: [0, 1],
-                                      duration: 1000,
-                                      elasticity: 600,
+                                      targets: "#circle7",
+                                      translateX: motion_path("x"),
+                                      translateY: motion_path("y"),
+                                      rotate: motion_path("angle"),
                                       easing: "linear",
-                                      complete: () => {
+                                      duration: 5000,
+                                      loop: true,
+                                      begin: () => {
+                                        document.querySelector(
+                                          "#circle7"
+                                        ).style.opacity = 1;
                                         animationInstanceRef.current = anime({
-                                          targets: ".explain-logo-animate-3",
+                                          targets: ".blue-circle-animate",
                                           opacity: [0, 1],
-                                          duration: 1000,
+                                          duration: 500,
                                           elasticity: 600,
                                           easing: "linear",
                                           complete: () => {
+                                            let motion_path_2 =
+                                              anime.path("#circle8");
                                             animationInstanceRef.current =
                                               anime({
-                                                targets:
-                                                  ".explain-logo-animate-4",
-                                                opacity: [0, 1],
-                                                duration: 1000,
-                                                elasticity: 600,
+                                                targets: "#circle9",
+                                                translateX: motion_path_2("x"),
+                                                translateY: motion_path_2("y"),
+                                                rotate: motion_path_2("angle"),
                                                 easing: "linear",
-                                                complete: () => {
-                                                  animationInstanceRef.current =
-                                                    anime({
-                                                      targets:
-                                                        ".orange-circle-animate",
-                                                      opacity: [0, 1],
-                                                      duration: 1000,
-                                                      elasticity: 600,
-                                                      easing: "linear",
-                                                      complete: () => {
-                                                        animationInstanceRef.current =
-                                                          anime({
-                                                            targets: "#circle7",
-                                                            translateX:
-                                                              motion_path("x"),
-                                                            translateY:
-                                                              motion_path("y"),
-                                                            rotate:
-                                                              motion_path(
-                                                                "angle"
-                                                              ),
-                                                            easing: "linear",
-                                                            duration: 5000,
-                                                            loop: true,
-                                                            begin: () => {
-                                                              document.querySelector(
-                                                                "#circle7"
-                                                              ).style.opacity = 1;
-                                                              animationInstanceRef.current =
-                                                                anime({
-                                                                  targets:
-                                                                    ".blue-circle-animate",
-                                                                  opacity: [
-                                                                    0, 1,
-                                                                  ],
-                                                                  duration: 1000,
-                                                                  elasticity: 600,
-                                                                  easing:
-                                                                    "linear",
-                                                                  complete:
-                                                                    () => {
-                                                                      let motion_path_2 =
-                                                                        anime.path(
-                                                                          "#circle8"
-                                                                        );
-                                                                      animationInstanceRef.current =
-                                                                        anime({
-                                                                          targets:
-                                                                            "#circle9",
-                                                                          translateX:
-                                                                            motion_path_2(
-                                                                              "x"
-                                                                            ),
-                                                                          translateY:
-                                                                            motion_path_2(
-                                                                              "y"
-                                                                            ),
-                                                                          rotate:
-                                                                            motion_path_2(
-                                                                              "angle"
-                                                                            ),
-                                                                          easing:
-                                                                            "linear",
-                                                                          duration: 5000,
-                                                                          loop: true,
-                                                                          begin:
-                                                                            () => {
-                                                                              document.querySelector(
-                                                                                "#circle9"
-                                                                              ).style.opacity = 1;
-                                                                            },
-                                                                          complete:
-                                                                            () => {},
-                                                                        });
-                                                                    },
-                                                                });
-                                                            },
-                                                          });
-                                                      },
-                                                    });
+                                                duration: 5000,
+                                                loop: true,
+                                                begin: () => {
+                                                  document.querySelector(
+                                                    "#circle9"
+                                                  ).style.opacity = 1;
                                                 },
+                                                complete: () => {},
                                               });
                                           },
                                         });
@@ -256,10 +233,11 @@ export const Banner = ({
     });
 
     tagAnimationInstanceRef.current = anime({
-      targets: ".tag-anime",
-      opacity: 0,
+      targets: shuffledTargets,
+      opacity: [0, 1],
+      duration: 500,
       delay: function (el, i) {
-        return i * 100;
+        return i * 100; // Add a delay to each element based on its index
       },
       loop: true,
       direction: "alternate",

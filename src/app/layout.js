@@ -5,9 +5,29 @@ import { Footer } from "@/components/Footer";
 import { Icon } from "@/components/Icon/Icon";
 import { Navbar } from "@/components/Navbar";
 import anime from "animejs";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function RootLayout({ children }) {
+  const [stickyClass, setStickyClass] = useState("relative h-[32px]");
+
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 800
+        ? setStickyClass(
+            "fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-[#fff] w-full p-5 h-[100px] shadow-sm"
+          )
+        : setStickyClass("relative h-[32px]");
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
+
   const flyAnimationRef = useRef(null);
   useEffect(() => {
     let line_path = anime.path("#fly-path");
@@ -24,7 +44,7 @@ export default function RootLayout({ children }) {
   }, []);
 
   return (
-    <html lang="en">
+    <html>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -33,10 +53,10 @@ export default function RootLayout({ children }) {
       <body>
         <BigHeader />
         <div className="relative xl:max-w-[1440px] mx-auto">
-          <Navbar />
+          <Navbar className={stickyClass} />
           {children}
           <svg
-            width="1440"
+            width="100%"
             height="1323"
             viewBox="0 0 1440 1323"
             fill="none"

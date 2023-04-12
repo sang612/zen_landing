@@ -20,12 +20,14 @@ import {
 import { ServicesSlider } from "@/components/Services/ServicesSlider";
 import { TextSection } from "@/components/Services/TextSection";
 import { TechnologyItem } from "@/components/Services/TechnologyItem";
+import "wowjs/css/libs/animate.css";
+import { useEffect } from "react";
 
 const laboContractList = [
   {
     id: 1,
     icon: Hearing,
-    title: "hearing",
+    title: "Hearing",
     desc: "We will be hearing more specifically in order to propose appropriate human resources and a good system.",
   },
   {
@@ -172,6 +174,16 @@ const contractAgreementList = [
 ];
 
 export default function AboutUsPage() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const WOW = require("wowjs");
+      new WOW.WOW({
+        live: false,
+      }).init();
+    }
+  }, []);
+  let delay = 0.2;
+
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
@@ -208,12 +220,16 @@ export default function AboutUsPage() {
             />
             <div className="grid grid-cols-2 mt-[80px]">
               {laboContractList.map((item) => {
+                const itemDelay = `${delay}s`;
+                delay += 0.2;
+
                 return (
                   <AboutUsItem
                     desc={item.desc}
                     icon={item.icon}
                     title={item.title}
                     key={item.id}
+                    delay={itemDelay}
                   />
                 );
               })}
@@ -226,12 +242,16 @@ export default function AboutUsPage() {
             />
             <div className="grid grid-cols-2 mt-[80px]">
               {contractAgreementList.map((item) => {
+                const itemDelay = `${delay}s`;
+                delay += 0.2;
+
                 return (
                   <AboutUsItem
                     desc={item.desc}
                     icon={item.icon}
                     title={item.title}
                     key={item.id}
+                    delay={itemDelay}
                   />
                 );
               })}

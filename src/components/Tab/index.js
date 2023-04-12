@@ -7,6 +7,7 @@ export const CustomTaps = ({
   setIsShowContent,
   searchInput,
   setSearchInput,
+  setCategory
 }) => {
   const [activeTab, setActiveTab] = useState(0);
 
@@ -25,6 +26,9 @@ export const CustomTaps = ({
               onClick={() => {
                 setIsShowContent(true);
                 setActiveTab(index);
+                tab.label === "All"
+                  ? setCategory("")
+                  : setCategory(tab.label);
               }}
             >
               {tab.label}
@@ -42,7 +46,7 @@ export const CustomTaps = ({
           <SearchIcon className="absolute right-[8px] top-1/2 -translate-y-1/2" />
         </div>
       </div>
-      <div>{isShowContent && listContent[activeTab]?.children}</div>
+      <div>{isShowContent && ( listContent[activeTab]?.children ?  listContent[activeTab]?.children : 'cc')}</div>
     </div>
   );
 };

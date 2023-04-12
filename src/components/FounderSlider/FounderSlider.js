@@ -35,8 +35,8 @@ export const FounderSlider = ({ beforeChange }) => (
       />
       <FounderSliderItem
         src="/feature-image4.svg"
-        name="Jane Cooper"
-        desc="Chairman"
+        name="Savannah Nguyen"
+        desc="Brand Manager"
       />
       <FounderSliderItem
         src="/feature-image5.svg"

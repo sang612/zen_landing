@@ -10,10 +10,10 @@ import { useCallback, useRef, useState } from "react";
 const settings = {
   dots: false,
   infinite: true,
-  autoplay: false,
+  autoplay: true,
   pauseOnHover: false,
   pauseOnFocus: false,
-  autoplaySpeed: 3000,
+  autoplaySpeed: 6000,
   speed: 1000,
   slidesToShow: 1,
   slidesToScroll: 1,

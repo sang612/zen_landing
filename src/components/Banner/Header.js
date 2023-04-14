@@ -51,12 +51,12 @@ export const Header = ({ showLogo, showButtonGroup }) => {
           <div className="ml-[44px] flex flex-row">
             <Link
               href="/contact"
-              className="p-[16px] w-[145px] h-[48px] bg-[#ffffff] text-[#005D6C] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase"
+              className="text-center p-[16px] w-[145px] h-[48px] bg-[#ffffff] text-[#005D6C] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase"
             >
-              CONTACT NOW
+              {t("ContactNow")}
             </Link>
-            <button className="ml-[27px] p-[16px] w-[145px] h-[48px] bg-opacity-0 text-[#ffffff] outline outline-[1px] outline-[#ffffff] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase">
-              LEARN MORE
+            <button className="text-center ml-[27px] p-[16px] w-[145px] h-[48px] bg-opacity-0 text-[#ffffff] outline outline-[1px] outline-[#ffffff] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase">
+              {t("LearnMore")}
             </button>
           </div>
         )}

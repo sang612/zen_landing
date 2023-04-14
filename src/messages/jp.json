@@ -3,7 +3,9 @@
     "title": "Halu"
   },
   "LocaleSwitcher": {
-    "switchLocale": "{locale, select, jp {日本語} en {English} other {Unbekannt}}"
+    "switchLocale": "{locale, select, jp {日本語} en {English} other {Unbekannt}}",
+    "ContactNow": "問い合わせ",
+    "LearnMore": "もっと見る"
   },
   "AboutUs": {
     "AboutUs": "企業情報",
@@ -60,5 +62,11 @@
     "All": "全て",
     "New": "新着",
     "Search": "検索"
+  },
+  "Banner1": {
+    "Explain1": "Zens の影は雷神やスピードとして知られるゼウスです",
+    "Explain2": "円は無限の思考を示しています。",
+    "Explain3": "それは善の言葉であり、善 を 積み、勤労倫理は日々の正しい努力の中で常に美徳を蓄積します。Zen.というのは仏教の中に、気を散らすものを排除し、心を育てることに集中する必要性を強調しています。",
+    "Explain4": "Zen Solutions の社名のドットは、テクノロジー ネットワークを表す「Connect」を表しています。禅には独自の考え方があります。テクノロジーの時代は、限界もスピードもありません。"
   }
 }

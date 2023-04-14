@@ -39,6 +39,7 @@ import {
   Item4Icon,
 } from "@/assets/icons";
 import { Header } from "./Header";
+import { useTranslations } from "next-intl";
 
 const shuffleArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -52,11 +53,11 @@ export const Banner = ({
   firstBannerAnimationsStarted,
   setFirstBannerAnimationsStarted,
 }) => {
-
   const [isPlaying, setIsPlaying] = useState(false);
   const animationInstanceRef = useRef(null);
   const tagAnimationInstanceRef = useRef(null);
   const gearAnimationInstanceRef = useRef(null);
+  const t = useTranslations("Banner1");
 
   useEffect(() => {
     if (firstBannerAnimationsStarted) {
@@ -392,33 +393,25 @@ export const Banner = ({
               <Icon className="top-[0%] left-[-3%] opacity-0 explain-logo-animate animate">
                 <Item1Icon width={293.32} height={282.67}></Item1Icon>
                 <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[35%] left-[27%] max-w-[122.04px]">
-                  The mirror image is the moniker of Zeus, commonly known as the
-                  thunder god, and it denotes speed.
+                  {t("Explain1")}
                 </span>
               </Icon>
               <Icon className="top-[-3.5%] left-[30%] opacity-0 explain-logo-animate-2 animate">
                 <Item2Icon width={251.54} height={254.16}></Item2Icon>
                 <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[39%] left-[29%] max-w-[119.88px]">
-                  The open circle indicates limitless thought.
+                  {t("Explain2")}
                 </span>
               </Icon>
               <Icon className="top-[19%] left-[51.5%] opacity-0 explain-logo-animate-3 animate">
                 <Item3Icon width={361.96} height={333.55}></Item3Icon>
                 <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[31%] left-[31%] max-w-[182px]">
-                  It is the word of goodness, continuously aspiring to do good,
-                  and work ethic constantly accumulates virtue in the righteous
-                  everyday effort. 善 を 積み 、 を 重ねる. The term Zen.
-                  Buddhism stresses the need of removing distractions and
-                  concentrating on mind cultivation in order to achieve nirvana.
+                  {t("Explain3")}
                 </span>
               </Icon>
               <Icon className="top-[50%] left-[-6%] opacity-0 explain-logo-animate-4 animate">
                 <Item4Icon width={333.96} height={336.55}></Item4Icon>
                 <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[37%] left-[26%] max-w-[184px]">
-                  The dot in Zen Solutions&apos; corporate name stands for
-                  &quot;Connect,&quot; which symbolizes the technological
-                  network. Zens has its own style of thinking. Technology period
-                  of unrestricted growth and speed.
+                  {t("Explain4")}
                 </span>
               </Icon>
             </div>

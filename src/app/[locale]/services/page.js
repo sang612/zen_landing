@@ -1,7 +1,7 @@
 "use client";
 
 import { AboutUsItem } from "@/components/AboutUs/AboutUsItem";
-import "../../pages/styles/globals.css";
+import "../../../pages/styles/globals.css";
 import {
   AIIcon,
   CloudIcon,
@@ -22,6 +22,7 @@ import { TextSection } from "@/components/Services/TextSection";
 import { TechnologyItem } from "@/components/Services/TechnologyItem";
 import "wowjs/css/libs/animate.css";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const laboContractList = [
   {
@@ -183,6 +184,7 @@ export default function AboutUsPage() {
     }
   }, []);
   let delay = 0.2;
+  const t = useTranslations("Services");
 
   return (
     <div className="relative overflow-hidden">
@@ -191,15 +193,13 @@ export default function AboutUsPage() {
           <div className="pb-[88px]">
             <ServicesSlider servicesList={servicesList} />
             <p className="max-w-[824px] mx-auto text-center -mt-10">
-              We provide full-cycle services that cover all aspects of software
-              engineering, from web and mobile app development to software
-              testing and quality assurance.
+              {t("WeProvice")}
             </p>
           </div>
           <div className="my-[100px]">
             <TextSection
-              title="Our technology solution"
-              desc="ZenS can support high-tech (AI, etc.) from basic development language."
+              title={t("OurTechnologySolution")}
+              desc={t("OurTechnologySolutionDesc")}
             />
             <div className="grid grid-cols-3 mt-[36px] mx-auto justify-items-start max-w-[865px]">
               {technologyList.map((item) => {
@@ -215,8 +215,8 @@ export default function AboutUsPage() {
           </div>
           <div className="my-[100px]">
             <TextSection
-              title="Labo contract (ODC)"
-              desc="A Lab contract (Lab-type development) is a contract that allows you to secure a certain number of excellent overseas engineers for a certain period (usually about half a year to a year) and proceed with a project development system (contract type is quasi contract). In other words, you can have your own overseas engineer team for a certain period of time regardless of whether or not you have a project."
+              title={t("LaboContract(ODC)")}
+              desc={t("LaboContractDesc")}
             />
             <div className="grid grid-cols-2 mt-[80px]">
               {laboContractList.map((item) => {
@@ -237,8 +237,8 @@ export default function AboutUsPage() {
           </div>
           <div className="mt-[172px] mb-[120px]">
             <TextSection
-              title="Contract agreement"
-              desc="Contract agreement (Agreement type development) is a contract to deliver deliverables based on a defined delivery date and number in the contract. ZenS will proceed project development based on the requirement definition and the specifications at the time of ordering."
+              title={t("ContractAgreement")}
+              desc={t("ContractAgreementDesc")}
             />
             <div className="grid grid-cols-2 mt-[80px]">
               {contractAgreementList.map((item) => {

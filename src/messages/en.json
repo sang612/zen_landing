@@ -1,0 +1,64 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "{locale, select, jp {日本語} en {English} other {Unknown}}"
+  },
+  "AboutUs": {
+    "AboutUs": "AboutUs",
+    "Vision": "Vision",
+    "VisionDesc": "Our vision is to become the most delivery capability company in Vietnam outsourcing industry, where each employee can discover their own value through the development of products that satisfy our customers.",
+    "Mission": "Mission",
+    "MissionDesc": "For customers we will always ensure the quality (Q), cost (C)and delivery date (D) with creative and innovative delivery methods. For our employees , we will provide an environment where highly mental health and a good life which enthusiastic ,creation can be developed.",
+    "WeDoAllThings": "We do all things",
+    "WithABigHeart": "with big a heart",
+    "Action": "Action",
+    "ActionDesc": "Our mains value <br /> PAWS is the person, Agile, Wikipedia, Solutions defined by us.",
+    "OurPerformance": "Our performance",
+    "Customer": "Customer",
+    "Employees": "Employees",
+    "Projects": "Projects",
+    "WePromiesToBring": "WE PROMIES TO BRING",
+    "CoreValue": "Core Value",
+    "Promise": "ZenS promise to following those things.",
+    "CoreValue1": "Appreciate customer time and response quickly.",
+    "CoreValue2": "Understand our customer and emphasis on the result.",
+    "CoreValue3": "Continue to response until you are satisfied.",
+    "CoreValue4": "Provide appropriate service which focus on humans, Technologies and process."
+  },
+  "Services": {
+    "WeProvice": "We provide full-cycle services that cover all aspects of software engineering, from web and mobile app development to software testing and quality assurance.",
+    "OurTechnologySolution": "Our technology solution",
+    "OurTechnologySolutionDesc": "ZenS can support high-tech (AI, etc.) from basic development language.",
+    "LaboContract(ODC)": "Labo contract（ODC)",
+    "LaboContractDesc": "A Lab contract (Lab-type development) is a contract that allows you to secure a certain number of excellent overseas engineers for a certain period (usually about half a year to a year) and proceed with a project development system (contract type is quasi contract). In other words, you can have your own overseas engineer team for a certain period of time regardless of whether or not you have a project.",
+    "ContractAgreement": "Contract agreement",
+    "ContractAgreementDesc": "Contract agreement (Agreement type development) is a contract to deliver deliverables based on a defined delivery date and number in the contract. ZenS will proceed project development based on the requirement definition and the specifications at the time of ordering."
+  },
+  "Contact": {
+    "Name": "Name",
+    "Email": "Email",
+    "Subject": "Subject",
+    "Messenger": "Messenger",
+    "Sent": "Sent"
+  },
+  "Nav": {
+    "AboutUs": "About Us",
+    "Services": "Services",
+    "Casestudy": "Casestudy",
+    "Recruitment": "Recruitment",
+    "News": "News",
+    "Contact": "Contact"
+  },
+  "Recruitment": {
+    "ByLocation": "By Location",
+    "ByTeam": "By Team",
+    "Search": "Search"
+  },
+  "News": {
+    "All": "All",
+    "New": "New",
+    "Search": "Search"
+  }
+}

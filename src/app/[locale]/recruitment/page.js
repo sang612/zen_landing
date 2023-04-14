@@ -1,6 +1,6 @@
 "use client";
 
-import "../../pages/styles/globals.css";
+import "../../../pages/styles/globals.css";
 import React from "react";
 import { FilterSelect } from "@/components/FilterSelect";
 import { useEffect } from "react";

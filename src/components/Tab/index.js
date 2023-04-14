@@ -1,4 +1,5 @@
 import { SearchIcon } from "@/assets/icons";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export const CustomTaps = ({
@@ -10,6 +11,7 @@ export const CustomTaps = ({
   setCategory
 }) => {
   const [activeTab, setActiveTab] = useState(0);
+  const t = useTranslations("News");
 
   return (
     <div>
@@ -39,7 +41,7 @@ export const CustomTaps = ({
           <input
             type="text"
             className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"
-            placeholder="Search"
+            placeholder={t("Search")}
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />

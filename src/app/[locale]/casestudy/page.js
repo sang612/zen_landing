@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import "../../pages/styles/globals.css";
+import "../../../pages/styles/globals.css";
 import Image from "next/image";
 import { CustomTaps } from "@/components/Tab";
 

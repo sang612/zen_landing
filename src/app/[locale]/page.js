@@ -7,10 +7,11 @@ import { SolutionsIcon } from "@/assets/icons/about-us/solutions";
 import { WikiIcon } from "@/assets/icons/about-us/wiki";
 import { AboutUsItem } from "@/components/AboutUs/AboutUsItem";
 import Image from "next/image";
-import "../pages/styles/globals.css";
+import "../../pages/styles/globals.css";
 import CountUp from "react-countup";
 import "wowjs/css/libs/animate.css";
 import { useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const visionList = [
   {
@@ -70,6 +71,8 @@ export default function AboutUsPage() {
     }
   }, []);
 
+  const t = useTranslations("AboutUs");
+
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
@@ -78,20 +81,17 @@ export default function AboutUsPage() {
             <div className="w-1/2">
               <div className="relative bg-[url('/blue-circle.svg')] bg-no-repeat w-[288px] h-[293px]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[700] text-[67px] whitespace-nowrap">
-                  About Us
+                  {t("AboutUs")}
                 </div>
               </div>
             </div>
             <div className="w-1/2">
               <div>
                 <h4 className="font-[600] text-[39px] leading-[48px] ">
-                  01. Vision
+                  01. {t("Vision")}
                 </h4>
                 <p className="font-[400] text-[19px] leading-[32px]">
-                  Our vision is to become the most delivery capability company
-                  in Vietnam outsourcing industry, where each employee can
-                  discover their own value through the development of products
-                  that satisfy our customers.
+                  {t("VisionDesc")}
                 </p>
               </div>
               <div className="mt-[32px]">
@@ -115,20 +115,16 @@ export default function AboutUsPage() {
           <div className="flex items-center justify-center  py-[88px]">
             <div className="w-1/2">
               <h4 className="font-[600] text-[39px] leading-[48px] ">
-                02. Mission
+                02. {t("Vision")}
               </h4>
               <p className="font-[400] text-[19px] leading-[32px] max-w-[558px]">
-                For customers we will always ensure the quality (Q), cost (C)and
-                delivery date (D) with creative and innovative delivery methods.
-                For our employees , we will provide an environment where highly
-                mental health and a good life which enthusiastic ,creation can
-                be developed.
+                {t("MissionDesc")}
               </p>
             </div>
             <div className="w-1/2">
               <div className="font-[400] text-[59px] leading-[78px] text-secondary flex-none order-1 flex-grow-0 w-full">
-                <p className="text-left">“ We do all things</p>
-                <p className="text-right">with big a heart ”</p>
+                <p className="text-left"> {t("WeDoAllThings")}</p>
+                <p className="text-right"> {t("WithABigHeart")}</p>
               </div>
             </div>
           </div>
@@ -136,12 +132,12 @@ export default function AboutUsPage() {
           <div className="flex-col items-center justify-start py-[88px]">
             <div className="w-1/2">
               <h4 className="font-[600] text-[39px] leading-[48px] ">
-                03. Action
+                03. {t("Action")}
               </h4>
-              <p className="font-[400] text-[19px] leading-[32px]">
-                Our mains value <br /> PAWS is the person, Agile, Wikipedia,
-                Solutions defined by us.
-              </p>
+              <p
+                className="font-[400] text-[19px] leading-[32px]"
+                dangerouslySetInnerHTML={{ __html: t("ActionDesc") }}
+              ></p>
             </div>
             <div className="w-full grid grid-cols-2 mt-[32px]">
               {actionList.map((item) => {
@@ -162,7 +158,7 @@ export default function AboutUsPage() {
           </div>
           <div className="bg-[url('/bg/our-performance-bg.svg')] bg-[center_center] bg-no-repeat bg-cover h-[560px] pt-[76px]">
             <h4 className="font-[600] text-[39px] leading-[48px] text-center">
-              Our performance
+              {t("OurPerformance")}
             </h4>
             <div className="flex justify-center items-center mt-[20px]">
               <div className="relative">
@@ -180,7 +176,7 @@ export default function AboutUsPage() {
                   </div>
                 </div>
                 <div className="text-center font-[400] text-[19px] leading-[32px] text-title">
-                  Customer
+                  {t("Customer")}
                 </div>
               </div>
               <div className="mx-[100px] relative">
@@ -199,7 +195,7 @@ export default function AboutUsPage() {
                   </div>
                 </div>
                 <div className="text-center font-[400] text-[19px] leading-[32px] text-title">
-                  Employees
+                  {t("Employees")}
                 </div>
               </div>
               <div className="relative">
@@ -217,7 +213,7 @@ export default function AboutUsPage() {
                   </div>
                 </div>
                 <div className="text-center font-[400] text-[19px] leading-[32px] text-title">
-                  Projects
+                  {t("Projects")}
                 </div>
               </div>
             </div>
@@ -225,25 +221,24 @@ export default function AboutUsPage() {
           <div className="flex items-start justify-start px-[88px] mt-[96px]">
             <div className="w-1/2">
               <h4 className="font-[600] text-[39px] leading-[49px]">
-                WE PROMIES TO BRING
+                {t("WePromiesToBring")}
               </h4>
               <p className="font-[400] text-[27px] leading-[32px] mt-10">
-                Core Value <br /> ZenS promise to following those things.
+                {t("CoreValue")} <br /> {t("Promise")}
               </p>
             </div>
             <div className="w-1/2 ml-[156px]">
               <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-                Appreciate customer time and response quickly.
+                {t("CoreValue1")}
               </div>
               <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-                Understand our customer and emphasis on the result.
+                {t("CoreValue2")}
               </div>
               <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-                Continue to response until you are satisfied.
+                {t("CoreValue3")}
               </div>
               <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-                Provide appropriate service which focus on humans, Technologies
-                and process.
+                {t("CoreValue4")}
               </div>
             </div>
           </div>

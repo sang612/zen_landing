@@ -1,3 +1,5 @@
+"use client"
+
 import { MapPinIcon, PhoneIcon } from "@/assets/icons";
 import {
   Facebook,
@@ -6,10 +8,12 @@ import {
   Twitter,
   Youtube,
 } from "@/assets/icons/footer";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
 export const Footer = () => {
+  const t = useTranslations("Nav");
   return (
     <footer className="border-t border-[#0000001a] border-solid mt-[100px] bg-[#fff] font-sans">
       <div className="xl:max-w-[1440px] mx-auto px-[168px] pb-[20px] pt-[55px]">
@@ -44,13 +48,13 @@ export const Footer = () => {
                   href="/"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
                 >
-                  About US
+                  {t("AboutUs")}
                 </Link>
                 <Link
                   href="/recruitment"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
                 >
-                  Recruitment
+                  {t("Recruitment")}
                 </Link>
               </div>
               <div className="flex">
@@ -58,13 +62,13 @@ export const Footer = () => {
                   href="/services"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
                 >
-                  Services
+                  {t("Services")}
                 </Link>
                 <Link
                   href="/news"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
                 >
-                  News
+                  {t("News")}
                 </Link>
               </div>
               <div className="flex">
@@ -72,13 +76,13 @@ export const Footer = () => {
                   href="/casestudy"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
                 >
-                  Casestudy
+                  {t("Casestudy")}
                 </Link>
                 <Link
                   href="/contact"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
                 >
-                  Contact
+                  {t("Contact")}
                 </Link>
               </div>
             </div>

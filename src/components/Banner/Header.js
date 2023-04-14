@@ -8,18 +8,37 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export const Header = ({ showLogo, showButtonGroup }) => {
+  const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    locale == "en" ? "English" : "日本語"
+  );
+  const pathName = usePathname();
+  const router = useRouter();
   const handleLanguageChange = (language) => {
-    setSelectedLanguage(language);
+    setSelectedLanguage(language == "en" ? "English" : "日本語");
     setIsOpen(false);
+    let newPathname;
+    if (pathName.includes("/jp")) {
+      newPathname = pathName.replace(`/jp`, `/${language}`);
+    } else {
+      newPathname = "/jp" + pathName;
+    }
+    router.replace(newPathname);
   };
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const t = useTranslations("LocaleSwitcher");
+  const otherLocale = locale === "en" ? "jp" : "en";
+
   return (
     <div className="pt-[28px] px-[80px] flex flex-row justify-between items-center relative z-10">
       <div className="flex flex-row items-center">
@@ -30,7 +49,10 @@ export const Header = ({ showLogo, showButtonGroup }) => {
         )}
         {showButtonGroup && (
           <div className="ml-[44px] flex flex-row">
-            <Link href='/contact' className="p-[16px] w-[145px] h-[48px] bg-[#ffffff] text-[#005D6C] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase">
+            <Link
+              href="/contact"
+              className="p-[16px] w-[145px] h-[48px] bg-[#ffffff] text-[#005D6C] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase"
+            >
               CONTACT NOW
             </Link>
             <button className="ml-[27px] p-[16px] w-[145px] h-[48px] bg-opacity-0 text-[#ffffff] outline outline-[1px] outline-[#ffffff] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase">
@@ -77,40 +99,22 @@ export const Header = ({ showLogo, showButtonGroup }) => {
           </button>
           {isOpen && (
             <ul
-              className="absolute left-0 mt-[8px] py-2 rounded-md shadow-lg"
+              className="absolute left-0 mt-[8px] py-2 rounded-md shadow-lg bg-[#fff]"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="options-menu"
             >
               <li>
-                <button
-                  className="flex flex-row items-center px-4 py-2 w-full text-left hover:bg-gray-100"
+                <div
+                  className="flex flex-row items-center px-4 w-full text-left hover:cursor-pointer"
                   role="menuitem"
-                  onClick={() => handleLanguageChange("English")}
+                  onClick={() => handleLanguageChange(otherLocale)}
                 >
                   <GlobalIcon width={16} height={16} />
-                  <span className="ml-3 whitespace-nowrap">English</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  className="flex flex-row items-center px-4 py-2 w-full text-left hover:bg-gray-100"
-                  role="menuitem"
-                  onClick={() => handleLanguageChange("Việt Nam")}
-                >
-                  <GlobalIcon width={16} height={16} />
-                  <span className="ml-3 whitespace-nowrap">Việt Nam</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  className="flex flex-row items-center px-4 py-2 w-full text-left hover:bg-gray-100"
-                  role="menuitem"
-                  onClick={() => handleLanguageChange("Japanese")}
-                >
-                  <GlobalIcon width={16} height={16} />
-                  <span className="ml-3 whitespace-nowrap">Japanese</span>
-                </button>
+                  <span className="ml-3 whitespace-nowrap">
+                    {t("switchLocale", { locale: otherLocale })}
+                  </span>
+                </div>
               </li>
             </ul>
           )}

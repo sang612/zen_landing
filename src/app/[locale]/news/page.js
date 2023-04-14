@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import "../../pages/styles/globals.css";
+import "../../../pages/styles/globals.css";
 import Image from "next/image";
 import { CustomTaps } from "@/components/Tab";
+import { useTranslations } from "next-intl";
 
 export default function CasestudyPage() {
   const [isShowContent, setIsShowContent] = useState(true);
@@ -11,6 +12,7 @@ export default function CasestudyPage() {
   const [newsData, setNewsData] = useState([]);
   const [casestudyListFiltered, setcasestudyListFiltered] = useState();
   const [category, setCategory] = useState("All");
+  const t = useTranslations("News");
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("/api/news");
@@ -33,7 +35,7 @@ export default function CasestudyPage() {
   const listContent = [
     {
       key: "1",
-      label: `All`,
+      label: t("All"),
       children: (
         <div className="grid grid-cols-4 gap-x-[42px] items-start justify-start">
           {casestudyListFiltered?.map((item, i) => (
@@ -66,7 +68,7 @@ export default function CasestudyPage() {
     },
     {
       key: "2",
-      label: `New`,
+      label: t("New"),
       children: (
         <div className="grid grid-cols-4 gap-x-[42px] items-start justify-start">
           {casestudyListFiltered?.map((item, i) => (

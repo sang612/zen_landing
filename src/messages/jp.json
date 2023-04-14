@@ -1,0 +1,64 @@
+{
+  "Index": {
+    "title": "Halu"
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "{locale, select, jp {日本語} en {English} other {Unbekannt}}"
+  },
+  "AboutUs": {
+    "AboutUs": "企業情報",
+    "Vision": "Vision",
+    "VisionDesc": "我々のビジョンはベトナムアウトソーシング業界の中で最もデリバリー能力の高く一人一人の従業員がお客様の満足を満たせる製品の開発を通して自分の価値を発揮できる企業になります。",
+    "Mission": "Mission",
+    "MissionDesc": "お客様に対して常にクリエィティブな、かつ革新的なデリバリー方法により品質（Q）、コスト（C),　納期（D）を厳守します,従業員に対しては熱心さ、創造力が発揮できるよう豊かな生活と高い精神力が発揮できる環境を提供します",
+    "WeDoAllThings": "We do all things",
+    "WithABigHeart": "with big a heart",
+    "Action": "Action",
+    "ActionDesc": "Our mains value <br /> PAWSとは弊社が定義した人・アジャイル・ウィキペディア・ソリューションズです。",
+    "OurPerformance": "実績",
+    "Customer": "顧客",
+    "Employees": "社員",
+    "Projects": "プロジェクト",
+    "WePromiesToBring": "WE PROMIES TO BRING",
+    "CoreValue": "Core Value",
+    "Promise": "ZenSは次のことを約束します。",
+    "CoreValue1": "お客様のお時間を大事にして迅速な対応。",
+    "CoreValue2": "お客様を理解して成果を重視すること。",
+    "CoreValue3": "満足していただくまで対応し続けること。",
+    "CoreValue4": "人と技術とプロセスを中心して快適なサービスを提供すること"
+  },
+  "Services": {
+    "WeProvice": "Webアプリやモバイルアプリの開発からソフトウェアのテストや品質保証まで、ソフトウェアエンジニアリングのすべての側面をカバーするフルサイクルサービスを提供します。",
+    "OurTechnologySolution": "我々の対応技術",
+    "OurTechnologySolutionDesc": "一般的な開発言語から先端な技術（AIなど）を対応することが可能です。",
+    "LaboContract(ODC)": "ラボ契約 (ODC)",
+    "LaboContractDesc": "ラボ契約（ラボ型開発）とは、ある一定期間（通常は半年～1年程度）、海外の優秀なエンジニアを一定数確保してシステム開発プロジェクトを進めることができる契約です（契約形態は準委任契約となります）。言い換えると、自社専属のエンジニアチームを海外に持ち、迅速な開発対応と 技術蓄積が図れます。",
+    "ContractAgreement": "請負契約",
+    "ContractAgreementDesc": "請負契約（請負型開発）とは、契約で定められた納期・数に基づいて成果物を納品する契約です。発注時の仕様・要件定義に基づいて開発プロジェクトを進めていきます。"
+  },
+  "Contact": {
+    "Name": "お名前",
+    "Email": "メールアドレス",
+    "Subject": "件名",
+    "Messenger": "お問い合わせ内容",
+    "Sent": "送信する"
+  },
+  "Nav": {
+    "AboutUs": "私たち",
+    "Services": "サービス",
+    "Casestudy": "事例",
+    "Recruitment": "募集",
+    "News": "ニュース",
+    "Contact": "問い合わせ"
+  },
+  "Recruitment": {
+    "ByLocation": "ロケーション",
+    "ByTeam": "チーム",
+    "Search": "検索"
+  },
+  "News": {
+    "All": "全て",
+    "New": "新着",
+    "Search": "検索"
+  }
+}

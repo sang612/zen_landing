@@ -1,4 +1,5 @@
 import { CategoryIcon, LocationIcon, SearchIcon } from "@/assets/icons";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import Select, { components } from "react-select";
 
@@ -115,6 +116,7 @@ export const FilterSelect = ({
   setSelectedOptions,
 }) => {
   const [activeTab] = useState(0);
+  const t = useTranslations("Recruitment");
 
   return (
     <div>
@@ -137,7 +139,7 @@ export const FilterSelect = ({
               Option: InputOption,
               IndicatorSeparator: () => null,
             }}
-            placeholder="By Location"
+            placeholder={t("ByLocation")}
             className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px]"
             styles={customStyles}
           />
@@ -160,7 +162,7 @@ export const FilterSelect = ({
               Option: InputOption,
               IndicatorSeparator: () => null,
             }}
-            placeholder="By Team"
+            placeholder={t("ByTeam")}
             className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px] ml-[32px]"
             styles={customStyles}
           />
@@ -169,7 +171,7 @@ export const FilterSelect = ({
           <input
             type="text"
             className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"
-            placeholder="Search"
+            placeholder={t("Search")}
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
           />

@@ -1,16 +1,20 @@
-import {
-  FacebookIcon,
-  GlobalIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  YoutubeIcon,
-} from "@/assets/icons";
+import { FacebookIcon, GlobalIcon } from "@/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
+import Popup from "reactjs-popup";
+
+const contentStyle = {
+  width: "358px",
+  padding: 0,
+  border: "none",
+  borderRadius: "8px",
+  boxShadow: "none",
+};
+const overlayStyle = { background: "rgba(0,0,0,0.4)" };
 
 export const Header = ({ showLogo, showButtonGroup }) => {
   const locale = useLocale();
@@ -18,6 +22,8 @@ export const Header = ({ showLogo, showButtonGroup }) => {
   const [selectedLanguage, setSelectedLanguage] = useState(
     locale == "en" ? "English" : "日本語"
   );
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
   const pathName = usePathname();
   const router = useRouter();
   const handleLanguageChange = (language) => {
@@ -51,7 +57,7 @@ export const Header = ({ showLogo, showButtonGroup }) => {
           <div className="ml-[44px] flex flex-row">
             <Link
               href="/contact"
-              className="text-center p-[16px] w-[145px] h-[48px] bg-[#ffffff] text-[#005D6C] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase"
+              className="text-center p-[16px] min-w-[145px] h-[48px] bg-[#ffffff] text-[#005D6C] text-[14px] font-[600] leading-[16px] tracking-[0.5px] uppercase"
             >
               {t("ContactNow")}
             </Link>
@@ -63,23 +69,17 @@ export const Header = ({ showLogo, showButtonGroup }) => {
       </div>
       <div className="flex flex-row items-center">
         <div className="flex flex-row">
+          <button
+            onClick={() => setOpen((o) => !o)}
+            className="bg-primary p-1 rounded-md text-[9px] text-[#fff] font-bold"
+          >
+            {t("Download")}
+          </button>
           <Link
             href="https://www.facebook.com/zens.company/"
             className="ml-[20px]"
           >
             <FacebookIcon width={28} height={28} />
-          </Link>
-          <Link href="" className="ml-[20px]">
-            <TwitterIcon width={28} height={28} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/company/zens-technology-company-limited/about/"
-            className="ml-[20px]"
-          >
-            <LinkedinIcon width={28} height={28} />
-          </Link>
-          <Link href="" className="ml-[20px]">
-            <YoutubeIcon width={28} height={28} />
           </Link>
         </div>
         <div className="relative ml-[56px]">
@@ -120,6 +120,50 @@ export const Header = ({ showLogo, showButtonGroup }) => {
           )}
         </div>
       </div>
+      <Popup
+        open={open}
+        closeOnDocumentClick
+        onClose={closeModal}
+        position="center center"
+        {...{ contentStyle, overlayStyle }}
+        modal
+        nested
+      >
+        <div className="modal">
+          <div className="bg-[#fff] rounded-[8px] px-[28px] pb-[40px]">
+            <div
+              className="close pt-[20px] mb-[20px] hover:cursor-pointer"
+              onClick={closeModal}
+            >
+              &times;
+            </div>
+            <form>
+              <div className="flex-col items-start justify-start">
+                <input
+                  type="text"
+                  placeholder={t("Name")}
+                  className="placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+                  required
+                />
+                <input
+                  type="email"
+                  placeholder={t("Email")}
+                  className="mt-[20px] placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+                  required
+                />
+              </div>
+              <div className="mt-[40px] text-center">
+                <button
+                  type="submit"
+                  className="w-[200px] h-[48px] rounded-[8px] px-[16px- py-[12px] bg-primary text-[#fff] text-[17px] leading-[24px] font-[600] tracking-[-0.005em]"
+                >
+                  {t("Sent")}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </Popup>
     </div>
   );
 };

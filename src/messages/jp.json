@@ -5,7 +5,11 @@
   "LocaleSwitcher": {
     "switchLocale": "{locale, select, jp {日本語} en {English} other {Unbekannt}}",
     "ContactNow": "問い合わせ",
-    "LearnMore": "もっと見る"
+    "LearnMore": "もっと見る",
+    "Download": "ダウンロード",
+    "Name": "お名前",
+    "Email": "メールアドレス",
+    "Sent": "送信する"
   },
   "AboutUs": {
     "AboutUs": "企業情報",
@@ -51,7 +55,11 @@
     "Casestudy": "事例",
     "Recruitment": "募集",
     "News": "ニュース",
-    "Contact": "問い合わせ"
+    "Contact": "問い合わせ",
+    "Download": "ダウンロード",
+    "Name": "お名前",
+    "Email": "メールアドレス",
+    "Sent": "送信する"
   },
   "Recruitment": {
     "ByLocation": "ロケーション",

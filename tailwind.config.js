@@ -22,6 +22,10 @@ module.exports = {
       primary: "#25C2E8",
       body: "#0B2337",
     },
+    screens: {
+      sm: { max: "600px" },
+      // => @media (max-width: 600px) { ... }
+    },
   },
   plugins: [],
 };

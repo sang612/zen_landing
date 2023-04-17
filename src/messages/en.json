@@ -5,7 +5,11 @@
   "LocaleSwitcher": {
     "switchLocale": "{locale, select, jp {日本語} en {English} other {Unknown}}",
     "ContactNow": "Contact Now",
-    "LearnMore": "Learn More"
+    "LearnMore": "Learn More",
+    "Download": "Download",
+    "Name": "Name",
+    "Email": "Email",
+    "Sent": "Sent"
   },
   "AboutUs": {
     "AboutUs": "AboutUs",
@@ -51,7 +55,11 @@
     "Casestudy": "Casestudy",
     "Recruitment": "Recruitment",
     "News": "News",
-    "Contact": "Contact"
+    "Contact": "Contact",
+    "Download": "Download",
+    "Name": "Name",
+    "Email": "Email",
+    "Sent": "Sent"
   },
   "Recruitment": {
     "ByLocation": "By Location",

@@ -84,6 +84,7 @@ export const BigHeader = () => {
 			afterChange={handleAfterChange}
 			ref={parentSlickRef}
 			beforeChange={handleBeforeChange}
+			className="overflow-hidden"
 		>
 			<Banner
 				firstBannerAnimationsStarted={firstBannerAnimationsStarted}

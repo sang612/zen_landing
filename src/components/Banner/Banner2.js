@@ -49,7 +49,7 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
   }, [animationsStarted]);
 
   return (
-    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] w-full relative overflow-hidden">
+    <div className="bg-gradient-to-b from-[#E2F6FC] min-h-[804px] w-full relative ">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <Header />
         <div className="-z-10">
@@ -66,18 +66,18 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
         </div>
 
         <div>
-          <div className="z-10 absolute top-0 left-0">
+          <div className="z-10 sm:z-0 absolute sm:relative top-0 left-0">
             <div>
               <Image
                 src="/jp_bulding.svg"
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="w-[923px] h-[655px] first-image opacity-0"
+                className="w-[923px] h-[655px] sm:h-auto first-image opacity-0"
                 alt="jp_bulding"
               />
             </div>
-            <div className="mt-[16px] ml-[40px] text-animate opacity-0">
+            <div className="mt-[16px] ml-[40px] sm:ml-0 text-animate opacity-0">
               <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em]">
                 Japan
               </h4>
@@ -97,7 +97,7 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
               </div>
             </div>
           </div>
-          <div className="z-0 absolute top-[136px] right-0 ">
+          <div className="z-0 absolute sm:relative top-[136px] sm:top-[10px] right-0 sm:flex-col-reverse sm:flex">
             <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] text-animate opacity-0">
               <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em]">
                 Viet Nam:
@@ -124,7 +124,7 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
                 width="0"
                 height="0"
                 sizes="100vw"
-                className="w-[640px] h-[495px] second-image opacity-0"
+                className="w-[640px] h-[495px] sm:h-auto second-image opacity-0"
                 alt="cityland"
               />
             </div>

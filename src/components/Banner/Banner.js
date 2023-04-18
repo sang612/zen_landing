@@ -58,6 +58,7 @@ export const Banner = ({
   const tagAnimationInstanceRef = useRef(null);
   const gearAnimationInstanceRef = useRef(null);
   const t = useTranslations("Banner1");
+  const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
     if (firstBannerAnimationsStarted) {
@@ -66,6 +67,21 @@ export const Banner = ({
       setIsPlaying(false);
     }
   }, [firstBannerAnimationsStarted]);
+
+  useEffect(() => {
+    function handleResize() {
+      setScreenWidth(window.innerWidth);
+    }
+
+    if (typeof window !== "undefined") {
+      setScreenWidth(window.innerWidth);
+      window.addEventListener("resize", handleResize);
+
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
 
   useEffect(() => {
     let motion_path = anime.path("#circle6");
@@ -269,10 +285,10 @@ export const Banner = ({
   }, [isPlaying]);
 
   return (
-    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] w-full  overflow-hidden">
-      <div className="relative xl:max-w-[1440px] mx-auto">
+    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto w-full">
+      <div className="relative xl:max-w-[1440px] mx-auto h-[804px]">
         <Header showLogo />
-        <div>
+        <div className="w-full h-full">
           <Icon className="top-[266.44px] left-[23.21px] gear-animate">
             <Gear1Icon width={24.86} height={25.59} />
           </Icon>
@@ -362,60 +378,117 @@ export const Banner = ({
             <Circle9Icon width={59.4} height={59.31} />
           </Icon>
 
-          <Icon className="top-[73.72px] left-[341.44px] max-h-[601.98px] h-[601.98px] w-[700.56px]">
-            <Icon className="top-[201.19px] left-[217.52px] z-10 logo-animate animate opacity-0">
-              <Icon className="top-[32%] left-[32%]">
-                <Circle5Icon width={160.7} height={160.5} />
-                <Icon className="top-[8px] left-[8px] scale-90">
-                  <Circle10Icon width={140.83} height={140.99} />
-                </Icon>
-                <Icon className="top-[68.24px] left-[24.94px] loading-animate animate opacity-0">
-                  <LoadingIcon width={36.78} height={37.54} />
-                </Icon>
-                <Icon className="top-[68.27px] left-[65.91px] z-letter-animate animate opacity-0">
-                  <ZIcon width={12.38} height={18.78} />
-                </Icon>
-                <Icon className="top-[71.68px] left-[80.64px] e-letter-animate animate opacity-0">
-                  <EIcon width={14.69} height={15.37} />
-                </Icon>
-                <Icon className="top-[71.92px] left-[98.21px] n-letter-animate animate opacity-0">
-                  <NIcon width={13.64} height={15.13} />
-                </Icon>
-                <Icon className="top-[83.1px] left-[115.18px] dot-letter-animate animate opacity-0">
-                  <DotIcon width={3.93} height={3.95} />
-                </Icon>
-                <Icon className="top-[68.27px] left-[122.12px] s-letter-animate animate opacity-0">
-                  <SIcon width={12.86} height={18.79} />
+          {screenWidth < 600 ? (
+            <Icon className="top-[9.6%] left-[23.7%] max-h-[601.98px] h-[74.7%] w-[48.6%] hidden sm:block">
+              <Icon className="top-[25.0%] left-[15.1%] z-[1] logo-animate animate opacity-0">
+                <Icon className="top-[32%] left-[32%]">
+                  <Circle5Icon width={70} height={70} />
+                  <Icon className="top-[6.9%] left-[6.9%] scale-90">
+                    <Circle10Icon width={58} height={59} />
+                  </Icon>
+                  <Icon className="top-[35.2%] left-[12.6%] loading-animate animate opacity-0">
+                    <LoadingIcon width={16} height={16} />
+                  </Icon>
+                  <Icon className="top-[35.2%] left-[34.1%] z-letter-animate animate opacity-0">
+                    <ZIcon width={8} height={12} />
+                  </Icon>
+                  <Icon className="top-[41.2%] left-[46.2%] e-letter-animate animate opacity-0">
+                    <EIcon width={8} height={8} />
+                  </Icon>
+                  <Icon className="top-[41.2%] left-[56.9%] n-letter-animate animate opacity-0">
+                    <NIcon width={8} height={8} />
+                  </Icon>
+                  <Icon className="top-[49.2%] left-[68.9%] dot-letter-animate animate opacity-0">
+                    <DotIcon width={2} height={2} />
+                  </Icon>
+                  <Icon className="top-[35%] left-[71%] s-letter-animate animate opacity-0">
+                    <SIcon width={12} height={12} />
+                  </Icon>
                 </Icon>
               </Icon>
+              <div className="z-0">
+                <Icon className="top-[5.5%] left-[-50.9%] opacity-0 explain-logo-animate animate">
+                  <Item1Icon width={160} height={160}></Item1Icon>
+                  <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[35%] left-[20%] max-w-[85px]">
+                    {t("Explain1")}
+                  </span>
+                </Icon>
+                <Icon className="top-[8.6%] left-[13.8%] opacity-0 explain-logo-animate-2 animate">
+                  <Item2Icon width={120} height={120}></Item2Icon>
+                  <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[32%] left-[29%] max-w-[60px]">
+                    {t("Explain2")}
+                  </span>
+                </Icon>
+                <Icon className="top-[12.6%] left-[44.8%] opacity-0 explain-logo-animate-3 animate">
+                  <Item3Icon width={220} height={220}></Item3Icon>
+                  <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[34%] left-[28%] max-w-[130px]">
+                    {t("Explain3")}
+                  </span>
+                </Icon>
+                <Icon className="top-[31%] left-[-54%] opacity-0 explain-logo-animate-4 animate">
+                  <Item4Icon width={190} height={190}></Item4Icon>
+                  <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[37%] left-[21%] max-w-[115px]">
+                    {t("Explain4")}
+                  </span>
+                </Icon>
+              </div>
             </Icon>
-            <div className="z-0">
-              <Icon className="top-[0%] left-[-3%] opacity-0 explain-logo-animate animate">
-                <Item1Icon width={293.32} height={282.67}></Item1Icon>
-                <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[35%] left-[27%] max-w-[122.04px]">
-                  {t("Explain1")}
-                </span>
+          ) : (
+            <Icon className="top-[73.72px] left-[341.44px] max-h-[601.98px] h-[601.98px] w-[700.56px] sm:hidden">
+              <Icon className="top-[201.19px] left-[217.52px] z-10 logo-animate animate opacity-0">
+                <Icon className="top-[32%] left-[32%]">
+                  <Circle5Icon width={160.7} height={160.5} />
+                  <Icon className="top-[8px] left-[8px] scale-90">
+                    <Circle10Icon width={140.83} height={140.99} />
+                  </Icon>
+                  <Icon className="top-[68.24px] left-[24.94px] loading-animate animate opacity-0">
+                    <LoadingIcon width={36.78} height={37.54} />
+                  </Icon>
+                  <Icon className="top-[68.27px] left-[65.91px] z-letter-animate animate opacity-0">
+                    <ZIcon width={12.38} height={18.78} />
+                  </Icon>
+                  <Icon className="top-[71.68px] left-[80.64px] e-letter-animate animate opacity-0">
+                    <EIcon width={14.69} height={15.37} />
+                  </Icon>
+                  <Icon className="top-[71.92px] left-[98.21px] n-letter-animate animate opacity-0">
+                    <NIcon width={13.64} height={15.13} />
+                  </Icon>
+                  <Icon className="top-[83.1px] left-[115.18px] dot-letter-animate animate opacity-0">
+                    <DotIcon width={3.93} height={3.95} />
+                  </Icon>
+                  <Icon className="top-[68.27px] left-[122.12px] s-letter-animate animate opacity-0">
+                    <SIcon width={12.86} height={18.79} />
+                  </Icon>
+                </Icon>
               </Icon>
-              <Icon className="top-[-3.5%] left-[30%] opacity-0 explain-logo-animate-2 animate">
-                <Item2Icon width={251.54} height={254.16}></Item2Icon>
-                <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[39%] left-[29%] max-w-[119.88px]">
-                  {t("Explain2")}
-                </span>
-              </Icon>
-              <Icon className="top-[19%] left-[51.5%] opacity-0 explain-logo-animate-3 animate">
-                <Item3Icon width={361.96} height={333.55}></Item3Icon>
-                <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[31%] left-[31%] max-w-[182px]">
-                  {t("Explain3")}
-                </span>
-              </Icon>
-              <Icon className="top-[50%] left-[-6%] opacity-0 explain-logo-animate-4 animate">
-                <Item4Icon width={333.96} height={336.55}></Item4Icon>
-                <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[37%] left-[26%] max-w-[184px]">
-                  {t("Explain4")}
-                </span>
-              </Icon>
-            </div>
-          </Icon>
+              <div className="z-0">
+                <Icon className="top-[0%] left-[-3%] opacity-0 explain-logo-animate animate">
+                  <Item1Icon width={293.32} height={282.67}></Item1Icon>
+                  <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[35%] left-[27%] max-w-[122.04px]">
+                    {t("Explain1")}
+                  </span>
+                </Icon>
+                <Icon className="top-[-3.5%] left-[30%] opacity-0 explain-logo-animate-2 animate">
+                  <Item2Icon width={251.54} height={254.16}></Item2Icon>
+                  <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[39%] left-[29%] max-w-[119.88px]">
+                    {t("Explain2")}
+                  </span>
+                </Icon>
+                <Icon className="top-[19%] left-[51.5%] opacity-0 explain-logo-animate-3 animate">
+                  <Item3Icon width={361.96} height={333.55}></Item3Icon>
+                  <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[31%] left-[31%] max-w-[182px]">
+                    {t("Explain3")}
+                  </span>
+                </Icon>
+                <Icon className="top-[50%] left-[-6%] opacity-0 explain-logo-animate-4 animate">
+                  <Item4Icon width={333.96} height={336.55}></Item4Icon>
+                  <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[37%] left-[26%] max-w-[184px]">
+                    {t("Explain4")}
+                  </span>
+                </Icon>
+              </div>
+            </Icon>
+          )}
         </div>
       </div>
     </div>

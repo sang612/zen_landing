@@ -20,6 +20,7 @@ input:checked + div svg {
 .swiper {
   width: 100% !important;
   transform: translateX(-85px) !important;
+  overflow: visible !important;
 }
 .swiper-slide {
   background-position: center !important;
@@ -35,3 +36,4 @@ input:checked + div svg {
   display: block !important;
   width: 100% !important;
 }
+

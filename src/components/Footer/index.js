@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { MapPinIcon, PhoneIcon } from "@/assets/icons";
 import {
@@ -16,13 +16,13 @@ export const Footer = () => {
   const t = useTranslations("Nav");
   return (
     <footer className="border-t border-[#0000001a] border-solid mt-[100px] bg-[#fff] font-sans">
-      <div className="xl:max-w-[1440px] mx-auto px-[168px] pb-[20px] pt-[55px]">
-        <div className="flex justify-between items-center">
-          <div>
-            <h3 className="font-[700] text-[87px] leading-[104.4px] text-secondary">
+      <div className="xl:max-w-[1440px] mx-auto px-[168px] sm:px-[10px] pb-[20px] pt-[55px]">
+        <div className="flex flex-wrap justify-between items-center sm:w-full">
+          <div className="sm:w-full">
+            <h3 className="font-[700] text-[87px] sm:text-[60px] sm:leading-[70px] leading-[104.4px] text-secondary sm:text-center">
               Let’s <br /> Connect
             </h3>
-            <div className="flex justify-start items-center mt-[68px]">
+            <div className="flex justify-start sm:justify-center items-center mt-[68px]">
               <Link
                 href="https://www.facebook.com/zens.company/"
                 className="mr-[20px]"
@@ -43,7 +43,7 @@ export const Footer = () => {
               </Link>
             </div>
             <div className="mt-[40px]">
-              <div className="flex">
+              <div className="flex sm:justify-center">
                 <Link
                   href="/"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
@@ -57,7 +57,7 @@ export const Footer = () => {
                   {t("Recruitment")}
                 </Link>
               </div>
-              <div className="flex">
+              <div className="flex sm:justify-center">
                 <Link
                   href="/services"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
@@ -71,7 +71,7 @@ export const Footer = () => {
                   {t("News")}
                 </Link>
               </div>
-              <div className="flex">
+              <div className="flex sm:justify-center">
                 <Link
                   href="/casestudy"
                   className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
@@ -89,8 +89,8 @@ export const Footer = () => {
           </div>
           <div>
             <div>
-              <Image src="/Logo.svg" alt="me" width="125" height="50" />
-              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[12px]">
+              <Image src="/Logo.svg" alt="me" width="125" height="50" className="sm:hidden"/>
+              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[12px] sm:m-0">
                 <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-title">
                   Viet Nam
                 </h4>
@@ -117,7 +117,7 @@ export const Footer = () => {
                 </div>
               </div>
 
-              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[20px]">
+              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[20px] sm:m-0">
                 <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-title">
                   Japan
                 </h4>

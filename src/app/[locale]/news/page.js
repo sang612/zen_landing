@@ -37,10 +37,10 @@ export default function CasestudyPage() {
       key: "1",
       label: t("All"),
       children: (
-        <div className="grid grid-cols-4 gap-x-[42px] items-start justify-start">
+        <div className="grid grid-cols-4 sm:grid-cols-1 gap-x-[42px] items-start justify-start">
           {casestudyListFiltered?.map((item, i) => (
             <div
-              className="mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+              className="mb-[32px] sm:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
               key={i}
             >
               <div className="hover:cursor-pointer">
@@ -70,10 +70,10 @@ export default function CasestudyPage() {
       key: "2",
       label: t("New"),
       children: (
-        <div className="grid grid-cols-4 gap-x-[42px] items-start justify-start">
+        <div className="grid grid-cols-4 sm:grid-cols-1 gap-x-[42px] items-start justify-start">
           {casestudyListFiltered?.map((item, i) => (
             <div
-              className="mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+              className="mb-[32px] sm:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
               key={i}
             >
               <div className="hover:cursor-pointer">
@@ -104,7 +104,7 @@ export default function CasestudyPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] sm:px-[10px] xl:max-w-[1440px] mx-auto">
           <CustomTaps
             listContent={listContent}
             isShowContent={isShowContent}

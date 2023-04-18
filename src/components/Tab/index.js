@@ -15,7 +15,7 @@ export const CustomTaps = ({
 
   return (
     <div>
-      <div className="flex items-center justify-between border-b border-b-[#CACACA] border-solid mb-[52px] pb-[11px]">
+      <div className="flex sm:flex-col items-center justify-between border-b border-b-[#CACACA] border-solid mb-[52px] pb-[11px]">
         <div className="flex ">
           {listContent.map((tab, index) => (
             <button
@@ -37,7 +37,7 @@ export const CustomTaps = ({
             </button>
           ))}
         </div>
-        <div className="relative h-[44px] min-w-[416px]">
+        <div className="relative h-[44px] min-w-[416px] sm:min-w-full sm:mt-[30px]">
           <input
             type="text"
             className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"

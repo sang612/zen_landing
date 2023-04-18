@@ -37,11 +37,11 @@ export default function CasestudyPage() {
       key: "1",
       label: `All`,
       children: (
-        <div className="flex flex-wrap items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -87,11 +87,11 @@ export default function CasestudyPage() {
       key: "2",
       label: `App`,
       children: (
-        <div className="flex flex-wrap items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -137,11 +137,11 @@ export default function CasestudyPage() {
       key: "3",
       label: `Web`,
       children: (
-        <div className="flex flex-wrap items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -187,11 +187,11 @@ export default function CasestudyPage() {
       key: "4",
       label: `Blockchain`,
       children: (
-        <div className="flex flex-wrap items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -238,7 +238,7 @@ export default function CasestudyPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] sm:px-[10px] xl:max-w-[1440px] mx-auto">
           <CustomTaps
             listContent={listContent}
             isShowContent={isShowContent}
@@ -252,7 +252,7 @@ export default function CasestudyPage() {
         {!isShowContent && (
           <div className="relative xl:max-w-[1440px] mx-auto">
             {listDetail.map((item, i) => (
-              <div className="relative w-full h-[1024px]" key={i}>
+              <div className="relative w-full h-[1024px] sm:h-auto sm:min-h-[300px]" key={i}>
                 <Image
                   src={item}
                   fill

@@ -121,7 +121,7 @@ export const FilterSelect = ({
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between mb-[52px] pb-[11px]">
-        <div className="flex ">
+        <div className="flex sm:flex-col">
           <Select
             instanceId={1}
             defaultValue={[]}
@@ -163,11 +163,11 @@ export const FilterSelect = ({
               IndicatorSeparator: () => null,
             }}
             placeholder={t("ByTeam")}
-            className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px] ml-[32px]"
+            className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px] ml-[32px] sm:ml-0 sm:my-2"
             styles={customStyles}
           />
         </div>
-        <div className="relative h-[44px] min-w-[416px]">
+        <div className="relative h-[44px] min-w-[416px] sm:min-w-full">
           <input
             type="text"
             className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"

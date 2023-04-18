@@ -25,6 +25,7 @@ module.exports = {
     screens: {
       sm: { max: "600px" },
       // => @media (max-width: 600px) { ... }
+      xl: { min: "1440px" },
     },
   },
   plugins: [],

@@ -21,7 +21,7 @@ export const Banner4 = ({ beforeChange, slickRef }) => {
           </Icon>
         </div>
         <div
-          className="mt-[182px] ml-[80px]"
+          className="mt-[182px] sm:ml-0 ml-[80px]"
           onMouseDown={(event) => event?.stopPropagation()}
           ref={slickRef}
         >

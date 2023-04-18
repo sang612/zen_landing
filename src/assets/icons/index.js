@@ -48,3 +48,4 @@ export { FlyIcon } from "./fly";
 export { SearchIcon } from "./search";
 export { LocationIcon } from "./location";
 export { CategoryIcon } from "./category";
+export { ExplainImage } from "./explain";

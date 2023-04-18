@@ -12,7 +12,7 @@ import {
 } from "@/assets/icons";
 import { Header } from "./Header";
 
-export const Banner2 = ({ animationsStarted, hideElement }) => {
+export const Banner2 = ({ animationsStarted, hideElement, setOpenMobileNav, setOpen }) => {
   const animationRef = useRef(null);
   useEffect(() => {
     if (animationsStarted) {
@@ -51,7 +51,7 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
   return (
     <div className="bg-gradient-to-b from-[#E2F6FC] min-h-[804px] w-full relative ">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <Header />
+        <Header setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
         <div className="-z-10">
           <Icon className="top-[141.27px] left-[929px]">
             <Gear5Icon width={68.1} height={79.65} />
@@ -77,7 +77,7 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
                 alt="jp_bulding"
               />
             </div>
-            <div className="mt-[16px] ml-[40px] sm:ml-0 text-animate opacity-0">
+            <div className="mt-[16px] ml-[40px] sm:ml-0 text-animate opacity-0 sm:pl-[40px] sm:mt-0">
               <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em]">
                 Japan
               </h4>
@@ -98,7 +98,7 @@ export const Banner2 = ({ animationsStarted, hideElement }) => {
             </div>
           </div>
           <div className="z-0 absolute sm:relative top-[136px] sm:top-[10px] right-0 sm:flex-col-reverse sm:flex">
-            <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] text-animate opacity-0">
+            <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] text-animate opacity-0 sm:pl-[40px]">
               <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em]">
                 Viet Nam:
               </h4>

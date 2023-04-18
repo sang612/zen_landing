@@ -4,11 +4,11 @@ import { Gear5Icon, Gear6Icon, Gear7Icon } from "@/assets/icons";
 import { FounderSlider } from "../FounderSlider/FounderSlider";
 import { Header } from "./Header";
 
-export const Banner4 = ({ beforeChange, slickRef }) => {
+export const Banner4 = ({ beforeChange, slickRef, setOpenMobileNav, setOpen }) => {
   return (
     <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] w-full relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <Header showLogo />
+        <Header showLogo setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
         <div className="-z-10">
           <Icon className="top-[141.27px] left-[929px]">
             <Gear5Icon width={68.1} height={79.65} />

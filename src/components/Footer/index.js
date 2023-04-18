@@ -16,7 +16,7 @@ export const Footer = () => {
   const t = useTranslations("Nav");
   return (
     <footer className="border-t border-[#0000001a] border-solid mt-[100px] bg-[#fff] font-sans">
-      <div className="xl:max-w-[1440px] mx-auto px-[168px] sm:px-[10px] pb-[20px] pt-[55px]">
+      <div className="xl:max-w-[1440px] mx-auto px-[168px] sm:px-[40px] pb-[20px] pt-[55px]">
         <div className="flex flex-wrap justify-between items-center sm:w-full">
           <div className="sm:w-full">
             <h3 className="font-[700] text-[87px] sm:text-[60px] sm:leading-[70px] leading-[104.4px] text-secondary sm:text-center">
@@ -26,6 +26,7 @@ export const Footer = () => {
               <Link
                 href="https://www.facebook.com/zens.company/"
                 className="mr-[20px]"
+                target="_blank"
               >
                 <Facebook />
               </Link>

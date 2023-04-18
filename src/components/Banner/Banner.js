@@ -52,6 +52,8 @@ const shuffleArray = (array) => {
 export const Banner = ({
   firstBannerAnimationsStarted,
   setFirstBannerAnimationsStarted,
+  setOpenMobileNav,
+  setOpen,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const animationInstanceRef = useRef(null);
@@ -287,7 +289,11 @@ export const Banner = ({
   return (
     <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto w-full">
       <div className="relative xl:max-w-[1440px] mx-auto h-[804px]">
-        <Header showLogo />
+        <Header
+          showLogo
+          setOpenMobileNav={setOpenMobileNav}
+          setOpen={setOpen}
+        />
         <div className="w-full h-full">
           <Icon className="top-[266.44px] left-[23.21px] gear-animate">
             <Gear1Icon width={24.86} height={25.59} />

@@ -104,7 +104,7 @@ export default function CasestudyPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] sm:px-[10px] xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] sm:px-[40px] xl:max-w-[1440px] mx-auto">
           <CustomTaps
             listContent={listContent}
             isShowContent={isShowContent}

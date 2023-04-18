@@ -7,7 +7,7 @@ export const ServicesSliderItem = ({ title, listDesc, icon }) => {
       <h4 className="font-[600] text-[27px] sm:text-[19px] leading-[32px] text-body mt-[12px] text-center">
         {title}
       </h4>
-      <ul className="list-disc ml-[20px] mt-[32px] sm:mt-[10px] font-[400] text-[15px] sm:text-[9px] leading-[28px] text-body">
+      <ul className="list-disc ml-[20px] mt-[32px] sm:mt-[10px] font-[400] text-[15px] sm:text-[9px] leading-[28px] sm:leading-[15px] text-body">
         {listDesc.map((e, i) => (
           <li key={i}>{e}</li>
         ))}

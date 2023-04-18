@@ -189,7 +189,7 @@ export default function AboutUsPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] sm:px-[10px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
+        <div className="px-[80px] sm:px-[40px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
           <div className="pb-[88px]">
             <ServicesSlider servicesList={servicesList} />
             <p className="max-w-[824px] mx-auto text-center -mt-10">

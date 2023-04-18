@@ -4,11 +4,11 @@ import Image from "next/image";
 import { Gear5Icon, Gear6Icon, Gear7Icon } from "@/assets/icons";
 import { Header } from "./Header";
 
-export const Banner3 = () => {
+export const Banner3 = ({setOpenMobileNav, setOpen}) => {
   return (
     <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] w-full relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <Header showLogo showButtonGroup />
+        <Header showLogo showButtonGroup setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
 
         <div className="-z-10">
           <Icon className="top-[141.27px] left-[929px]">

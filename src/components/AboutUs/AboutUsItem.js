@@ -3,7 +3,7 @@ export const AboutUsItem = ({ icon, title, desc, delay }) => {
 
   return (
     <div
-      className="wow fadeInLeft hover:bg-[#fff] w-full flex px-[20px] py-[12px] items-center rounded-[10px] hover:shadow-hover transition-all duration-[0.2s] ease-in-out"
+      className="wow fadeInLeft hover:bg-[#fff] w-full flex px-[20px] sm:px-0 py-[12px] items-center rounded-[10px] hover:shadow-hover transition-all duration-[0.2s] ease-in-out"
       data-wow-delay={delay}
     >
       <div>

@@ -74,30 +74,30 @@ export default function AboutUsPage() {
   const t = useTranslations("AboutUs");
 
   return (
-		<div className="relative overflow-hidden">
-			<div className="relative xl:max-w-[1440px] mx-auto">
-				<div className="sm:px-[10px] px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
-					<div className="sm:flex-col flex flex-wrap items-center justify-center py-[88px] sm:py-[20px]">
-						<div className="sm:w-full w-1/2">
-							<div className="sm:mx-auto relative bg-[url('/blue-circle.svg')] bg-no-repeat w-[288px] h-[293px]">
-								<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[700] text-[67px] whitespace-nowrap">
-									{t("AboutUs")}
-								</div>
-							</div>
-						</div>
-						<div className="sm:w-full w-1/2">
-							<div>
-								<h4 className="font-[600] text-[39px] leading-[48px] sm:mt-5">
-									01. {t("Vision")}
-								</h4>
-								<p className="font-[400] text-[19px] sm:text-[13px] leading-[32px]">
-									{t("VisionDesc")}
-								</p>
-							</div>
-							<div className="mt-[32px]">
-								{visionList.map((item) => {
-									const itemDelay = `${delay}s`;
-									delay += 0.2;
+    <div className="relative overflow-hidden">
+      <div className="relative xl:max-w-[1440px] mx-auto">
+        <div className="sm:px-[40px] px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
+          <div className="sm:flex-col flex flex-wrap items-center justify-center py-[88px] sm:py-[20px]">
+            <div className="sm:w-full w-1/2">
+              <div className="sm:mx-auto relative bg-[url('/blue-circle.svg')] bg-no-repeat w-[288px] h-[293px]">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[700] text-[67px] whitespace-nowrap">
+                  {t("AboutUs")}
+                </div>
+              </div>
+            </div>
+            <div className="sm:w-full w-1/2">
+              <div>
+                <h4 className="font-[600] text-[39px] leading-[48px] ">
+                  01. {t("Vision")}
+                </h4>
+                <p className="font-[400] text-[19px] sm:text-[13px] leading-[32px]">
+                  {t("VisionDesc")}
+                </p>
+              </div>
+              <div className="mt-[32px]">
+                {visionList.map((item) => {
+                  const itemDelay = `${delay}s`;
+                  delay += 0.2;
 
 									return (
 										<AboutUsItem
@@ -190,60 +190,60 @@ export default function AboutUsPage() {
 										style={{ maxWidth: "none", width: "150%", height: "150%" }}
 									/>
 
-									<div className="w-[134px]">
-										<CountUp start={0} end={25} duration={3} enableScrollSpy />+
-									</div>
-								</div>
-								<div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
-									{t("Employees")}
-								</div>
-							</div>
-							<div className="relative">
-								<div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
-									<Image
-										src="/bg/simple-icons_marketo.png"
-										alt="bg-number3"
-										className="absolute z-[-1] left-[-40%] top-[-25%]"
-										width={100}
-										height={100}
-										style={{ maxWidth: "none", width: "150%", height: "150%" }}
-									/>
-									<div className="w-[134px]">
-										<CountUp start={0} end={15} duration={3} enableScrollSpy />+
-									</div>
-								</div>
-								<div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
-									{t("Projects")}
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="sm:px-[10px] sm:flex-col flex items-start justify-start px-[88px] mt-[96px]">
-						<div className="sm:w-full w-1/2">
-							<h4 className="font-[600] text-[39px] leading-[49px]">
-								{t("WePromiesToBring")}
-							</h4>
-							<p className="font-[400] text-[27px] leading-[32px] mt-10">
-								{t("CoreValue")} <br /> {t("Promise")}
-							</p>
-						</div>
-						<div className="sm:w-full sm:ml-0 sm:mt-2 w-1/2 ml-[156px]">
-							<div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-								{t("CoreValue1")}
-							</div>
-							<div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-								{t("CoreValue2")}
-							</div>
-							<div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-								{t("CoreValue3")}
-							</div>
-							<div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
-								{t("CoreValue4")}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+                  <div className="w-[134px]">
+                    <CountUp start={0} end={25} duration={3} enableScrollSpy />+
+                  </div>
+                </div>
+                <div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
+                  {t("Employees")}
+                </div>
+              </div>
+              <div className="relative">
+                <div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
+                  <Image
+                    src="/bg/simple-icons_marketo.png"
+                    alt="bg-number3"
+                    className="absolute z-[-1] left-[-40%] top-[-25%]"
+                    width={100}
+                    height={100}
+                    style={{ maxWidth: "none", width: "150%", height: "150%" }}
+                  />
+                  <div className="w-[134px]">
+                    <CountUp start={0} end={15} duration={3} enableScrollSpy />+
+                  </div>
+                </div>
+                <div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
+                  {t("Projects")}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sm:px-[40px] sm:flex-col flex items-start justify-start px-[88px] mt-[96px]">
+            <div className="sm:w-full w-1/2">
+              <h4 className="font-[600] text-[39px] leading-[49px]">
+                {t("WePromiesToBring")}
+              </h4>
+              <p className="font-[400] text-[27px] leading-[32px] mt-10">
+                {t("CoreValue")} <br /> {t("Promise")}
+              </p>
+            </div>
+            <div className="sm:w-full sm:ml-0 sm:mt-2 w-1/2 ml-[156px]">
+              <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
+                {t("CoreValue1")}
+              </div>
+              <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
+                {t("CoreValue2")}
+              </div>
+              <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
+                {t("CoreValue3")}
+              </div>
+              <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
+                {t("CoreValue4")}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

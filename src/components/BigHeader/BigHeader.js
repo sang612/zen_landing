@@ -122,7 +122,6 @@ export const BigHeader = () => {
 		})
 			.then((res) => res.json())
 			.then((data) => {
-				console.log("data", data);
 				if (data.data.status === 200) {
 					window.open("/ユーザー一括登録用エクセル_Nerusoku.xlsx");
 					setOpen(false);

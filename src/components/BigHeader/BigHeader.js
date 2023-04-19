@@ -112,7 +112,7 @@ export const BigHeader = () => {
 			email,
 		};
 
-		const rs = fetch(`/api/submitGGSheet`, {
+		fetch(`/api/submitGGSheet`, {
 			method: "POST",
 			headers: {
 				Accept: "application/json",

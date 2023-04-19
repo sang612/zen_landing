@@ -130,8 +130,6 @@ export const BigHeader = () => {
 					setEmail("");
 				}
 			});
-
-		console.log(rs);
 	};
 
 	const [openMobileNav, setOpenMobileNav] = useState(false);
@@ -271,7 +269,7 @@ export const BigHeader = () => {
 									setOpen((o) => !o);
 									setOpenMobileNav((prev) => !prev);
 								}}
-								className="bg-primary p-1 rounded-md text-[9px] text-[#fff] font-bold my-3"
+								className="bg-[#f67b25] p-2 rounded-md text-[18px] text-[#fff] font-bold my-3"
 							>
 								{t("Download")}
 							</button>

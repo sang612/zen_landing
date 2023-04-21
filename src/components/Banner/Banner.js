@@ -202,9 +202,11 @@ export const Banner = ({
                                       duration: 5000,
                                       loop: true,
                                       begin: () => {
-                                        document.querySelector(
-                                          "#circle7"
-                                        ).style.opacity = 1;
+                                        let circle7 =
+                                          document.querySelector("#circle7");
+                                        if (circle7) {
+                                          circle7.style.opacity = 1;
+                                        }
                                         animationInstanceRef.current = anime({
                                           targets: ".blue-circle-animate",
                                           opacity: [0, 1],
@@ -287,7 +289,7 @@ export const Banner = ({
   }, [isPlaying]);
 
   return (
-    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto w-full">
+    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto w-full overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto h-[804px]">
         <Header
           showLogo

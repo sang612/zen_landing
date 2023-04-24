@@ -53,14 +53,14 @@ export const Banner2 = ({ animationsStarted, hideElement, setOpenMobileNav, setO
       <div className="relative xl:max-w-[1440px] mx-auto">
         <Header setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
         <div className="-z-10">
-          <Icon className="top-[141.27px] left-[929px]">
+          <Icon className="top-[141.27px] left-[929px] sm:left-[10%]">
             <Gear5Icon width={68.1} height={79.65} />
           </Icon>
-          <Icon className="top-[155.43px] left-[980.99px]">
+          <Icon className="top-[155.43px] left-[980.99px] sm:left-[24%]">
             <Gear6Icon width={116.39} height={136.08} />
           </Icon>
 
-          <Icon className="top-[200.17px] left-[1092.28px]">
+          <Icon className="top-[200.17px] left-[1092.28px] sm:left-[54%]">
             <Gear7Icon width={69.08} height={80.78} />
           </Icon>
         </div>

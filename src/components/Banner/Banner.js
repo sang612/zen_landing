@@ -364,12 +364,12 @@ export const Banner = ({
             <DivIcon width={34.4} height={37.41} />
           </Icon>
 
-          <Icon className="top-[92.38px] left-[375.11px] orange-circle-animate animate opacity-0">
-            <Circle6Icon width={528.39} height={527.74} idPath="circle6" />
+          <Icon className="top-[92.38px] left-[375.11px] m:left-[10%] orange-circle-animate animate opacity-0">
+            <Circle6Icon width={528.39} height={527.74} idPath="circle6" className='sm:w-[71vw] h-auto' />
           </Icon>
 
           <Icon
-            className="top-[77px] left-[357px] opacity-0 animate"
+            className="top-[77px] left-[357px] m:left-[7%] opacity-0 animate"
             id="circle7"
           >
             <Circle7Icon width={34.56} height={34.52} />
@@ -415,25 +415,25 @@ export const Banner = ({
                 </Icon>
               </Icon>
               <div className="z-0">
-                <Icon className="top-[5.5%] left-[-50.9%] opacity-0 explain-logo-animate animate">
+                <Icon className="top-[5.5%] s:left-[-50.9%] sm:left-[-35.9%] opacity-0 explain-logo-animate animate">
                   <Item1Icon width={160} height={160}></Item1Icon>
                   <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[35%] left-[20%] max-w-[85px]">
                     {t("Explain1")}
                   </span>
                 </Icon>
-                <Icon className="top-[8.6%] left-[13.8%] opacity-0 explain-logo-animate-2 animate">
+                <Icon className="top-[8.6%] s:left-[13.8%] sm:left-[13.8%] opacity-0 explain-logo-animate-2 animate">
                   <Item2Icon width={120} height={120}></Item2Icon>
                   <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[32%] left-[29%] max-w-[60px]">
                     {t("Explain2")}
                   </span>
                 </Icon>
-                <Icon className="top-[12.6%] left-[44.8%] opacity-0 explain-logo-animate-3 animate">
+                <Icon className="top-[12.6%] s:left-[44.8%] sm:left-[35.8%] opacity-0 explain-logo-animate-3 animate">
                   <Item3Icon width={220} height={220}></Item3Icon>
                   <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[34%] left-[28%] max-w-[130px]">
                     {t("Explain3")}
                   </span>
                 </Icon>
-                <Icon className="top-[31%] left-[-54%] opacity-0 explain-logo-animate-4 animate">
+                <Icon className="top-[31%] s:left-[-54%] sm:left-[-42%] opacity-0 explain-logo-animate-4 animate">
                   <Item4Icon width={190} height={190}></Item4Icon>
                   <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[37%] left-[21%] max-w-[115px]">
                     {t("Explain4")}
@@ -442,7 +442,7 @@ export const Banner = ({
               </div>
             </Icon>
           ) : (
-            <Icon className="top-[73.72px] left-[341.44px] max-h-[601.98px] h-[601.98px] w-[700.56px] sm:hidden">
+            <Icon className="top-[73.72px] left-[341.44px] m:left-[10%] max-h-[601.98px] h-[601.98px] w-[700.56px] sm:hidden">
               <Icon className="top-[201.19px] left-[217.52px] z-10 logo-animate animate opacity-0">
                 <Icon className="top-[32%] left-[32%]">
                   <Circle5Icon width={160.7} height={160.5} />

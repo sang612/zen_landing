@@ -6,7 +6,7 @@ import { Header } from "./Header";
 
 export const Banner3 = ({setOpenMobileNav, setOpen}) => {
   return (
-    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] w-full relative overflow-hidden">
+    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto sm:mb-4 w-full relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <Header showLogo showButtonGroup setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
 

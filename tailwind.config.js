@@ -23,7 +23,9 @@ module.exports = {
       body: "#0B2337",
     },
     screens: {
+      m: { max: "900px" },
       sm: { max: "600px" },
+      s: { max: "420px" },
       // => @media (max-width: 600px) { ... }
       xl: { min: "1440px" },
     },

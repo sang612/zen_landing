@@ -44,44 +44,44 @@ export const Footer = () => {
               </Link>
             </div>
             <div className="mt-[40px]">
-              <div className="flex sm:justify-center">
+              <div className="flex sm:justify-center sm:text-center">
                 <Link
                   href="/"
-                  className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
+                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("AboutUs")}
                 </Link>
                 <Link
                   href="/recruitment"
-                  className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
+                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Recruitment")}
                 </Link>
               </div>
-              <div className="flex sm:justify-center">
+              <div className="flex sm:justify-center sm:text-center">
                 <Link
                   href="/services"
-                  className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
+                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Services")}
                 </Link>
                 <Link
                   href="/news"
-                  className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
+                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("News")}
                 </Link>
               </div>
-              <div className="flex sm:justify-center">
+              <div className="flex sm:justify-center sm:text-center">
                 <Link
                   href="/casestudy"
-                  className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
+                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Casestudy")}
                 </Link>
                 <Link
                   href="/contact"
-                  className="min-w-[85px] mr-[40px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title"
+                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Contact")}
                 </Link>
@@ -99,7 +99,7 @@ export const Footer = () => {
                   <div className="flex flex-row items-center">
                     <MapPinIcon width={20} height={20} />
                     <Link
-                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub"
+                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub hover:text-title"
                       href="https://www.google.com/maps/place/C%C3%B4ng+ty+c%E1%BB%95+ph%E1%BA%A7n+c%C3%B4ng+ngh%E1%BB%87+ZenS/@10.8354372,106.6675287,18z/data=!3m1!4b1!4m6!3m5!1s0x31752910902df7b1:0x92e7a55bfae26cb6!8m2!3d10.8354346!4d106.669771!16s%2Fg%2F11rt_wdk_q"
                     >
                       No. 59, Road 06, Cityland Park Hills, 10, Go Vap, Ho Chi
@@ -110,7 +110,7 @@ export const Footer = () => {
                     <PhoneIcon width={20} height={20} />
                     <Link
                       href="tel:0974497631"
-                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub"
+                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub hover:text-title"
                     >
                       0974-497-631
                     </Link>
@@ -125,7 +125,7 @@ export const Footer = () => {
                 <div className="mt-[12px]">
                   <div className="flex flex-row items-center">
                     <MapPinIcon width={20} height={20} />
-                    <h5 className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub">
+                    <h5 className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub hover:text-title">
                       〒110-0005 東京都台東区上野7丁目3-9アルベルゴ上野511
                     </h5>
                   </div>
@@ -133,14 +133,14 @@ export const Footer = () => {
                     <PhoneIcon width={20} height={20} />
                     <Link
                       href="tel:0362317256"
-                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub"
+                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub hover:text-title"
                     >
                       03-6231-7256
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="mt-[24px] font-[600] text-[15px] leading-[28px] text-title flex items-center">
+              <div className="mt-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300 flex items-center">
                 <Mail />
                 <Link href="mailto:contact@zen-s.com" className="ml-[12px]">
                   Email: contact@zen-s.com

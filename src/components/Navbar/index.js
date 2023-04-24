@@ -29,7 +29,7 @@ export const Navbar = () => {
 			let windowHeight = window.scrollY;
 			if (windowHeight > 800) {
 				setStickyClass(
-					"fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-[#fff] w-full p-5 h-[100px] shadow-md m:pr-[200px]"
+					"fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-[#fff] w-full p-5 h-[100px] shadow-md lg:pr-[200px]"
 				);
 				setButtonClass("flex");
 			} else {
@@ -48,11 +48,11 @@ export const Navbar = () => {
 
 	const t = useTranslations("Nav");
 	return (
-		<div className="sm:hidden h-[100px] flex justify-center items-center">
+		<div className="lg:hidden h-[100px] flex justify-center items-center">
 			<nav
 				className={`flex flex-wrap items-center justify-center mb-[100px] transition-[height] ease-in-out duration-500 ${stickyClass}`}
 			>
-				<Link href="/" className="m:w-[17%]">
+				<Link href="/" className="lg:w-[17%]">
 					<Image
 						src="/Logo.svg"
 						alt="me"

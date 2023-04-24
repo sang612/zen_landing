@@ -16,13 +16,13 @@ export const Footer = () => {
   const t = useTranslations("Nav");
   return (
     <footer className="border-t border-[#0000001a] border-solid mt-[100px] bg-[#fff] font-sans">
-      <div className="xl:max-w-[1440px] mx-auto px-[168px] sm:px-[40px] pb-[20px] pt-[55px]">
-        <div className="flex flex-wrap justify-between items-center sm:w-full">
-          <div className="sm:w-full">
-            <h3 className="font-[700] text-[87px] sm:text-[60px] sm:leading-[70px] leading-[104.4px] text-secondary sm:text-center">
+      <div className="xl:max-w-[1440px] mx-auto px-[168px] lg:px-[40px] pb-[20px] pt-[55px]">
+        <div className="flex flex-wrap justify-between lg:justify-center items-center lg:w-full">
+          <div className="lg:w-full">
+            <h3 className="font-[700] text-[87px] lg:text-[60px] lg:leading-[70px] leading-[104.4px] text-secondary lg:text-center">
               Let’s <br /> Connect
             </h3>
-            <div className="flex justify-start sm:justify-center items-center mt-[68px]">
+            <div className="flex justify-start lg:justify-center items-center mt-[68px]">
               <Link
                 href="https://www.facebook.com/zens.company/"
                 className="mr-[20px]"
@@ -44,44 +44,44 @@ export const Footer = () => {
               </Link>
             </div>
             <div className="mt-[40px]">
-              <div className="flex sm:justify-center sm:text-center">
+              <div className="flex lg:justify-center lg:text-center">
                 <Link
                   href="/"
-                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
+                  className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("AboutUs")}
                 </Link>
                 <Link
                   href="/recruitment"
-                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
+                  className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Recruitment")}
                 </Link>
               </div>
-              <div className="flex sm:justify-center sm:text-center">
+              <div className="flex lg:justify-center lg:text-center">
                 <Link
                   href="/services"
-                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
+                  className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Services")}
                 </Link>
                 <Link
                   href="/news"
-                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
+                  className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("News")}
                 </Link>
               </div>
-              <div className="flex sm:justify-center sm:text-center">
+              <div className="flex lg:justify-center lg:text-center">
                 <Link
                   href="/casestudy"
-                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
+                  className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Casestudy")}
                 </Link>
                 <Link
                   href="/contact"
-                  className="min-w-[85px] mr-[40px] sm:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
+                  className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-title hover:text-primary transition-all duration-300"
                 >
                   {t("Contact")}
                 </Link>
@@ -90,8 +90,8 @@ export const Footer = () => {
           </div>
           <div>
             <div>
-              <Image src="/Logo.svg" alt="me" width="125" height="50" className="sm:hidden"/>
-              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[12px] sm:m-0">
+              <Image src="/Logo.svg" alt="me" width="125" height="50" className="lg:hidden"/>
+              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[12px] lg:m-0">
                 <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-title">
                   Viet Nam
                 </h4>
@@ -118,7 +118,7 @@ export const Footer = () => {
                 </div>
               </div>
 
-              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[20px] sm:m-0">
+              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[20px] lg:m-0">
                 <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-title">
                   Japan
                 </h4>

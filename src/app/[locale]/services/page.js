@@ -189,19 +189,19 @@ export default function AboutUsPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] sm:px-[40px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
+        <div className="px-[80px] lg:px-[40px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
           <div className="pb-[88px]">
             <ServicesSlider servicesList={servicesList} />
             <p className="max-w-[824px] mx-auto text-center -mt-10">
               {t("WeProvice")}
             </p>
           </div>
-          <div className="my-[100px] sm:my-[20px]">
+          <div className="my-[100px] lg:my-[20px]">
             <TextSection
               title={t("OurTechnologySolution")}
               desc={t("OurTechnologySolutionDesc")}
             />
-            <div className="grid grid-cols-3 sm:grid-cols-2 mt-[36px] mx-auto justify-items-start max-w-[865px]">
+            <div className="grid grid-cols-3 lg:grid-cols-2 mt-[36px] mx-auto justify-items-start max-w-[865px]">
               {technologyList.map((item) => {
                 return (
                   <TechnologyItem
@@ -213,12 +213,12 @@ export default function AboutUsPage() {
               })}
             </div>
           </div>
-          <div className="my-[100px] sm:my-[20px]">
+          <div className="my-[100px] lg:my-[20px]">
             <TextSection
               title={t("LaboContract(ODC)")}
               desc={t("LaboContractDesc")}
             />
-            <div className="grid grid-cols-2 sm:grid-cols-1 mt-[80px]">
+            <div className="grid grid-cols-2 lg:grid-cols-1 mt-[80px]">
               {laboContractList.map((item) => {
                 const itemDelay = `${delay}s`;
                 delay += 0.2;
@@ -235,12 +235,12 @@ export default function AboutUsPage() {
               })}
             </div>
           </div>
-          <div className="mt-[172px] sm:mt-[20px] mb-[120px] sm:mb-[20px]">
+          <div className="mt-[172px] lg:mt-[20px] mb-[120px] lg:mb-[20px]">
             <TextSection
               title={t("ContractAgreement")}
               desc={t("ContractAgreementDesc")}
             />
-            <div className="grid grid-cols-2 sm:grid-cols-1 mt-[80px]">
+            <div className="grid grid-cols-2 lg:grid-cols-1 mt-[80px]">
               {contractAgreementList.map((item) => {
                 const itemDelay = `${delay}s`;
                 delay += 0.2;

@@ -10,7 +10,7 @@ export default function CasestudyPage() {
   const [listDetail, setListDetail] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [casestudyData, setCasestudyData] = useState([]);
-  const [category, setCategory] = useState('All')
+  const [category, setCategory] = useState("All");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -37,11 +37,11 @@ export default function CasestudyPage() {
       key: "1",
       label: `All`,
       children: (
-        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -51,12 +51,13 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="lg:mx-[-1.25rem] lg:w-auto w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
                       fill
                       sizes="auto"
                       alt={item.name}
+                      className="lg:w-screen"
                     />
                   </div>
                   <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
@@ -87,11 +88,11 @@ export default function CasestudyPage() {
       key: "2",
       label: `App`,
       children: (
-        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -101,7 +102,7 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="lg:mx-[-1.25rem] w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
                       fill
@@ -137,11 +138,11 @@ export default function CasestudyPage() {
       key: "3",
       label: `Web`,
       children: (
-        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -151,7 +152,7 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="lg:mx-[-1.25rem] w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
                       fill
@@ -187,11 +188,11 @@ export default function CasestudyPage() {
       key: "4",
       label: `Blockchain`,
       children: (
-        <div className="flex flex-wrap sm:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] sm:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -201,7 +202,7 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="lg:mx-[-1.25rem] w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
                       fill
@@ -238,7 +239,7 @@ export default function CasestudyPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] sm:px-[40px] xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] lg:px-0 xl:max-w-[1440px] mx-auto">
           <CustomTaps
             listContent={listContent}
             isShowContent={isShowContent}
@@ -252,7 +253,10 @@ export default function CasestudyPage() {
         {!isShowContent && (
           <div className="relative xl:max-w-[1440px] mx-auto">
             {listDetail.map((item, i) => (
-              <div className="relative w-full h-[1024px] sm:h-auto sm:min-h-[300px]" key={i}>
+              <div
+                className="relative w-full h-[1024px] lg:h-auto lg:min-h-[300px]"
+                key={i}
+              >
                 <Image
                   src={item}
                   fill

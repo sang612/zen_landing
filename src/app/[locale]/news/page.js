@@ -37,14 +37,14 @@ export default function CasestudyPage() {
       key: "1",
       label: t("All"),
       children: (
-        <div className="grid grid-cols-4 sm:grid-cols-1 gap-x-[42px] items-start justify-start">
+        <div className="grid grid-cols-4 lg:grid-cols-1 gap-x-[42px] items-start justify-start">
           {casestudyListFiltered?.map((item, i) => (
             <div
-              className="mb-[32px] sm:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+              className="mb-[32px] lg:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
               key={i}
             >
               <div className="hover:cursor-pointer">
-                <div className="w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
+                <div className="lg:mx-[-1.25rem] lg:w-screen lg:h-[562px] sm:h-[200px] w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
                   <Image src={item.imgSrc} fill sizes="auto" alt={item.name} />
                 </div>
                 <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
@@ -70,14 +70,14 @@ export default function CasestudyPage() {
       key: "2",
       label: t("New"),
       children: (
-        <div className="grid grid-cols-4 sm:grid-cols-1 gap-x-[42px] items-start justify-start">
+        <div className="grid grid-cols-4 lg:grid-cols-1 gap-x-[42px] items-start justify-start">
           {casestudyListFiltered?.map((item, i) => (
             <div
-              className="mb-[32px] sm:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+              className="mb-[32px] lg:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
               key={i}
             >
               <div className="hover:cursor-pointer">
-                <div className="w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
+                <div className="lg:mx-[-1.25rem] lg:w-screen lg:h-[562px] sm:h-[200px] w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
                   <Image src={item.imgSrc} fill sizes="auto" alt={item.name} />
                 </div>
                 <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
@@ -104,7 +104,7 @@ export default function CasestudyPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] sm:px-[40px] xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] lg:px-0 xl:max-w-[1440px] mx-auto">
           <CustomTaps
             listContent={listContent}
             isShowContent={isShowContent}

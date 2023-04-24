@@ -23,7 +23,7 @@ module.exports = {
       body: "#0B2337",
     },
     screens: {
-      m: { max: "900px" },
+      lg: { max: "1023px" },
       sm: { max: "600px" },
       s: { max: "420px" },
       // => @media (max-width: 600px) { ... }

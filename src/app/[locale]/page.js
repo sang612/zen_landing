@@ -76,21 +76,21 @@ export default function AboutUsPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="sm:px-[40px] px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
-          <div className="sm:flex-col flex flex-wrap items-center justify-center py-[88px] sm:py-[20px]">
-            <div className="sm:w-full w-1/2">
-              <div className="sm:mx-auto relative bg-[url('/blue-circle.svg')] bg-no-repeat w-[288px] h-[293px]">
+        <div className="lg:px-[40px] px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
+          <div className="lg:flex-col flex flex-wrap items-center justify-center py-[88px] lg:py-[20px]">
+            <div className="lg:w-full w-1/2">
+              <div className="lg:mx-auto relative bg-[url('/blue-circle.svg')] bg-no-repeat w-[288px] h-[293px]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[700] text-[67px] whitespace-nowrap">
                   {t("AboutUs")}
                 </div>
               </div>
             </div>
-            <div className="sm:w-full w-1/2">
+            <div className="lg:w-full w-1/2">
               <div>
                 <h4 className="font-[600] text-[39px] leading-[48px] ">
                   01. {t("Vision")}
                 </h4>
-                <p className="font-[400] text-[19px] sm:text-[13px] leading-[32px]">
+                <p className="font-[400] text-[19px] lg:text-[13px] leading-[32px]">
                   {t("VisionDesc")}
                 </p>
               </div>
@@ -112,16 +112,16 @@ export default function AboutUsPage() {
 							</div>
 						</div>
 					</div>
-					<div className="sm:flex-col flex items-center justify-center py-[88px] sm:py-[20px]">
-						<div className="sm:w-full w-1/2">
-							<h4 className="font-[600] text-[39px] leading-[48px] sm:mt-5">
+					<div className="lg:flex-col flex items-center justify-center py-[88px] lg:py-[20px]">
+						<div className="lg:w-full w-1/2">
+							<h4 className="font-[600] text-[39px] leading-[48px] lg:mt-5">
 								02. {t("Mission")}
 							</h4>
-							<p className="font-[400] text-[19px] sm:text-[13px] leading-[32px] max-w-[558px] sm:max-w-none">
+							<p className="font-[400] text-[19px] lg:text-[13px] leading-[32px] max-w-[558px] lg:max-w-none">
 								{t("MissionDesc")}
 							</p>
 						</div>
-						<div className="sm:w-full w-1/2">
+						<div className="lg:w-full w-1/2">
 							<div className="font-[400] text-[59px] leading-[78px] text-secondary flex-none order-1 flex-grow-0 w-full">
 								<p className="text-left"> {t("WeDoAllThings")}</p>
 								<p className="text-right"> {t("WithABigHeart")}</p>
@@ -129,17 +129,17 @@ export default function AboutUsPage() {
 						</div>
 					</div>
 
-					<div className="flex-col items-center justify-start py-[88px] sm:py-[20px]">
-						<div className="sm:w-full w-1/2">
-							<h4 className="font-[600] text-[39px] leading-[48px] sm:mt-5">
+					<div className="flex-col items-center justify-start py-[88px] lg:py-[20px]">
+						<div className="lg:w-full w-1/2">
+							<h4 className="font-[600] text-[39px] leading-[48px] lg:mt-5">
 								03. {t("Action")}
 							</h4>
 							<p
-								className="font-[400] text-[19px] sm:text-[13px] leading-[32px]"
+								className="font-[400] text-[19px] lg:text-[13px] leading-[32px]"
 								dangerouslySetInnerHTML={{ __html: t("ActionDesc") }}
 							></p>
 						</div>
-						<div className="w-full grid sm:grid-cols-1 grid-cols-2 mt-[32px]">
+						<div className="w-full grid lg:grid-cols-1 grid-cols-2 mt-[32px]">
 							{actionList.map((item) => {
 								const itemDelay = `${delay}s`;
 								delay += 0.2;
@@ -160,7 +160,7 @@ export default function AboutUsPage() {
 						<h4 className="font-[600] text-[39px] leading-[48px] text-center mt-5">
 							{t("OurPerformance")}
 						</h4>
-						<div className="sm:flex-col flex justify-center items-center mt-[20px]">
+						<div className="lg:flex-col flex justify-center items-center mt-[20px]">
 							<div className="relative">
 								<div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
 									<Image
@@ -175,7 +175,7 @@ export default function AboutUsPage() {
 										<CountUp start={0} end={10} duration={3} enableScrollSpy />+
 									</div>
 								</div>
-								<div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
+								<div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
 									{t("Customer")}
 								</div>
 							</div>
@@ -194,7 +194,7 @@ export default function AboutUsPage() {
                     <CountUp start={0} end={25} duration={3} enableScrollSpy />+
                   </div>
                 </div>
-                <div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
+                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
                   {t("Employees")}
                 </div>
               </div>
@@ -212,14 +212,14 @@ export default function AboutUsPage() {
                     <CountUp start={0} end={15} duration={3} enableScrollSpy />+
                   </div>
                 </div>
-                <div className="text-center font-[400] text-[19px] sm:text-[13px] leading-[32px] text-title">
+                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
                   {t("Projects")}
                 </div>
               </div>
             </div>
           </div>
-          <div className="sm:px-[40px] sm:flex-col flex items-start justify-start px-[88px] mt-[96px]">
-            <div className="sm:w-full w-1/2">
+          <div className="lg:px-[40px] lg:flex-col flex items-start justify-start px-[88px] mt-[96px]">
+            <div className="lg:w-full w-1/2">
               <h4 className="font-[600] text-[39px] leading-[49px]">
                 {t("WePromiesToBring")}
               </h4>
@@ -227,7 +227,7 @@ export default function AboutUsPage() {
                 {t("CoreValue")} <br /> {t("Promise")}
               </p>
             </div>
-            <div className="sm:w-full sm:ml-0 sm:mt-2 w-1/2 ml-[156px]">
+            <div className="lg:w-full lg:ml-0 lg:mt-2 w-1/2 ml-[156px]">
               <div className="pl-[32px] mb-[42px] font-[400] text-[13px] leading-[20px] relative before:rounded-full before:top-1/2 before:-translate-y-1/2 before:absolute before:left-0 before:content-[''] before:w-[16px] before:h-[16px] before:bg-primary">
                 {t("CoreValue1")}
               </div>

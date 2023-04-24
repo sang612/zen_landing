@@ -45,12 +45,15 @@ export default function RecruitmentPage() {
       key: "1",
       label: `All`,
       children: (
-        <div className="grid grid-cols-4 sm:grid-cols-1 gap-x-[42px] items-start justify-start">
+        <div className="grid grid-cols-4 lg:grid-cols-1 gap-x-[42px] items-start justify-start">
           {recruitmentListFiltered?.map((item, i) => {
             return (
-              <div className="mb-[32px] sm:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300" key={i}>
+              <div
+                className="mb-[32px] lg:mb-[10px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                key={i}
+              >
                 <div className="hover:cursor-pointer">
-                  <div className="w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
+                  <div className="lg:mx-[-1.25rem] lg:w-screen lg:h-[562px] sm:h-[200px] w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
                       fill
@@ -83,7 +86,7 @@ export default function RecruitmentPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] sm:px-[40px] xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] lg:px-0 xl:max-w-[1440px] mx-auto">
           <FilterSelect
             listContent={listContent}
             searchInput={searchInput}

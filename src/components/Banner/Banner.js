@@ -364,12 +364,12 @@ export const Banner = ({
             <DivIcon width={34.4} height={37.41} />
           </Icon>
 
-          <Icon className="top-[92.38px] left-[375.11px] m:left-[10%] orange-circle-animate animate opacity-0">
+          <Icon className="top-[92.38px] left-[375.11px] lg:left-[10%] orange-circle-animate animate opacity-0">
             <Circle6Icon width={528.39} height={527.74} idPath="circle6" className='sm:w-[71vw] h-auto' />
           </Icon>
 
           <Icon
-            className="top-[77px] left-[357px] m:left-[7%] opacity-0 animate"
+            className="top-[77px] left-[357px] lg:left-[7%] opacity-0 animate"
             id="circle7"
           >
             <Circle7Icon width={34.56} height={34.52} />
@@ -433,7 +433,7 @@ export const Banner = ({
                     {t("Explain3")}
                   </span>
                 </Icon>
-                <Icon className="top-[31%] s:left-[-54%] sm:left-[-42%] opacity-0 explain-logo-animate-4 animate">
+                <Icon className="top-[31%] s:left-[-54%] sm:left-[-45%] opacity-0 explain-logo-animate-4 animate">
                   <Item4Icon width={190} height={190}></Item4Icon>
                   <span className="font-[400] text-[6px] leading-[9px] tracking-[0.01em] absolute top-[37%] left-[21%] max-w-[115px]">
                     {t("Explain4")}
@@ -442,7 +442,7 @@ export const Banner = ({
               </div>
             </Icon>
           ) : (
-            <Icon className="top-[73.72px] left-[341.44px] m:left-[10%] max-h-[601.98px] h-[601.98px] w-[700.56px] sm:hidden">
+            <Icon className="top-[73.72px] left-[341.44px] lg:left-[10%] max-h-[601.98px] h-[601.98px] w-[700.56px] sm:hidden">
               <Icon className="top-[201.19px] left-[217.52px] z-10 logo-animate animate opacity-0">
                 <Icon className="top-[32%] left-[32%]">
                   <Circle5Icon width={160.7} height={160.5} />

@@ -165,11 +165,11 @@ export const BigHeader = () => {
       <div
         className={`${
           openMobileNav ? "block" : "hidden"
-        } lg:flex lg:items-center lg:w-auto w-full fixed left-0 top-0 h-screen  z-[9999]`}
+        }  w-full fixed left-0 top-0 h-screen  z-[9999]`}
         id="menu"
       >
         <nav className="h-full">
-          <ul className="h-full z-20 lg:flex text-left font-bold items-center justify-between text-base bg-[#fbfbfb] py-4 px-[30px] lg:pt-0 w-screen">
+          <ul className="h-full z-20 text-left font-bold items-center justify-between text-base bg-[#fbfbfb] py-4 px-[30px] w-screen">
             <li
               onClick={() => setOpenMobileNav((prev) => !prev)}
               className="flex items-start justify-between mb-4"

@@ -52,8 +52,9 @@
     "Name": "Name",
     "Email": "Email",
     "Subject": "Subject",
-    "Messenger": "Messenger",
-    "Sent": "Sent"
+    "Message": "Message",
+    "Sent": "Sent",
+    "Success": "Success"
   },
   "Nav": {
     "AboutUs": "About Us",

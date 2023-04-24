@@ -52,8 +52,9 @@
     "Name": "お名前",
     "Email": "メールアドレス",
     "Subject": "件名",
-    "Messenger": "お問い合わせ内容",
-    "Sent": "送信する"
+    "Message": "お問い合わせ内容",
+    "Sent": "送信する",
+    "Success": "成功"
   },
   "Nav": {
     "AboutUs": "私たち",

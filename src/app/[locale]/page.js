@@ -99,99 +99,123 @@ export default function AboutUsPage() {
                   const itemDelay = `${delay}s`;
                   delay += 0.2;
 
-									return (
-										<AboutUsItem
-											key={item.id}
-											icon={item.icon}
-											title={item.title}
-											desc={item.desc}
-											delay={itemDelay}
-										/>
-									);
-								})}
-							</div>
-						</div>
-					</div>
-					<div className="lg:flex-col flex items-center justify-center py-[88px] lg:py-[20px]">
-						<div className="lg:w-full w-1/2">
-							<h4 className="font-[600] text-[39px] leading-[48px] lg:mt-5">
-								02. {t("Mission")}
-							</h4>
-							<p className="font-[400] text-[19px] lg:text-[13px] leading-[32px] max-w-[558px] lg:max-w-none">
-								{t("MissionDesc")}
-							</p>
-						</div>
-						<div className="lg:w-full w-1/2">
-							<div className="font-[400] text-[59px] leading-[78px] text-secondary flex-none order-1 flex-grow-0 w-full">
-								<p className="text-left"> {t("WeDoAllThings")}</p>
-								<p className="text-right"> {t("WithABigHeart")}</p>
-							</div>
-						</div>
-					</div>
+                  return (
+                    <AboutUsItem
+                      key={item.id}
+                      icon={item.icon}
+                      title={item.title}
+                      desc={item.desc}
+                      delay={itemDelay}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+          <div className="lg:flex-col flex items-center justify-center py-[88px] lg:py-[20px]">
+            <div className="lg:w-full w-1/2">
+              <h4 className="font-[600] text-[39px] leading-[48px] lg:mt-5">
+                02. {t("Mission")}
+              </h4>
+              <p className="font-[400] text-[19px] lg:text-[13px] leading-[32px] max-w-[558px] lg:max-w-none">
+                {t("MissionDesc")}
+              </p>
+            </div>
+            <div className="lg:w-full w-1/2">
+              <div className="font-[400] text-[59px] leading-[78px] text-secondary flex-none order-1 flex-grow-0 w-full">
+                <p className="text-left"> {t("WeDoAllThings")}</p>
+                <p className="text-right"> {t("WithABigHeart")}</p>
+              </div>
+            </div>
+          </div>
 
-					<div className="flex-col items-center justify-start py-[88px] lg:py-[20px]">
-						<div className="lg:w-full w-1/2">
-							<h4 className="font-[600] text-[39px] leading-[48px] lg:mt-5">
-								03. {t("Action")}
-							</h4>
-							<p
-								className="font-[400] text-[19px] lg:text-[13px] leading-[32px]"
-								dangerouslySetInnerHTML={{ __html: t("ActionDesc") }}
-							></p>
-						</div>
-						<div className="w-full grid lg:grid-cols-1 grid-cols-2 mt-[32px]">
-							{actionList.map((item) => {
-								const itemDelay = `${delay}s`;
-								delay += 0.2;
+          <div className="flex-col items-center justify-start py-[88px] lg:py-[20px]">
+            <div className="lg:w-full w-1/2">
+              <h4 className="font-[600] text-[39px] leading-[48px] lg:mt-5">
+                03. {t("Action")}
+              </h4>
+              <p
+                className="font-[400] text-[19px] lg:text-[13px] leading-[32px]"
+                dangerouslySetInnerHTML={{ __html: t("ActionDesc") }}
+              ></p>
+            </div>
+            <div className="w-full grid lg:grid-cols-1 grid-cols-2 mt-[32px]">
+              {actionList.map((item) => {
+                const itemDelay = `${delay}s`;
+                delay += 0.2;
 
-								return (
-									<AboutUsItem
-										key={item.id}
-										icon={item.icon}
-										title={item.title}
-										desc={item.desc}
-										delay={itemDelay}
-									/>
-								);
-							})}
-						</div>
-					</div>
-					<div className="bg-[url('/bg/our-performance-bg.svg')] bg-[center_center] bg-no-repeat bg-cover h-[560px] pt-[76px]">
-						<h4 className="font-[600] text-[39px] leading-[48px] text-center mt-5">
-							{t("OurPerformance")}
-						</h4>
-						<div className="lg:flex-col flex justify-center items-center mt-[20px]">
-							<div className="relative">
-								<div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
-									<Image
-										src="/bg/simple-icons_marketo.png"
-										alt="bg-number"
-										className="absolute z-[-1] left-[-40%] top-[-25%]"
-										width={100}
-										height={100}
-										style={{ maxWidth: "none", width: "150%", height: "150%" }}
-									/>
-									<div className="w-[134px]">
-										<CountUp start={0} end={10} duration={3} enableScrollSpy />+
-									</div>
-								</div>
-								<div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
-									{t("Customer")}
-								</div>
-							</div>
-							<div className="mx-[100px] relative">
-								<div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
-									<Image
-										src="/bg/simple-icons_marketo.png"
-										alt="bg-number2"
-										className="absolute z-[-1] left-[-40%] top-[-25%]"
-										width={100}
-										height={100}
-										style={{ maxWidth: "none", width: "150%", height: "150%" }}
-									/>
+                return (
+                  <AboutUsItem
+                    key={item.id}
+                    icon={item.icon}
+                    title={item.title}
+                    desc={item.desc}
+                    delay={itemDelay}
+                  />
+                );
+              })}
+            </div>
+          </div>
+          <div className="bg-[url('/bg/our-performance-bg.svg')] bg-[center_center] bg-no-repeat bg-cover h-[560px] pt-[76px]">
+            <h4 className="font-[600] text-[39px] leading-[48px] text-center mt-5">
+              {t("OurPerformance")}
+            </h4>
+            <div className="lg:flex-col flex justify-center items-center mt-[20px]">
+              <div className="relative">
+                <div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
+                  <Image
+                    src="/bg/simple-icons_marketo.png"
+                    alt="bg-number"
+                    className="absolute z-[-1] left-[-40%] top-[-25%]"
+                    width={100}
+                    height={100}
+                    style={{ maxWidth: "none", width: "150%", height: "150%" }}
+                  />
+                  <div className="w-[134px]">
+                    <CountUp
+                      start={0}
+                      end={10}
+                      duration={3}
+                      enableScrollSpy
+                      className="flex"
+                    >
+                      {({ countUpRef }) => (
+                        <>
+                          <span ref={countUpRef} />+
+                        </>
+                      )}
+                    </CountUp>
+                  </div>
+                </div>
+                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
+                  {t("Customer")}
+                </div>
+              </div>
+              <div className="mx-[100px] relative">
+                <div className="font-[600] text-[79px] leading-[118.5px] text-primary relative">
+                  <Image
+                    src="/bg/simple-icons_marketo.png"
+                    alt="bg-number2"
+                    className="absolute z-[-1] left-[-40%] top-[-25%]"
+                    width={100}
+                    height={100}
+                    style={{ maxWidth: "none", width: "150%", height: "150%" }}
+                  />
 
                   <div className="w-[134px]">
-                    <CountUp start={0} end={25} duration={3} enableScrollSpy />+
+                    <CountUp
+                      start={0}
+                      end={25}
+                      duration={3}
+                      enableScrollSpy
+                      className="flex"
+                    >
+                      {({ countUpRef }) => (
+                        <>
+                          <span ref={countUpRef} />+
+                        </>
+                      )}
+                    </CountUp>
                   </div>
                 </div>
                 <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
@@ -209,7 +233,19 @@ export default function AboutUsPage() {
                     style={{ maxWidth: "none", width: "150%", height: "150%" }}
                   />
                   <div className="w-[134px]">
-                    <CountUp start={0} end={15} duration={3} enableScrollSpy />+
+                    <CountUp
+                      start={0}
+                      end={15}
+                      duration={3}
+                      enableScrollSpy
+                      className="flex"
+                    >
+                      {({ countUpRef }) => (
+                        <>
+                          <span ref={countUpRef} />+
+                        </>
+                      )}
+                    </CountUp>
                   </div>
                 </div>
                 <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">

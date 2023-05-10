@@ -216,7 +216,7 @@ export const Banner = ({
                                           complete: () => {
                                             let motion_path_2 =
                                               anime.path("#circle8");
-                                            animationInstanceRef.current =
+                                            animationInstanceRef.current = firstBannerAnimationsStarted &&
                                               anime({
                                                 targets: "#circle9",
                                                 translateX: motion_path_2("x"),
@@ -365,7 +365,12 @@ export const Banner = ({
           </Icon>
 
           <Icon className="top-[92.38px] left-[375.11px] lg:left-[10%] orange-circle-animate animate opacity-0">
-            <Circle6Icon width={528.39} height={527.74} idPath="circle6" className='sm:w-[71vw] h-auto' />
+            <Circle6Icon
+              width={528.39}
+              height={527.74}
+              idPath="circle6"
+              className="sm:w-[71vw] h-auto"
+            />
           </Icon>
 
           <Icon

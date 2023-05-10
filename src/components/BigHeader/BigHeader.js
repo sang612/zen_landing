@@ -125,42 +125,50 @@ export const BigHeader = () => {
     handleChangeBanner();
   }, [pathName]);
 
+  const [dom, setDom] = useState(false);
+  useEffect(() => {
+    setDom(true);
+  }, []);
+
   return (
     <>
-      {(pathName === "/" ||
-        pathName === "/jp" ||
-        pathName === "/news" ||
-        pathName === "/jp/news") && (
-        <Banner
-          firstBannerAnimationsStarted={firstBannerAnimationsStarted}
-          setFirstBannerAnimationsStarted={setFirstBannerAnimationsStarted}
-          hideElement={hideElement}
-          setOpenMobileNav={setOpenMobileNav}
-          setOpen={setOpen}
-        />
-      )}
-      {(pathName === "/services" ||
-        pathName === "/jp/services" ||
-        pathName === "/contact" ||
-        pathName === "/jp/contact") && (
-        <Banner2
-          animationsStarted={animationsStarted}
-          hideElement={hideElement}
-          setOpenMobileNav={setOpenMobileNav}
-          setOpen={setOpen}
-        />
-      )}
-      {(pathName === "/casestudy" || pathName === "/jp/casestudy") && (
+      {dom &&
+        (pathName === "/" ||
+          pathName === "/jp" ||
+          pathName === "/news" ||
+          pathName === "/jp/news") && (
+          <Banner
+            firstBannerAnimationsStarted={firstBannerAnimationsStarted}
+            setFirstBannerAnimationsStarted={setFirstBannerAnimationsStarted}
+            hideElement={hideElement}
+            setOpenMobileNav={setOpenMobileNav}
+            setOpen={setOpen}
+          />
+        )}
+      {dom &&
+        (pathName === "/services" ||
+          pathName === "/jp/services" ||
+          pathName === "/contact" ||
+          pathName === "/jp/contact") && (
+          <Banner2
+            animationsStarted={animationsStarted}
+            hideElement={hideElement}
+            setOpenMobileNav={setOpenMobileNav}
+            setOpen={setOpen}
+          />
+        )}
+      {dom && (pathName === "/casestudy" || pathName === "/jp/casestudy") && (
         <Banner3 setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
       )}
-      {(pathName === "/recruitment" || pathName === "/jp/recruitment") && (
-        <Banner4
-          beforeChange={handleBeforeChange}
-          slickRef={childSlickRef}
-          setOpenMobileNav={setOpenMobileNav}
-          setOpen={setOpen}
-        />
-      )}
+      {dom &&
+        (pathName === "/recruitment" || pathName === "/jp/recruitment") && (
+          <Banner4
+            beforeChange={handleBeforeChange}
+            slickRef={childSlickRef}
+            setOpenMobileNav={setOpenMobileNav}
+            setOpen={setOpen}
+          />
+        )}
 
       <div
         className={`${

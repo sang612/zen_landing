@@ -29,29 +29,19 @@ export const FounderSlider = ({ beforeChange }) => (
   <div>
     <Slider {...settings} beforeChange={beforeChange}>
       <FounderSliderItem
+        src="/feature-image4.svg"
+        name="Hoang Khac Hung"
+        desc="CEO"
+      />
+      <FounderSliderItem
         src="/feature-image1.svg"
-        name="Theresa Web"
-        desc="Co-Founder, C.O.O"
+        name="Dang Quoc Dat"
+        desc="COO"
       />
       <FounderSliderItem
         src="/feature-image2.svg"
-        name="Wade Brain"
-        desc="Founder, C.E.O"
-      />
-      <FounderSliderItem
-        src="/feature-image3.svg"
-        name="Jane Cooper"
-        desc="Chairman"
-      />
-      <FounderSliderItem
-        src="/feature-image4.svg"
-        name="Savannah Nguyen"
-        desc="Brand Manager"
-      />
-      <FounderSliderItem
-        src="/feature-image5.svg"
-        name="Kathryn Murphy"
-        desc="Human Management"
+        name="Pham Thi Phuong"
+        desc="CDO"
       />
     </Slider>
   </div>

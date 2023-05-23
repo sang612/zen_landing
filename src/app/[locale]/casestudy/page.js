@@ -60,7 +60,7 @@ export default function CasestudyPage() {
                       className="lg:w-screen"
                     />
                   </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                     {item.name}
                   </h4>
                 </div>
@@ -77,7 +77,7 @@ export default function CasestudyPage() {
               </div>
             ))
           ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
               Not found
             </h4>
           )}
@@ -110,7 +110,7 @@ export default function CasestudyPage() {
                       alt={item.name}
                     />
                   </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                     {item.name}
                   </h4>
                 </div>
@@ -127,7 +127,7 @@ export default function CasestudyPage() {
               </div>
             ))
           ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
               Not found
             </h4>
           )}
@@ -160,7 +160,7 @@ export default function CasestudyPage() {
                       alt={item.name}
                     />
                   </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                     {item.name}
                   </h4>
                 </div>
@@ -177,7 +177,7 @@ export default function CasestudyPage() {
               </div>
             ))
           ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
               Not found
             </h4>
           )}
@@ -210,7 +210,7 @@ export default function CasestudyPage() {
                       alt={item.name}
                     />
                   </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                     {item.name}
                   </h4>
                 </div>
@@ -227,7 +227,7 @@ export default function CasestudyPage() {
               </div>
             ))
           ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
               Not found
             </h4>
           )}

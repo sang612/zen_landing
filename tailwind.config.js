@@ -21,6 +21,7 @@ module.exports = {
       secondary: "#F1673A",
       primary: "#25C2E8",
       body: "#0B2337",
+      black: '#000'
     },
     screens: {
       lg: { max: "1023px" },

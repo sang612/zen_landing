@@ -26,7 +26,7 @@ export default async function RootLayout({ children, params: { locale } }) {
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <BigHeader />
-          <div className="relative xl:max-w-[1440px] mx-auto">
+          <div className="relative xl:max-w-[1440px] mx-auto text-sub">
             <Navbar />
             {children}
             <Layout />

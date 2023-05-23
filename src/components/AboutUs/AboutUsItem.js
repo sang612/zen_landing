@@ -10,7 +10,7 @@ export const AboutUsItem = ({ icon, title, desc, delay }) => {
         <IconComponent />
       </div>
       <div className="ml-[16px]">
-        <h4 className="font-[600] text-[19px] leading-[32px] text-title">
+        <h4 className="font-[600] text-[19px] leading-[32px] text-sub">
           {title}
         </h4>
         <p className="font-[400] text-[13px] leading-[20px] text-sub">{desc}</p>

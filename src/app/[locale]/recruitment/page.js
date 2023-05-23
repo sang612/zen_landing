@@ -61,7 +61,7 @@ export default function RecruitmentPage() {
                       alt={item.name}
                     />
                   </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                     {item.name}
                   </h4>
                 </div>

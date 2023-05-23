@@ -80,7 +80,7 @@ export default function AboutUsPage() {
           <div className="lg:flex-col flex flex-wrap items-center justify-center py-[88px] lg:py-[20px]">
             <div className="lg:w-full w-1/2">
               <div className="lg:mx-auto relative bg-[url('/blue-circle.svg')] bg-no-repeat w-[288px] h-[293px]">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[700] text-[67px] whitespace-nowrap">
+                <div className="text-black absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-[700] text-[67px] whitespace-nowrap">
                   {t("AboutUs")}
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function AboutUsPage() {
                     </CountUp>
                   </div>
                 </div>
-                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
+                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-sub">
                   {t("Customer")}
                 </div>
               </div>
@@ -218,7 +218,7 @@ export default function AboutUsPage() {
                     </CountUp>
                   </div>
                 </div>
-                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
+                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-sub">
                   {t("Employees")}
                 </div>
               </div>
@@ -248,7 +248,7 @@ export default function AboutUsPage() {
                     </CountUp>
                   </div>
                 </div>
-                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-title">
+                <div className="text-center font-[400] text-[19px] lg:text-[13px] leading-[32px] text-sub">
                   {t("Projects")}
                 </div>
               </div>

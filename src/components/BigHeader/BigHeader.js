@@ -131,7 +131,7 @@ export const BigHeader = () => {
   }, []);
 
   return (
-    <>
+    <div className="text-sub">
       {dom &&
         (pathName === "/" ||
           pathName === "/jp" ||
@@ -192,7 +192,7 @@ export const BigHeader = () => {
                 className={`py-3 px-0 block hover:text-primary ${
                   pathName === "/" || pathName === "/jp"
                     ? "text-primary bg-[#e7e7e7] pl-[10px] rounded-[8px]"
-                    : "text-title"
+                    : "text-sub"
                 }`}
                 href="/"
               >
@@ -205,7 +205,7 @@ export const BigHeader = () => {
                 className={`py-3 px-0 block hover:text-primary ${
                   pathName === "/services" || pathName === "/jp/services"
                     ? "text-primary bg-[#e7e7e7] pl-[10px] rounded-[8px]"
-                    : "text-title"
+                    : "text-sub"
                 }`}
                 href="/services"
               >
@@ -218,7 +218,7 @@ export const BigHeader = () => {
                 className={`py-3 px-0 block hover:text-primary ${
                   pathName === "/casestudy" || pathName === "/jp/casestudy"
                     ? "text-primary bg-[#e7e7e7] pl-[10px] rounded-[8px]"
-                    : "text-title"
+                    : "text-sub"
                 }`}
                 href="/casestudy"
               >
@@ -231,7 +231,7 @@ export const BigHeader = () => {
                 className={`py-3 px-0 block hover:text-primary ${
                   pathName === "/recruitment" || pathName === "/jp/recruitment"
                     ? "text-primary bg-[#e7e7e7] pl-[10px] rounded-[8px]"
-                    : "text-title"
+                    : "text-sub"
                 }`}
                 href="/recruitment"
               >
@@ -244,7 +244,7 @@ export const BigHeader = () => {
                 className={`py-3 px-0 block hover:text-primary ${
                   pathName === "/news" || pathName === "/jp/news"
                     ? "text-primary bg-[#e7e7e7] pl-[10px] rounded-[8px]"
-                    : "text-title"
+                    : "text-sub"
                 }`}
                 href="/news"
               >
@@ -257,7 +257,7 @@ export const BigHeader = () => {
                 className={`py-3 px-0 block hover:text-primary ${
                   pathName === "/contact" || pathName === "/jp/contact"
                     ? "text-primary bg-[#e7e7e7] pl-[10px] rounded-[8px]"
-                    : "text-title"
+                    : "text-sub"
                 }`}
                 href="/contact"
               >
@@ -301,14 +301,14 @@ export const BigHeader = () => {
                   <input
                     type="text"
                     placeholder={t("Name")}
-                    className="placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+                    className="placeholder:text-sub placeholder:text-[15px] text-[15px] text-sub outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
                     required
                     onChange={(e) => setName(e.target.value)}
                   />
                   <input
                     type="email"
                     placeholder={t("Email")}
-                    className="mt-[20px] placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+                    className="mt-[20px] placeholder:text-sub placeholder:text-[15px] text-[15px] text-sub outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
                     required
                     onChange={(e) => setEmail(e.target.value)}
                   />
@@ -326,6 +326,6 @@ export const BigHeader = () => {
           </div>
         </Popup>
       </div>
-    </>
+    </div>
   );
 };

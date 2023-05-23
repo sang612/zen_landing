@@ -47,7 +47,7 @@ export default function CasestudyPage() {
                 <div className="lg:mx-[-1.25rem] lg:w-screen lg:h-[562px] sm:h-[200px] w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
                   <Image src={item.imgSrc} fill sizes="auto" alt={item.name} />
                 </div>
-                <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                   {item.name}
                 </h4>
               </div>
@@ -80,7 +80,7 @@ export default function CasestudyPage() {
                 <div className="lg:mx-[-1.25rem] lg:w-screen lg:h-[562px] sm:h-[200px] w-full h-auto min-h-[200px] relative hover:scale-110 transition-all duration-300">
                   <Image src={item.imgSrc} fill sizes="auto" alt={item.name} />
                 </div>
-                <h4 className="font-[400] text-[15px] leading-[22px] text-body mt-[20px] mb-[12px] hover:text-sub">
+                <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                   {item.name}
                 </h4>
               </div>

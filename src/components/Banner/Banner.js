@@ -289,7 +289,7 @@ export const Banner = ({
   }, [isPlaying]);
 
   return (
-    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto w-full overflow-hidden">
+    <div className="bg-gradient-to-b from-[#E2F6FC] h-[804px] sm:h-auto w-full overflow-hidden text-sub">
       <div className="relative xl:max-w-[1440px] mx-auto h-[804px]">
         <Header
           showLogo
@@ -489,7 +489,7 @@ export const Banner = ({
                 </Icon>
                 <Icon className="top-[19%] left-[51.5%] opacity-0 explain-logo-animate-3 animate">
                   <Item3Icon width={361.96} height={333.55}></Item3Icon>
-                  <span className="font-[400] text-[10px] leading-[16px] tracking-[0.01em] absolute top-[31%] left-[31%] max-w-[182px]">
+                  <span className="font-[400] text-[10px] leading-[15px] tracking-[0.01em] absolute top-[25%] left-[32%] max-w-[172px]">
                     {t("Explain3")}
                   </span>
                 </Icon>

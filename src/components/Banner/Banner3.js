@@ -25,11 +25,11 @@ export const Banner3 = ({setOpenMobileNav, setOpen}) => {
 
         <div className="absolute lg:relative top-0 left-0 w-full">
           <Image
-            src="/banner3.svg"
+            src="/banner3.jpg"
             width="0"
             height="0"
             sizes="100vw"
-            className="w-full h-auto"
+            className="w-full h-auto max-h-[734px] object-cover"
             alt="banner3"
           />
         </div>

@@ -39,7 +39,7 @@ export default function ContactPage() {
 							type="text"
 							name="name"
 							placeholder={t("Name")}
-							className="placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+							className="placeholder:text-sub placeholder:text-[15px] text-[15px] text-sub outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
 							required
 						/>
 						<input
@@ -47,7 +47,7 @@ export default function ContactPage() {
 							type="email"
 							name="email"
 							placeholder={t("Email")}
-							className="ml-[20px] placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+							className="ml-[20px] placeholder:text-sub placeholder:text-[15px] text-[15px] text-sub outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
 							required
 						/>
 					</div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
 						type="text"
 						name="subject"
 						placeholder={t("Subject")}
-						className="my-[20px] placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+						className="my-[20px] placeholder:text-sub placeholder:text-[15px] text-[15px] text-sub outline-none w-full px-[12px] py-[11px] h-[44px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
 						required
 					/>
 					<textarea
@@ -64,7 +64,7 @@ export default function ContactPage() {
 						type="text"
 						name="message"
 						placeholder={t("Message")}
-						className="placeholder:text-body placeholder:text-[15px] text-[15px] text-body outline-none w-full px-[12px] py-[11px] h-[148px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
+						className="placeholder:text-sub placeholder:text-[15px] text-[15px] text-sub outline-none w-full px-[12px] py-[11px] h-[148px] border-[1.5px] border-solid border-[#C4C4C4] rounded-[8px]"
 						required
 					/>
 					<div className="mt-[40px] text-center">

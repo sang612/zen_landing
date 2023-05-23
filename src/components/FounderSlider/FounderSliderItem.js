@@ -8,7 +8,7 @@ export const FounderSliderItem = ({ src, name, desc }) => (
       </div>
     </div>
     <div className="mt-[39.12px] text-center max-w-[288px] sm:mx-auto">
-      <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-[#0B2337]">
+      <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-sub">
         {name}
       </h4>
       <h5 className="font-[400] text-[12px] leading-[20px] tracking-[0.01em] text-[#707172]">

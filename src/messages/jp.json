@@ -54,7 +54,8 @@
     "Subject": "件名",
     "Message": "お問い合わせ内容",
     "Sent": "送信する",
-    "Success": "成功"
+    "Success": "成功",
+    "Error": "エラーが出てきました"
   },
   "Nav": {
     "AboutUs": "私たち",

@@ -23,14 +23,14 @@ export default function CasestudyPage() {
   }, []);
   const [casestudyListFiltered, setcasestudyListFiltered] = useState();
   useEffect(() => {
-    setcasestudyListFiltered(
-      casestudyData.filter(
-        (item) =>
-          item.name.toLowerCase().includes(searchInput.toLowerCase()) &&
-          item.category.toLowerCase().includes(category.toLowerCase())
-      )
-    );
-  }, [searchInput, category]);
+		setcasestudyListFiltered(
+			casestudyData.filter(
+				(item) =>
+					item.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+					item.category.toLowerCase().includes(category.toLowerCase())
+			)
+		);
+	}, [searchInput, category, casestudyData]);
 
   const listContent = [
     {

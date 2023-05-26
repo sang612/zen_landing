@@ -22,23 +22,23 @@ export default function RecruitmentPage() {
     fetchData();
   }, []);
   useEffect(() => {
-    let filteredRecruitmentList = recruitmentData.filter((recruitment) => {
-      if (selectedOptions?.includes("all")) {
-        return true;
-      } else {
-        const badgeLocations = recruitment.badge.map((badge) =>
-          badge.toLowerCase()
-        );
-        return selectedOptions?.some((option) =>
-          badgeLocations.includes(option.toLowerCase())
-        );
-      }
-    });
-    filteredRecruitmentList = filteredRecruitmentList.filter((item) =>
-      item.name.toLowerCase().includes(searchInput)
-    );
-    setRecruitmentListFiltered(filteredRecruitmentList);
-  }, [searchInput, selectedOptions]);
+		let filteredRecruitmentList = recruitmentData.filter((recruitment) => {
+			if (selectedOptions?.includes("all")) {
+				return true;
+			} else {
+				const badgeLocations = recruitment.badge.map((badge) =>
+					badge.toLowerCase()
+				);
+				return selectedOptions?.some((option) =>
+					badgeLocations.includes(option.toLowerCase())
+				);
+			}
+		});
+		filteredRecruitmentList = filteredRecruitmentList.filter((item) =>
+			item.name.toLowerCase().includes(searchInput)
+		);
+		setRecruitmentListFiltered(filteredRecruitmentList);
+	}, [recruitmentData, searchInput, selectedOptions]);
 
   const listContent = [
     {

@@ -54,7 +54,8 @@
     "Subject": "Subject",
     "Message": "Message",
     "Sent": "Sent",
-    "Success": "Success"
+    "Success": "Success",
+    "Error": "Error"
   },
   "Nav": {
     "AboutUs": "About Us",

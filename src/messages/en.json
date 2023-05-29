@@ -1,7 +1,4 @@
 {
-  "Index": {
-    "title": "Hello world!"
-  },
   "LocaleSwitcher": {
     "switchLocale": "{locale, select, jp {日本語} en {English} other {Unknown}}",
     "ContactNow": "Contact Now",

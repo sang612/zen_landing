@@ -49,3 +49,4 @@ export { SearchIcon } from "./search";
 export { LocationIcon } from "./location";
 export { CategoryIcon } from "./category";
 export { ExplainImage } from "./explain";
+export { Facebook2Icon } from "./fb2";

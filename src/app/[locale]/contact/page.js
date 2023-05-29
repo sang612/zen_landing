@@ -70,7 +70,7 @@ export default function ContactPage() {
 					<div className="mt-[40px] text-center">
 						<button
 							type="submit"
-							className="w-[200px] h-[48px] rounded-[8px] px-[16px- py-[12px] bg-primary text-[#fff] text-[17px] leading-[24px] font-[600] tracking-[-0.005em]"
+							className="w-[200px] h-[48px] rounded-[8px] px-[16px- py-[12px] bg-primary transition-colors duration-300 hover:bg-black text-[#fff] text-[17px] leading-[24px] font-[600] tracking-[-0.005em]"
 						>
 							{t("Sent")}
 						</button>

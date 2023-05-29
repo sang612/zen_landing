@@ -12,6 +12,10 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 
+const goToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 export const Footer = () => {
   const t = useTranslations("Nav");
   return (
@@ -46,12 +50,14 @@ export const Footer = () => {
             <div className="mt-[40px]">
               <div className="flex lg:justify-center lg:text-center">
                 <Link
+                  onClick={goToTop}
                   href="/"
                   className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-sub hover:text-primary transition-all duration-300"
                 >
                   {t("AboutUs")}
                 </Link>
                 <Link
+                  onClick={goToTop}
                   href="/recruitment"
                   className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-sub hover:text-primary transition-all duration-300"
                 >
@@ -60,12 +66,14 @@ export const Footer = () => {
               </div>
               <div className="flex lg:justify-center lg:text-center">
                 <Link
+                  onClick={goToTop}
                   href="/services"
                   className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-sub hover:text-primary transition-all duration-300"
                 >
                   {t("Services")}
                 </Link>
                 <Link
+                  onClick={goToTop}
                   href="/news"
                   className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-sub hover:text-primary transition-all duration-300"
                 >
@@ -74,12 +82,14 @@ export const Footer = () => {
               </div>
               <div className="flex lg:justify-center lg:text-center">
                 <Link
+                  onClick={goToTop}
                   href="/casestudy"
                   className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-sub hover:text-primary transition-all duration-300"
                 >
                   {t("Casestudy")}
                 </Link>
                 <Link
+                  onClick={goToTop}
                   href="/contact"
                   className="min-w-[85px] mr-[40px] lg:mr-[15px] mb-[24px] font-[600] text-[15px] leading-[28px] text-sub hover:text-primary transition-all duration-300"
                 >
@@ -90,7 +100,13 @@ export const Footer = () => {
           </div>
           <div>
             <div>
-              <Image src="/Logo.svg" alt="me" width="125" height="50" className="lg:hidden"/>
+              <Image
+                src="/Logo.svg"
+                alt="me"
+                width="125"
+                height="50"
+                className="lg:hidden"
+              />
               <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[12px] lg:m-0">
                 <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-sub">
                   Viet Nam
@@ -118,7 +134,7 @@ export const Footer = () => {
                 </div>
               </div>
 
-              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[20px] lg:m-0">
+              <div className="max-w-[437px] ml-auto mr-[40px] mb-[16px] mt-[20px] lg:m-0 sm:mt-4">
                 <h4 className="font-[600] text-[16px] leading-[28px] tracking-[0.015em] text-sub">
                   Japan
                 </h4>

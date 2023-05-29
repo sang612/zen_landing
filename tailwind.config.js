@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       boxShadow: {
         hover:
-          "0px 2px 8px rgba(40, 41, 61, 0.02), 0px 16px 24px rgba(96, 97, 112, 0.12)",
+          "0px 2px 8px rgba(40, 41, 61, 0.15), 0px 16px 24px rgba(96, 97, 112, 0.15)",
       },
     },
     colors: {
@@ -21,7 +21,8 @@ module.exports = {
       secondary: "#F1673A",
       primary: "#25C2E8",
       body: "#0B2337",
-      black: '#000'
+      black: "#000",
+      white: "#fff",
     },
     screens: {
       lg: { max: "1023px" },

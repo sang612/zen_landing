@@ -489,7 +489,7 @@ export const Banner = ({
                 </Icon>
                 <Icon className="top-[19%] left-[51.5%] opacity-0 explain-logo-animate-3 animate">
                   <Item3Icon width={361.96} height={333.55}></Item3Icon>
-                  <span className="font-[400] text-[10px] leading-[15px] tracking-[0.01em] absolute top-[25%] left-[32%] max-w-[172px]">
+                  <span className="font-[400] text-[10px] leading-[15px] tracking-[0.01em] absolute top-[28%] left-[32%] max-w-[172px]">
                     {t("Explain3")}
                   </span>
                 </Icon>

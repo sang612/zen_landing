@@ -1,4 +1,4 @@
-import { FacebookIcon, GlobalIcon } from "@/assets/icons";
+import { Facebook2Icon, FacebookIcon, GlobalIcon } from "@/assets/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import { useEffect } from "react";
 
 export const Header = ({
   showLogo,
@@ -40,6 +41,25 @@ export const Header = ({
 
   const t = useTranslations("LocaleSwitcher");
   const otherLocale = locale === "en" ? "jp" : "en";
+
+  const [stickyClass, setStickyClass] = useState("h-[52px]");
+  const stickNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      if (windowHeight > 80) {
+        setStickyClass("fixed p-[28px_10px_0] h-[100px] bg-white left-0 shadow-sm bg-[#fff]");
+      } else {
+        setStickyClass("h-[52px]");
+      }
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", stickNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickNavbar);
+    };
+  }, []);
 
   return (
     <div className="pt-[28px] sm:px-[10px] px-[80px] flex flex-row justify-between items-center relative z-10">
@@ -118,8 +138,8 @@ export const Header = ({
         </div>
       </div>
 
-      <div className="hidden lg:block z-20 w-full">
-        <div className="relative">
+      <div className={`${stickyClass} hidden lg:block z-20 w-full transition-[height] ease-in-out duration-500`}>
+        <div className="relative h-full flex items-center">
           <div className="flex justify-between items-center w-full">
             <Link href="/">
               <Image src="/Logo.svg" alt="me" width="125" height="50" />
@@ -130,7 +150,7 @@ export const Header = ({
                 className=" py-3 px-0  mx-auto flex justify-center"
                 target="_blank"
               >
-                <Image src={"/fb.png"} width={28} height={28} alt="logo" />
+                <Facebook2Icon width={28} height={28} />
               </Link>
               <div className="relative mx-4">
                 <button

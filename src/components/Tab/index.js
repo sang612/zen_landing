@@ -37,7 +37,7 @@ export const CustomTaps = ({
             </button>
           ))}
         </div>
-        <div className="relative h-[44px] min-w-[416px] sm:min-w-full sm:mt-[30px]">
+        <div className="relative h-[44px] min-w-[416px] sm:min-w-[70%] sm:mt-[30px]">
           <input
             type="text"
             className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"

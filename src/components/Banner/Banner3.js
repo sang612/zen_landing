@@ -29,7 +29,7 @@ export const Banner3 = ({setOpenMobileNav, setOpen}) => {
             width="0"
             height="0"
             sizes="100vw"
-            className="w-full h-auto max-h-[734px] object-cover"
+            className="w-full h-auto max-h-[734px] object-cover object-bottom"
             alt="banner3"
           />
         </div>

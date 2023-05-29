@@ -41,7 +41,7 @@ export default function CasestudyPage() {
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -51,13 +51,14 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="lg:mx-[-1.25rem] lg:w-auto w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="w-full relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
-                      fill
                       sizes="auto"
                       alt={item.name}
-                      className="lg:w-screen"
+                      className="h-auto w-full "
+                      width={300}
+                      height={300}
                     />
                   </div>
                   <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
@@ -92,7 +93,7 @@ export default function CasestudyPage() {
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -102,12 +103,14 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="lg:mx-[-1.25rem] w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="w-full relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
-                      fill
                       sizes="auto"
                       alt={item.name}
+                      className="h-auto w-full "
+                      width={300}
+                      height={300}
                     />
                   </div>
                   <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
@@ -142,7 +145,7 @@ export default function CasestudyPage() {
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -152,12 +155,14 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="lg:mx-[-1.25rem] w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="w-full relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
-                      fill
                       sizes="auto"
                       alt={item.name}
+                      className="h-auto w-full "
+                      width={300}
+                      height={300}
                     />
                   </div>
                   <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
@@ -192,7 +197,7 @@ export default function CasestudyPage() {
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 transition-all duration-300"
+                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
                 key={i}
               >
                 <div
@@ -202,12 +207,14 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="lg:mx-[-1.25rem] w-full h-[284px] lg:h-[562px] sm:h-[284px] relative hover:scale-110 transition-all duration-300">
+                  <div className="w-full relative hover:scale-110 transition-all duration-300">
                     <Image
                       src={item.imgSrc}
-                      fill
                       sizes="auto"
                       alt={item.name}
+                      className="h-auto w-full "
+                      width={300}
+                      height={300}
                     />
                   </div>
                   <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
@@ -239,7 +246,7 @@ export default function CasestudyPage() {
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
-        <div className="px-[80px] lg:px-0 xl:max-w-[1440px] mx-auto">
+        <div className="px-[80px] lg:px-6 xl:max-w-[1440px] mx-auto">
           <CustomTaps
             listContent={listContent}
             isShowContent={isShowContent}

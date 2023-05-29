@@ -32,7 +32,7 @@ export const Navbar = () => {
       let windowHeight = window.scrollY;
       if (windowHeight > 800) {
         setStickyClass(
-          "fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-[#fff] w-full p-5 h-[100px] shadow-md lg:pr-[200px]"
+          "fixed top-0 left-1/2 -translate-x-1/2 z-50 bg-[#fff] w-full p-5 h-[100px] shadow-md lg:pr-[200px] px-[200px]"
         );
         setButtonClass("flex");
       } else {
@@ -50,25 +50,50 @@ export const Navbar = () => {
   }, []);
 
   const t = useTranslations("Nav");
+
   return (
     <div className="lg:hidden h-[100px] flex justify-center items-center">
       <nav
         className={`flex flex-wrap items-center justify-center mb-[100px] transition-[height] ease-in-out duration-500 ${stickyClass}`}
       >
-        <Link href="/" className="lg:w-[17%]">
+        <Link
+          href="/"
+          className="lg:w-[17%] w-[125px] absolute left-[30px] top-[30px]"
+        >
           <Image
             src="/Logo.svg"
             alt="me"
             width="125"
             height="50"
-            className={`absolute left-[30px] top-[30px] ${buttonClass}`}
+            className={`${buttonClass}`}
           />
         </Link>
         <Link
           onClick={goToTop}
           href="/"
           className={`${
-            pathName === "/" || pathName === "/jp"
+            (pathName.includes("/") &&
+              !pathName.includes("services") &&
+              !pathName.includes("/jp/services") &&
+              !pathName.includes("casestudy") &&
+              !pathName.includes("/jp/casestudy") &&
+              !pathName.includes("recruitment") &&
+              !pathName.includes("/jp/recruitment") &&
+              !pathName.includes("news") &&
+              !pathName.includes("/jp/news") &&
+              !pathName.includes("contact") &&
+              !pathName.includes("/jp/contact")) ||
+            (pathName.includes("/jp") &&
+              !pathName.includes("services") &&
+              !pathName.includes("/jp/services") &&
+              !pathName.includes("casestudy") &&
+              !pathName.includes("/jp/casestudy") &&
+              !pathName.includes("recruitment") &&
+              !pathName.includes("/jp/recruitment") &&
+              !pathName.includes("news") &&
+              !pathName.includes("/jp/news") &&
+              !pathName.includes("contact") &&
+              !pathName.includes("/jp/contact"))
               ? "font-[600] text-primary after:absolute after:bottom-[-2px] after:left-0 after:content-[''] after:rounded-[2px] after:w-full after:h-[2px] after:bg-primary"
               : "font-[400] text-sub after:w-0"
           } relative text-[19px] leading-[32px] mr-[60px] flex-shrink-0 
@@ -80,7 +105,7 @@ export const Navbar = () => {
           onClick={goToTop}
           href="/services"
           className={`${
-            pathName === "/services" || pathName === "/jp/services"
+            pathName.includes("services") || pathName.includes("/jp/services")
               ? "font-[600] text-primary after:absolute after:bottom-[-2px] after:left-0 after:content-[''] after:rounded-[2px] after:w-full after:h-[2px] after:bg-primary"
               : "font-[400] text-sub after:w-0"
           } relative text-[19px] leading-[32px] mr-[60px] flex-shrink-0
@@ -92,7 +117,7 @@ export const Navbar = () => {
           onClick={goToTop}
           href="/casestudy"
           className={`${
-            pathName === "/casestudy" || pathName === "/jp/casestudy"
+            pathName.includes("casestudy") || pathName.includes("/jp/casestudy")
               ? "font-[600] text-primary after:absolute after:bottom-[-2px] after:left-0 after:content-[''] after:rounded-[2px] after:w-full after:h-[2px] after:bg-primary"
               : "font-[400] text-sub after:w-0"
           } relative text-[19px] leading-[32px] mr-[60px] flex-shrink-0
@@ -104,7 +129,8 @@ export const Navbar = () => {
           onClick={goToTop}
           href="/recruitment"
           className={`${
-            pathName === "/recruitment" || pathName === "/jp/recruitment"
+            pathName.includes("recruitment") ||
+            pathName.includes("/jp/recruitment")
               ? "font-[600] text-primary after:absolute after:bottom-[-2px] after:left-0 after:content-[''] after:rounded-[2px] after:w-full after:h-[2px] after:bg-primary"
               : "font-[400] text-sub after:w-0"
           } relative text-[19px] leading-[32px] mr-[60px] flex-shrink-0
@@ -116,7 +142,7 @@ export const Navbar = () => {
           onClick={goToTop}
           href="/news"
           className={`${
-            pathName === "/news" || pathName === "/jp/news"
+            pathName.includes("news") || pathName.includes("/jp/news")
               ? "font-[600] text-primary after:absolute after:bottom-[-2px] after:left-0 after:content-[''] after:rounded-[2px] after:w-full after:h-[2px] after:bg-primary"
               : "font-[400] text-sub after:w-0"
           } relative text-[19px] leading-[32px] mr-[60px] flex-shrink-0
@@ -128,7 +154,7 @@ export const Navbar = () => {
           onClick={goToTop}
           href="/contact"
           className={`${
-            pathName === "/contact" || pathName === "/jp/contact"
+            pathName.includes("contact") || pathName.includes("/jp/contact")
               ? "font-[600] text-primary after:absolute after:bottom-[-2px] after:left-0 after:content-[''] after:rounded-[2px] after:w-full after:h-[2px] after:bg-primary"
               : "font-[400] text-sub after:w-0"
           } relative text-[19px] leading-[32px] mr-[60px] flex-shrink-0
@@ -137,6 +163,7 @@ export const Navbar = () => {
         >
           {t("Contact")}
         </Link>
+
         <button
           onClick={() => setOpen((o) => !o)}
           className={`absolute right-10 flex justify-center align-center bg-[#f67b25] p-4 w-[200px] height-[50px] rounded-md text-[16px] text-[#ffffff] font-bold ${buttonClass}`}

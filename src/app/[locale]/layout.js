@@ -2,6 +2,7 @@ import { BigHeader } from "@/components/BigHeader/BigHeader";
 import { Footer } from "@/components/Footer";
 import Layout from "@/components/Layout";
 import { Navbar } from "@/components/Navbar";
+import { ScrollButton } from "@/components/ScrollButton";
 import { NextIntlClientProvider } from "next-intl";
 
 export function generateStaticParams() {
@@ -32,6 +33,7 @@ export default async function RootLayout({ children, params: { locale } }) {
             <Layout />
           </div>
           <Footer />
+          <ScrollButton />
         </NextIntlClientProvider>
       </body>
     </html>

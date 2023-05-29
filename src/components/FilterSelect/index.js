@@ -8,6 +8,7 @@ const locationOptions = [
   { value: "ha noi", label: "Ha Noi" },
   { value: "ho chi minh city", label: "Ho Chi Minh" },
   { value: "da nang city", label: "Da Nang" },
+  { value: "Japan", label: "Japan" },
 ];
 const teamOptions = [
   { value: "creation-line", label: "Creation line" },
@@ -120,8 +121,18 @@ export const FilterSelect = ({
 
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-between mb-[52px] pb-[11px]">
-        <div className="flex sm:flex-col">
+      <div className="flex flex-wrap items-center justify-between mb-[52px] pb-[11px] sm:mb-0">
+        <div className="relative h-[44px] min-w-[416px] sm:w-full sm:min-w-0 sm:mx-auto mb-2 sm:mb-0">
+          <input
+            type="text"
+            className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"
+            placeholder={t("Search")}
+            value={searchInput}
+            onChange={(e) => setSearchInput(e.target.value)}
+          />
+          <SearchIcon className="absolute right-[8px] top-1/2 -translate-y-1/2" />
+        </div>
+        <div className="flex sm:flex-col sm:w-full sm:min-w-0 sm:mx-auto">
           <Select
             instanceId={1}
             defaultValue={[]}
@@ -140,7 +151,7 @@ export const FilterSelect = ({
               IndicatorSeparator: () => null,
             }}
             placeholder={t("ByLocation")}
-            className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px]"
+            className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px] sm:my-2"
             styles={customStyles}
           />
           <Select
@@ -163,19 +174,9 @@ export const FilterSelect = ({
               IndicatorSeparator: () => null,
             }}
             placeholder={t("ByTeam")}
-            className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px] ml-[32px] sm:ml-0 sm:my-2"
+            className="min-w-[256px] h-[48px] text-[13px] text-sub leading-[20px] rounded-[8px] ml-[32px] sm:ml-0"
             styles={customStyles}
           />
-        </div>
-        <div className="relative h-[44px] min-w-[416px] sm:min-w-full">
-          <input
-            type="text"
-            className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"
-            placeholder={t("Search")}
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-          />
-          <SearchIcon className="absolute right-[8px] top-1/2 -translate-y-1/2" />
         </div>
       </div>
       <div className="min-h-[288px]">{listContent[activeTab]?.children}</div>

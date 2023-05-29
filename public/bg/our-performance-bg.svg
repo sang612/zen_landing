@@ -36,7 +36,7 @@
                 fill="#25C2E8" />
         </g>
         <circle opacity="0.3" cx="830" cy="407" r="12" fill="#F1673A" />
-        <circle opacity="0.3" cx="438" cy="102" r="12" fill="#F1673A" />
+        <!-- <circle id="perform-circle-1" opacity="0.3" cx="438" cy="102" r="12" fill="#F1673A" /> -->
         <circle opacity="0.3" cx="912" cy="69" r="12" fill="#F1673A" />
     </g>
     <defs>

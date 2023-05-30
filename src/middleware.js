@@ -5,9 +5,8 @@ import createMiddleware from "next-intl/middleware";
 // is set in the background, so if the user switches to a new
 // language, this will take precedence from now on.
 export default createMiddleware({
-  locales: ["en", "jp"],
-  defaultLocale: "en",
-  localePrefix: 'always'
+	locales: ["en", "jp"],
+	defaultLocale: "en",
 });
 
 export const config = {

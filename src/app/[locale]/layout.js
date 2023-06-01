@@ -1,7 +1,5 @@
-import { BigHeader } from "@/components/BigHeader/BigHeader";
+import { BigLayout } from "@/components/BigLayout";
 import { Footer } from "@/components/Footer";
-import Layout from "@/components/Layout";
-import { Navbar } from "@/components/Navbar";
 import { ScrollButton } from "@/components/ScrollButton";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -26,12 +24,7 @@ export default async function RootLayout({ children, params: { locale } }) {
       <head />
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <BigHeader />
-          <div className="relative xl:max-w-[1440px] mx-auto text-sub">
-            <Navbar />
-            {children}
-            <Layout />
-          </div>
+          <BigLayout component={children} />
           <Footer />
           <ScrollButton />
         </NextIntlClientProvider>

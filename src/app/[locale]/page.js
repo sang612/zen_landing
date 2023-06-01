@@ -95,6 +95,7 @@ export default function AboutUsPage() {
       }).init();
     }
   }, []);
+
   useEffect(() => {
     let performLine1 = anime.path("#perform-line-1");
     let performLine2 = anime.path("#perform-line-2");
@@ -108,10 +109,6 @@ export default function AboutUsPage() {
       duration: 5000,
       loop: true,
       autoplay: false,
-      complete: () => {
-        animationRef.current.pause();
-        animationRef.current.remove("#perform-circle-1");
-      },
       begin: () => {
         animationRef.current = anime({
           targets: "#perform-circle-2",
@@ -139,6 +136,7 @@ export default function AboutUsPage() {
 
     return () => {
       animationRef.current?.pause();
+      animationRef.current?.remove("#perform-circle-1");
     };
   }, []);
 
@@ -242,6 +240,7 @@ export default function AboutUsPage() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
               className="absolute z-[-10] w-full lg:top-[21%] s:top-[27%]"
+              id="perform-animate"
             >
               <g clipPath="url(#clip0_116_2159)">
                 <circle

@@ -50,7 +50,7 @@ const hideElement = (value, type) => {
   }
 };
 
-export const BigHeader = () => {
+export const BigHeader = ({ setHeaderLoaded }) => {
   const [firstBannerAnimationsStarted, setFirstBannerAnimationsStarted] =
     useState(false);
   const t = useTranslations();
@@ -131,6 +131,7 @@ export const BigHeader = () => {
 
   useEffect(() => {
     setDom(true);
+    setHeaderLoaded(true);
   }, []);
 
   return (

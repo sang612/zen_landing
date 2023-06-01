@@ -69,13 +69,13 @@ export const ServicesSlider = ({ servicesList, locale }) => {
         </Swiper>
       )}
       <div
-        className="absolute left-[11%] top-[44%] -translate-y-1/2 z-10 hover:cursor-pointer"
+        className="absolute left-[11%] top-[44%] sm:left-[-6%] -translate-y-1/2 z-10 hover:cursor-pointer"
         onClick={handlePrev}
       >
         <PreviousButton />
       </div>
       <div
-        className="absolute right-[15%] top-[44%] -translate-y-1/2 z-10 hover:cursor-pointer"
+        className="absolute right-[15%] top-[44%] sm:right-[-5%] -translate-y-1/2 z-10 hover:cursor-pointer"
         onClick={handleNext}
       >
         <NextButton />

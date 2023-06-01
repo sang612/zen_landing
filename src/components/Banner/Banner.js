@@ -86,195 +86,207 @@ export const Banner = ({
   }, []);
 
   useEffect(() => {
-		let motion_path = anime.path("#circle6");
-		const targets = document.querySelectorAll(".tag-anime");
-		const shuffledTargets = shuffleArray([...targets]);
+    let motion_path = anime.path("#circle6");
+    const targets = document.querySelectorAll(".tag-anime");
+    const shuffledTargets = shuffleArray([...targets]);
 
-		animationInstanceRef.current = anime({
-			autoplay: false,
-			targets: ".logo-animate",
-			opacity: [0, 1],
-			duration: 800,
-			elasticity: 600,
-			easing: "linear",
-			complete: () => {
-				animationInstanceRef.current = anime({
-					targets: ".loading-animate",
-					opacity: [0, 1],
-					rotate: 360,
-					scale: [2, 1],
-					duration: 800,
-					elasticity: 600,
-					easing: "linear",
-					complete: () => {
-						animationInstanceRef.current = anime({
-							targets: ".explain-logo-animate",
-							opacity: [0, 1],
-							duration: 500,
-							elasticity: 600,
-							easing: "linear",
-							complete: () => {
-								animationInstanceRef.current = anime({
-									targets: ".explain-logo-animate-2",
-									opacity: [0, 1],
-									duration: 500,
-									elasticity: 600,
-									easing: "linear",
-									complete: () => {
-										animationInstanceRef.current = anime({
-											targets: ".explain-logo-animate-3",
-											opacity: [0, 1],
-											duration: 500,
-											elasticity: 600,
-											easing: "linear",
-											complete: () => {
-												animationInstanceRef.current = anime({
-													targets: ".explain-logo-animate-4",
-													opacity: [0, 1],
-													duration: 500,
-													elasticity: 600,
-													easing: "linear",
-												});
-											},
-										});
-									},
-								});
-							},
-						});
-						animationInstanceRef.current = anime({
-							targets: ".z-letter-animate",
-							opacity: [0, 1],
-							rotate: 360,
-							scale: [2, 1],
-							duration: 500,
-							elasticity: 600,
-							easing: "linear",
-							complete: () => {
-								animationInstanceRef.current = anime({
-									targets: ".e-letter-animate",
-									opacity: [0, 1],
-									rotate: 360,
-									scale: [2, 1],
-									duration: 500,
-									elasticity: 600,
-									easing: "linear",
-									complete: () => {
-										animationInstanceRef.current = anime({
-											targets: ".n-letter-animate",
-											opacity: [0, 1],
-											rotate: 360,
-											scale: [2, 1],
-											duration: 500,
-											elasticity: 600,
-											easing: "linear",
-											complete: () => {
-												animationInstanceRef.current = anime({
-													targets: ".dot-letter-animate",
-													opacity: [0, 1],
-													rotate: 360,
-													scale: [2, 1],
-													duration: 500,
-													elasticity: 600,
-													easing: "linear",
-													complete: () => {
-														animationInstanceRef.current = anime({
-															targets: ".s-letter-animate",
-															opacity: [0, 1],
-															rotate: 360,
-															scale: [2, 1],
-															duration: 500,
-															elasticity: 600,
-															easing: "linear",
-															complete: () => {
-																animationInstanceRef.current = anime({
-																	targets: ".orange-circle-animate",
-																	opacity: [0, 1],
-																	duration: 500,
-																	elasticity: 600,
-																	easing: "linear",
-																	complete: () => {
-																		animationInstanceRef.current = anime({
-																			targets: "#circle7",
-																			translateX: motion_path("x"),
-																			translateY: motion_path("y"),
-																			rotate: motion_path("angle"),
-																			easing: "linear",
-																			duration: 5000,
-																			loop: true,
-																			begin: () => {
-																				let circle7 =
-																					document.querySelector("#circle7");
-																				if (circle7) {
-																					circle7.style.opacity = 1;
-																				}
-																				animationInstanceRef.current = anime({
-																					targets: ".blue-circle-animate",
-																					opacity: [0, 1],
-																					duration: 500,
-																					elasticity: 600,
-																					easing: "linear",
-																					complete: () => {
-																						let motion_path_2 =
-																							anime.path("#circle8");
-																						animationInstanceRef.current =
-																							anime({
-																								targets: "#circle9",
-																								translateX: motion_path_2("x"),
-																								translateY: motion_path_2("y"),
-																								rotate: motion_path_2("angle"),
-																								easing: "linear",
-																								duration: 5000,
-																								loop: true,
-																								begin: () => {
-																									document.querySelector(
-																										"#circle9"
-																									).style.opacity = 1;
-																								},
-																								complete: () => {},
-																							});
-																					},
-																				});
-																			},
-																		});
-																	},
-																});
-															},
-														});
-													},
-												});
-											},
-										});
-									},
-								});
-							},
-						});
-					},
-				});
-			},
-		});
+    animationInstanceRef.current = anime({
+      autoplay: false,
+      targets: ".logo-animate",
+      opacity: [0, 1],
+      duration: 800,
+      elasticity: 600,
+      easing: "linear",
+      complete: () => {
+        animationInstanceRef.current = anime({
+          targets: ".loading-animate",
+          opacity: [0, 1],
+          rotate: 360,
+          scale: [2, 1],
+          duration: 800,
+          elasticity: 600,
+          easing: "linear",
+          complete: () => {
+            animationInstanceRef.current = anime({
+              targets: ".explain-logo-animate",
+              opacity: [0, 1],
+              duration: 500,
+              elasticity: 600,
+              easing: "linear",
+              complete: () => {
+                animationInstanceRef.current = anime({
+                  targets: ".explain-logo-animate-2",
+                  opacity: [0, 1],
+                  duration: 500,
+                  elasticity: 600,
+                  easing: "linear",
+                  complete: () => {
+                    animationInstanceRef.current = anime({
+                      targets: ".explain-logo-animate-3",
+                      opacity: [0, 1],
+                      duration: 500,
+                      elasticity: 600,
+                      easing: "linear",
+                      complete: () => {
+                        animationInstanceRef.current = anime({
+                          targets: ".explain-logo-animate-4",
+                          opacity: [0, 1],
+                          duration: 500,
+                          elasticity: 600,
+                          easing: "linear",
+                        });
+                      },
+                    });
+                  },
+                });
+              },
+            });
+            animationInstanceRef.current = anime({
+              targets: ".z-letter-animate",
+              opacity: [0, 1],
+              rotate: 360,
+              scale: [2, 1],
+              duration: 500,
+              elasticity: 600,
+              easing: "linear",
+              complete: () => {
+                animationInstanceRef.current = anime({
+                  targets: ".e-letter-animate",
+                  opacity: [0, 1],
+                  rotate: 360,
+                  scale: [2, 1],
+                  duration: 500,
+                  elasticity: 600,
+                  easing: "linear",
+                  complete: () => {
+                    animationInstanceRef.current = anime({
+                      targets: ".n-letter-animate",
+                      opacity: [0, 1],
+                      rotate: 360,
+                      scale: [2, 1],
+                      duration: 500,
+                      elasticity: 600,
+                      easing: "linear",
+                      complete: () => {
+                        animationInstanceRef.current = anime({
+                          targets: ".dot-letter-animate",
+                          opacity: [0, 1],
+                          rotate: 360,
+                          scale: [2, 1],
+                          duration: 500,
+                          elasticity: 600,
+                          easing: "linear",
+                          complete: () => {
+                            animationInstanceRef.current = anime({
+                              targets: ".s-letter-animate",
+                              opacity: [0, 1],
+                              rotate: 360,
+                              scale: [2, 1],
+                              duration: 500,
+                              elasticity: 600,
+                              easing: "linear",
+                              complete: () => {
+                                animationInstanceRef.current = anime({
+                                  targets: ".orange-circle-animate",
+                                  opacity: [0, 1],
+                                  duration: 500,
+                                  elasticity: 600,
+                                  easing: "linear",
+                                  complete: () => {
+                                    animationInstanceRef.current = anime({
+                                      targets: "#circle7",
+                                      translateX: motion_path("x"),
+                                      translateY: motion_path("y"),
+                                      rotate: motion_path("angle"),
+                                      easing: "linear",
+                                      duration: 5000,
+                                      loop: true,
+                                      begin: () => {
+                                        let circle7 =
+                                          document.querySelector("#circle7");
+                                        if (circle7) {
+                                          circle7.style.opacity = 1;
+                                        }
+                                        animationInstanceRef.current = anime({
+                                          targets: ".blue-circle-animate",
+                                          opacity: [0, 1],
+                                          duration: 500,
+                                          elasticity: 600,
+                                          easing: "linear",
+                                          complete: () => {
+                                            let motion_path_2 =
+                                              anime.path("#circle8");
+                                            animationInstanceRef.current =
+                                              anime({
+                                                targets: "#circle9",
+                                                translateX:
+                                                  isPlaying &&
+                                                  motion_path_2("x"),
+                                                translateY:
+                                                  isPlaying &&
+                                                  motion_path_2("y"),
+                                                rotate:
+                                                  isPlaying &&
+                                                  motion_path_2("angle"),
+                                                easing: "linear",
+                                                duration: 5000,
+                                                loop: true,
+                                                begin: () => {
+                                                  if (
+                                                    document.querySelector(
+                                                      "#circle9"
+                                                    )
+                                                  ) {
+                                                    document.querySelector(
+                                                      "#circle9"
+                                                    ).style.opacity = 1;
+                                                  }
+                                                },
+                                                complete: () => {},
+                                              });
+                                          },
+                                        });
+                                      },
+                                    });
+                                  },
+                                });
+                              },
+                            });
+                          },
+                        });
+                      },
+                    });
+                  },
+                });
+              },
+            });
+          },
+        });
+      },
+    });
 
-		tagAnimationInstanceRef.current = anime({
-			targets: shuffledTargets,
-			opacity: [0, 1],
-			duration: 500,
-			delay: function (el, i) {
-				return i * 100; // Add a delay to each element based on its index
-			},
-			loop: true,
-			direction: "alternate",
-			easing: "easeInOutSine",
-		});
+    tagAnimationInstanceRef.current = anime({
+      targets: shuffledTargets,
+      opacity: [0, 1],
+      duration: 500,
+      delay: function (el, i) {
+        return i * 100; // Add a delay to each element based on its index
+      },
+      loop: true,
+      direction: "alternate",
+      easing: "easeInOutSine",
+    });
 
-		gearAnimationInstanceRef.current = anime({
-			targets: ".gear-animate",
-			rotate: 360,
-			duration: 1600,
-			loop: true,
-			elasticity: 600,
-			easing: "linear",
-		});
-		setFirstBannerAnimationsStarted(true);
-	}, []);
+    gearAnimationInstanceRef.current = anime({
+      targets: ".gear-animate",
+      rotate: 360,
+      duration: 1600,
+      loop: true,
+      elasticity: 600,
+      easing: "linear",
+    });
+    setFirstBannerAnimationsStarted(true);
+  }, []);
 
   useEffect(() => {
     if (isPlaying) {

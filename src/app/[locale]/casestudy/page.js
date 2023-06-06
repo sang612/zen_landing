@@ -11,6 +11,7 @@ export default function CasestudyPage() {
   const [searchInput, setSearchInput] = useState("");
   const [casestudyData, setCasestudyData] = useState([]);
   const [category, setCategory] = useState("All");
+  const [casestudyListFiltered, setcasestudyListFiltered] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,16 +22,24 @@ export default function CasestudyPage() {
     };
     fetchData();
   }, []);
-  const [casestudyListFiltered, setcasestudyListFiltered] = useState();
   useEffect(() => {
-		setcasestudyListFiltered(
-			casestudyData.filter(
-				(item) =>
-					item.name.toLowerCase().includes(searchInput.toLowerCase()) &&
-					item.category.toLowerCase().includes(category.toLowerCase())
-			)
-		);
-	}, [searchInput, category, casestudyData]);
+    if (category === "All" && !searchInput)
+      setcasestudyListFiltered(casestudyData);
+    else if (category === "All" && searchInput)
+      setcasestudyListFiltered(
+        casestudyData.filter((item) =>
+          item.name.toLowerCase().includes(searchInput.toLowerCase())
+        )
+      );
+    else
+      setcasestudyListFiltered(
+        casestudyData.filter(
+          (item) =>
+            item.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+            item.category.toLowerCase().includes(category.toLowerCase())
+        )
+      );
+  }, [searchInput, category, casestudyData]);
 
   const listContent = [
     {

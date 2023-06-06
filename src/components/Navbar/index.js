@@ -7,6 +7,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Popup from "reactjs-popup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const contentStyle = {
   width: "358px",
@@ -50,6 +52,34 @@ export const Navbar = () => {
   }, []);
 
   const t = useTranslations("Nav");
+  const notify = () =>
+    toast.success(`${t("Contact.Success")}`, { autoClose: 2000 });
+  const notifyError = () =>
+    toast.success(`${t("Contact.Error")}`, { autoClose: 2000 });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = document.getElementById("formToDownload");
+    const formData = new FormData(form);
+    fetch(
+      `https://script.google.com/macros/s/AKfycbwy4JsgIQitmQYNlrowg-BQE30RDMNOgRZHEt6q5Zi-rTJSjFFyP9IF8ZwYliCk2dXr/exec`,
+      {
+        method: "POST",
+        body: formData,
+      }
+    )
+      .then((res) => res)
+      .then((data) => {
+        if (data.status === 200) {
+          notify();
+          window.open("/ZensCompany_Profile.pdf");
+          setOpen(false);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        notifyError();
+      });
+  };
 
   return (
     <div className="lg:hidden h-[100px] flex justify-center items-center">
@@ -188,7 +218,7 @@ export const Navbar = () => {
             >
               &times;
             </div>
-            <form>
+            <form id="formToDownload" onSubmit={handleSubmit}>
               <div className="flex-col items-start justify-start">
                 <input
                   type="text"
@@ -215,6 +245,7 @@ export const Navbar = () => {
           </div>
         </div>
       </Popup>
+      <ToastContainer />
     </div>
   );
 };

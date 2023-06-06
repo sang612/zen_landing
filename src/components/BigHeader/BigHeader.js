@@ -91,7 +91,7 @@ export const BigHeader = ({ setHeaderLoaded }) => {
       .then((data) => {
         if (data.status === 200) {
           notify();
-          window.open("/ユーザー一括登録用エクセル_Nerusoku.xlsx");
+          window.open("/ZensCompany_Profile.pdf");
           setOpen(false);
         }
       })

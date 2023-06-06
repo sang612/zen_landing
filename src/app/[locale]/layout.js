@@ -1,5 +1,4 @@
 import { BigLayout } from "@/components/BigLayout";
-import { Footer } from "@/components/Footer";
 import { ScrollButton } from "@/components/ScrollButton";
 import { NextIntlClientProvider } from "next-intl";
 
@@ -25,7 +24,6 @@ export default async function RootLayout({ children, params: { locale } }) {
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <BigLayout component={children} />
-          <Footer />
           <ScrollButton />
         </NextIntlClientProvider>
       </body>

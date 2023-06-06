@@ -23,14 +23,23 @@ export default function CasestudyPage() {
     fetchData();
   }, []);
   useEffect(() => {
-		setcasestudyListFiltered(
-			newsData.filter(
-				(item) =>
-					item.name.toLowerCase().includes(searchInput) &&
-					item.category.toLowerCase().includes(category.toLowerCase())
-			)
-		);
-	}, [searchInput, category, newsData]);
+    if (category === "All" && !searchInput) setcasestudyListFiltered(newsData);
+    else if (category === "All" && searchInput)
+      setcasestudyListFiltered(
+        newsData.filter((item) =>
+          item.name.toLowerCase().includes(searchInput.toLowerCase())
+        )
+      );
+    else
+      setcasestudyListFiltered(
+        newsData.filter(
+          (item) =>
+            item.name.toLowerCase().includes(searchInput.toLowerCase()) &&
+            item.category.toLowerCase().includes(category.toLowerCase())
+        )
+      );
+  }, [searchInput, category, newsData]);
+  console.log("casestudyListFiltered", casestudyListFiltered);
 
   const listContent = [
     {
@@ -45,7 +54,14 @@ export default function CasestudyPage() {
             >
               <div className="hover:cursor-pointer">
                 <div className="w-full h-auto min-h-0 relative hover:scale-110 transition-all duration-300">
-                  <Image src={item.imgSrc} width={300} height={300} className="w-full h-auto" sizes="auto" alt={item.name} />
+                  <Image
+                    src={item.imgSrc}
+                    width={300}
+                    height={300}
+                    className="w-full h-auto"
+                    sizes="auto"
+                    alt={item.name}
+                  />
                 </div>
                 <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                   {item.name}
@@ -78,7 +94,14 @@ export default function CasestudyPage() {
             >
               <div className="hover:cursor-pointer">
                 <div className="w-full h-auto min-h-0 relative hover:scale-110 transition-all duration-300">
-                  <Image src={item.imgSrc} width={300} height={300} className="w-full h-auto" sizes="auto" alt={item.name} />
+                  <Image
+                    src={item.imgSrc}
+                    width={300}
+                    height={300}
+                    className="w-full h-auto"
+                    sizes="auto"
+                    alt={item.name}
+                  />
                 </div>
                 <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
                   {item.name}

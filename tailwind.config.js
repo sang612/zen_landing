@@ -23,6 +23,8 @@ module.exports = {
       body: "#0B2337",
       black: "#000",
       white: "#fff",
+      title2: "#090606",
+      sub2: "#5f5d5c",
     },
     screens: {
       lg: { max: "1023px" },

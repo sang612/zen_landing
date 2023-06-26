@@ -48,7 +48,7 @@ export const CustomTaps = ({
           <SearchIcon className="absolute right-[8px] top-1/2 -translate-y-1/2" />
         </div>
       </div>
-      <div>{isShowContent && ( listContent[activeTab]?.children ?  listContent[activeTab]?.children : 'cc')}</div>
+      <div>{isShowContent && ( listContent[activeTab]?.children ?  listContent[activeTab]?.children : 'Not found')}</div>
     </div>
   );
 };

@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import "../../../pages/styles/globals.css";
-import Image from "next/image";
 import { CustomTaps } from "@/components/Tab";
+import { CasestudyDetail } from "@/components/CasestudyDetail/CaseStudyDetail";
 
 export default function CasestudyPage() {
   const [isShowContent, setIsShowContent] = useState(true);
@@ -46,7 +46,7 @@ export default function CasestudyPage() {
       key: "1",
       label: `All`,
       children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
@@ -60,12 +60,11 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full relative hover:scale-110 transition-all duration-300">
-                    <Image
+                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
+                    <img
                       src={item.imgSrc}
-                      sizes="auto"
                       alt={item.name}
-                      className="h-auto w-full "
+                      className=""
                       width={300}
                       height={300}
                     />
@@ -98,7 +97,7 @@ export default function CasestudyPage() {
       key: "2",
       label: `App`,
       children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
@@ -112,12 +111,12 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full relative hover:scale-110 transition-all duration-300">
-                    <Image
+                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
+                    <img
                       src={item.imgSrc}
                       sizes="auto"
                       alt={item.name}
-                      className="h-auto w-full "
+                      className=""
                       width={300}
                       height={300}
                     />
@@ -150,7 +149,7 @@ export default function CasestudyPage() {
       key: "3",
       label: `Web`,
       children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
@@ -164,12 +163,12 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full relative hover:scale-110 transition-all duration-300">
-                    <Image
+                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
+                    <img
                       src={item.imgSrc}
                       sizes="auto"
                       alt={item.name}
-                      className="h-auto w-full "
+                      className=""
                       width={300}
                       height={300}
                     />
@@ -202,7 +201,7 @@ export default function CasestudyPage() {
       key: "4",
       label: `Blockchain`,
       children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-between gap-x-[40px]">
+        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
           {casestudyListFiltered?.length ? (
             casestudyListFiltered?.map((item, i) => (
               <div
@@ -216,12 +215,12 @@ export default function CasestudyPage() {
                   }}
                   className="hover:cursor-pointer"
                 >
-                  <div className="w-full relative hover:scale-110 transition-all duration-300">
-                    <Image
+                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
+                    <img
                       src={item.imgSrc}
                       sizes="auto"
                       alt={item.name}
-                      className="h-auto w-full "
+                      className=""
                       width={300}
                       height={300}
                     />
@@ -251,7 +250,6 @@ export default function CasestudyPage() {
       ),
     },
   ];
-
   return (
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
@@ -267,21 +265,20 @@ export default function CasestudyPage() {
         </div>
 
         {!isShowContent && (
-          <div className="relative xl:max-w-[1440px] mx-auto">
-            {listDetail.map((item, i) => (
-              <div
-                className="relative w-full h-[1024px] lg:h-auto lg:min-h-[300px]"
-                key={i}
-              >
-                <Image
-                  src={item}
-                  fill
-                  className="w-full h-full object-contain"
-                  alt="zenhair"
-                />
-              </div>
-            ))}
-          </div>
+          <CasestudyDetail
+            title={listDetail.title}
+            desc={listDetail.desc}
+            label={listDetail.label}
+            content={listDetail.content}
+            label2={listDetail.label2}
+            content2={listDetail.content2}
+            image={listDetail.image}
+            special={listDetail.special}
+            qr={listDetail.qr}
+            qr2={listDetail.qr2}
+            link1={listDetail.link1}
+            link2={listDetail.link2}
+          />
         )}
       </div>
     </div>

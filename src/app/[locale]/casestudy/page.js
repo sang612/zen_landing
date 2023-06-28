@@ -1,18 +1,19 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useEffect, useState } from "react";
 import "../../../pages/styles/globals.css";
-import { CustomTaps } from "@/components/Tab";
-import { CasestudyDetail } from "@/components/CasestudyDetail/CaseStudyDetail";
+import { Tabs } from "antd";
+import CardCaseStudy from "@/components/CardCaseStudy";
+import { SearchIcon } from "@/assets/icons";
+import { useTranslations } from "next-intl";
 
-export default function CasestudyPage() {
-  const [isShowContent, setIsShowContent] = useState(true);
-  const [listDetail, setListDetail] = useState([]);
+export default function Layout() {
   const [searchInput, setSearchInput] = useState("");
   const [casestudyData, setCasestudyData] = useState([]);
-  const [category, setCategory] = useState("All");
-  const [casestudyListFiltered, setcasestudyListFiltered] = useState();
-
+  const [key, setKey] = useState("all");
+  const [casestudyListFiltered, setcasestudyListFiltered] = useState([]);
+  const t = useTranslations("News");
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch("/api/casestudy");
@@ -23,9 +24,8 @@ export default function CasestudyPage() {
     fetchData();
   }, []);
   useEffect(() => {
-    if (category === "All" && !searchInput)
-      setcasestudyListFiltered(casestudyData);
-    else if (category === "All" && searchInput)
+    if (key === "all" && !searchInput) setcasestudyListFiltered(casestudyData);
+    else if (key === "all" && searchInput)
       setcasestudyListFiltered(
         casestudyData.filter((item) =>
           item.name.toLowerCase().includes(searchInput.toLowerCase())
@@ -36,250 +36,61 @@ export default function CasestudyPage() {
         casestudyData.filter(
           (item) =>
             item.name.toLowerCase().includes(searchInput.toLowerCase()) &&
-            item.category.toLowerCase().includes(category.toLowerCase())
+            item.category.toLowerCase().includes(key.toLowerCase())
         )
       );
-  }, [searchInput, category, casestudyData]);
+  }, [searchInput, key, casestudyData]);
 
-  const listContent = [
+  const onChange = (key) => {
+    casestudyData.map((caseStudy) => {
+      setcasestudyListFiltered(caseStudy.category === key ? caseStudy : []);
+    });
+    setKey(key);
+  };
+  const items = [
     {
-      key: "1",
+      key: "all",
       label: `All`,
-      children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
-          {casestudyListFiltered?.length ? (
-            casestudyListFiltered?.map((item, i) => (
-              <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
-                key={i}
-              >
-                <div
-                  onClick={() => {
-                    setIsShowContent(false);
-                    setListDetail(item.detail);
-                  }}
-                  className="hover:cursor-pointer"
-                >
-                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
-                    <img
-                      src={item.imgSrc}
-                      alt={item.name}
-                      className=""
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-                    {item.name}
-                  </h4>
-                </div>
-                <div>
-                  {item.badge.map((e, i) => (
-                    <span
-                      key={i}
-                      className="mr-[8px] py-[6px] px-[8px] bg-[#F4F6F8] rounded-[8px] text-[11px] font-[400] leading-[20px] text-sub tracking-[0.01em]"
-                    >
-                      {e}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))
-          ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-              Not found
-            </h4>
-          )}
-        </div>
-      ),
+      children: <CardCaseStudy casestudyListFiltered={casestudyListFiltered} />,
     },
     {
-      key: "2",
+      key: "app",
       label: `App`,
-      children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
-          {casestudyListFiltered?.length ? (
-            casestudyListFiltered?.map((item, i) => (
-              <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
-                key={i}
-              >
-                <div
-                  onClick={() => {
-                    setIsShowContent(false);
-                    setListDetail(item.detail);
-                  }}
-                  className="hover:cursor-pointer"
-                >
-                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
-                    <img
-                      src={item.imgSrc}
-                      sizes="auto"
-                      alt={item.name}
-                      className=""
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-                    {item.name}
-                  </h4>
-                </div>
-                <div>
-                  {item.badge.map((e, i) => (
-                    <span
-                      key={i}
-                      className="mr-[8px] py-[6px] px-[8px] bg-[#F4F6F8] rounded-[8px] text-[11px] font-[400] leading-[20px] text-sub tracking-[0.01em]"
-                    >
-                      {e}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))
-          ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-              Not found
-            </h4>
-          )}
-        </div>
-      ),
+      children: <CardCaseStudy casestudyListFiltered={casestudyListFiltered} />,
     },
     {
-      key: "3",
+      key: "web",
       label: `Web`,
-      children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
-          {casestudyListFiltered?.length ? (
-            casestudyListFiltered?.map((item, i) => (
-              <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
-                key={i}
-              >
-                <div
-                  onClick={() => {
-                    setIsShowContent(false);
-                    setListDetail(item.detail);
-                  }}
-                  className="hover:cursor-pointer"
-                >
-                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
-                    <img
-                      src={item.imgSrc}
-                      sizes="auto"
-                      alt={item.name}
-                      className=""
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-                    {item.name}
-                  </h4>
-                </div>
-                <div>
-                  {item.badge.map((e, i) => (
-                    <span
-                      key={i}
-                      className="mr-[8px] py-[6px] px-[8px] bg-[#F4F6F8] rounded-[8px] text-[11px] font-[400] leading-[20px] text-sub tracking-[0.01em]"
-                    >
-                      {e}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))
-          ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-              Not found
-            </h4>
-          )}
-        </div>
-      ),
+      children: <CardCaseStudy casestudyListFiltered={casestudyListFiltered} />,
     },
     {
-      key: "4",
+      key: "blockchain",
       label: `Blockchain`,
-      children: (
-        <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
-          {casestudyListFiltered?.length ? (
-            casestudyListFiltered?.map((item, i) => (
-              <div
-                className="w-[30%] lg:w-full mb-[32px] hover:shadow-hover hover:bg-[#fff] p-5 sm:px-0 transition-all duration-300"
-                key={i}
-              >
-                <div
-                  onClick={() => {
-                    setIsShowContent(false);
-                    setListDetail(item.detail);
-                  }}
-                  className="hover:cursor-pointer"
-                >
-                  <div className="w-full  relative hover:scale-110 transition-all duration-300">
-                    <img
-                      src={item.imgSrc}
-                      sizes="auto"
-                      alt={item.name}
-                      className=""
-                      width={300}
-                      height={300}
-                    />
-                  </div>
-                  <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-                    {item.name}
-                  </h4>
-                </div>
-                <div>
-                  {item.badge.map((e, i) => (
-                    <span
-                      key={i}
-                      className="mr-[8px] py-[6px] px-[8px] bg-[#F4F6F8] rounded-[8px] text-[11px] font-[400] leading-[20px] text-sub tracking-[0.01em]"
-                    >
-                      {e}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))
-          ) : (
-            <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-              Not found
-            </h4>
-          )}
-        </div>
-      ),
+      children: <CardCaseStudy casestudyListFiltered={casestudyListFiltered} />,
     },
   ];
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <div className="px-[80px] lg:px-6 xl:max-w-[1440px] mx-auto">
-          <CustomTaps
-            listContent={listContent}
-            isShowContent={isShowContent}
-            setIsShowContent={setIsShowContent}
-            searchInput={searchInput}
-            setSearchInput={setSearchInput}
-            setCategory={setCategory}
+          <Tabs
+            activeKey={key}
+            items={items}
+            onChange={onChange}
+            tabBarExtraContent={
+              <div className="relative h-[30px] min-w-[416px] sm:min-w-[70%] sm:mt-[30px]">
+                <input
+                  type="text"
+                  className="placeholder:text-[#CACACA] placeholder:text-[400] placeholder:text-[13px] text-[400] text-[13px] leading-[20px] w-full h-full p-[8px] rounded-[8px] border border-solid border-[#CACACA] text-sub outline-none"
+                  placeholder={t("Search")}
+                  value={searchInput}
+                  onChange={(e) => setSearchInput(e.target.value)}
+                />
+                <SearchIcon className="absolute right-[8px] top-1/2 -translate-y-1/2" />
+              </div>
+            }
           />
         </div>
-
-        {!isShowContent && (
-          <CasestudyDetail
-            title={listDetail.title}
-            desc={listDetail.desc}
-            label={listDetail.label}
-            content={listDetail.content}
-            label2={listDetail.label2}
-            content2={listDetail.content2}
-            image={listDetail.image}
-            special={listDetail.special}
-            qr={listDetail.qr}
-            qr2={listDetail.qr2}
-            link1={listDetail.link1}
-            link2={listDetail.link2}
-          />
-        )}
       </div>
     </div>
   );

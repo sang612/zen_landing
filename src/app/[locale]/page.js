@@ -144,7 +144,7 @@ export default function AboutUsPage() {
   const locale = useLocale();
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative ">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <div className="lg:px-[40px] px-[80px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
           <div className="lg:flex-col flex flex-wrap items-center justify-center py-[88px] lg:py-[20px]">

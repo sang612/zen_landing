@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import "../../../pages/styles/globals.css";
 import Image from "next/image";
-import { CustomTaps } from "@/components/Tab";
+import { CustomTabs } from "@/components/Tab";
 import { useTranslations } from "next-intl";
 
 export default function CasestudyPage() {
@@ -39,7 +39,6 @@ export default function CasestudyPage() {
         )
       );
   }, [searchInput, category, newsData]);
-  console.log("casestudyListFiltered", casestudyListFiltered);
 
   const listContent = [
     {
@@ -128,7 +127,7 @@ export default function CasestudyPage() {
     <div className="relative overflow-hidden">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <div className="px-[80px] lg:px-6 xl:max-w-[1440px] mx-auto">
-          <CustomTaps
+          <CustomTabs
             listContent={listContent}
             isShowContent={isShowContent}
             setIsShowContent={setIsShowContent}

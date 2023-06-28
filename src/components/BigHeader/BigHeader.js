@@ -24,6 +24,7 @@ import { useTranslations } from "next-intl";
 import Popup from "reactjs-popup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useParams } from "next/navigation";
 
 const contentStyle = {
   width: "358px",
@@ -59,14 +60,12 @@ export const BigHeader = ({ setHeaderLoaded }) => {
   const [openMobileNav, setOpenMobileNav] = useState(false);
   const pathName = usePathname();
   const [open, setOpen] = useState(false);
-
+  const params = useParams();
   const notify = () =>
     toast.success(`${t("Contact.Success")}`, { autoClose: 2000 });
   const notifyError = () =>
     toast.success(`${t("Contact.Error")}`, { autoClose: 2000 });
-
   const childSlickRef = useRef(null);
-
   const handleBeforeChange = useCallback(() => {
     if (childSlickRef.current && childSlickRef.current.innerSlider) {
       const target = childSlickRef.current.innerSlider.list;
@@ -75,7 +74,6 @@ export const BigHeader = ({ setHeaderLoaded }) => {
       }
     }
   }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = document.getElementById("formToDownload");
@@ -161,9 +159,13 @@ export const BigHeader = ({ setHeaderLoaded }) => {
             setOpen={setOpen}
           />
         )}
-      {dom && (pathName === "/casestudy" || pathName === "/jp/casestudy") && (
-        <Banner3 setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
-      )}
+      {dom &&
+        (pathName === `/casestudy/${params.id}` ||
+          pathName === "/casestudy" ||
+          pathName === `jp/casestudy/` ||
+          pathName === `jp/casestudy/${params.id}`) && (
+          <Banner3 setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
+        )}
       {dom &&
         (pathName === "/recruitment" || pathName === "/jp/recruitment") && (
           <Banner4

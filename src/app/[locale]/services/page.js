@@ -235,7 +235,7 @@ export default function AboutUsPage() {
   const locale = useLocale();
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative ">
       <div className="relative xl:max-w-[1440px] mx-auto">
         <div className="px-[80px] lg:px-[40px] xl:max-w-[1440px] mx-auto bg-[url('/bg/about-bg.svg')] bg-no-repeat bg-auto bg-[-1%_10%]">
           <div className="pb-[88px]">

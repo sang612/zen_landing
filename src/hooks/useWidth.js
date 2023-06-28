@@ -1,14 +1,17 @@
-import { useState, useMemo } from "react";
+import { useState, useEffect } from "react";
 
 export default function useWidth() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState();
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
   const breakpoints = {
     sm: "640",
     md: "768",
     lg: "1024",
     xl: "1280",
   };
-  useMemo(() => {
+  useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
     };

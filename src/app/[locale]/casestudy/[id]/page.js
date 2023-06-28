@@ -2,7 +2,7 @@ import "@/pages/styles/globals.css";
 import { CasestudyDetail } from "@/components/CasestudyDetail/CaseStudyDetail";
 
 export async function generateStaticParams() {
-  const res = await fetch("http://localhost:3000/api/casestudy");
+  const res = await fetch("/api/casestudy");
   const casestudies = await res.json();
   return casestudies.map((casestudy) => ({
     id: casestudy.id.toString(),
@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 }
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/casestudy");
+  const res = await fetch("/api/casestudy");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

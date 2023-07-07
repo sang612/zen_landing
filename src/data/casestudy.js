@@ -7,7 +7,7 @@ export const casestudyList = [
     detail: {
       title: "Phone Tracker Number Locator",
       desc: "This app allows users to locate any phone number (current location) by tracking down its GPS. Besides that, you can search for nearby places (food & drinks, ATM, gasoline, ...), information about phone carriers’ information stay updated on traffic’s conditions.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -20,7 +20,7 @@ export const casestudyList = [
         "/casestudy/phone-tracker-number-locator/1.png",
         "/casestudy/phone-tracker-number-locator/2.png",
       ],
-      special: "1+ milion downloads on Google Play",
+      special: "1M+ downloads on Google Play",
       qr: "/casestudy/phone-tracker-number-locator/qr.png",
     },
     category: "app",
@@ -33,11 +33,11 @@ export const casestudyList = [
     detail: {
       title: "Fam: Location Sharing",
       desc: "This app offers users a convenient way to locate their family or friends. With this app, users can share their location either through a QR code or GPS. Additionally, in the unfortunate event of a lost or stolen phone, the app features a reliable location tracker that facilitates easy retrieval.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
       ],
       label2: "Download",
@@ -55,11 +55,11 @@ export const casestudyList = [
     detail: {
       title: "GigApp",
       desc: "This app provides users with a seamless experience for ordering food from restaurants and food vendors. Once an order is placed, the app facilitates easy pickup and delivery right to your door. With the real-time order tracking feature, you can also monitor the status of your delivery. Moreover, the app offers a wide range of payment methods catering to the preferences of users.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
         {
           id: "2",
@@ -71,7 +71,7 @@ export const casestudyList = [
         },
         {
           id: "4",
-          text: "API:GraphQL",
+          text: "API: GraphQL",
         },
       ],
 
@@ -87,14 +87,14 @@ export const casestudyList = [
     detail: {
       title: "GIOLE",
       desc: "GIOLE is an app that helps users find nearby churches and their service schedules throughout the day, making it convenient to attend church services. Additionally, the app provides navigation assistance using Google Maps, simplifying the process of finding and reaching the desired church. With GIOLE, attending a church service has never been easier.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
           text: "Flutter",
         },
       ],
-      label2: "Press",
+      label2: "Press:",
       content2: [
         {
           id: "1",
@@ -123,11 +123,11 @@ export const casestudyList = [
     detail: {
       title: "PCR Test Kit",
       desc: "This app offers a secure and convenient solution for users to purchase PCR kits, particularly during periods of strict lockdowns when people are restricted from leaving their homes. It facilitates effortless ordering, delivery, and tracking of PCR kit shipments. Users can also easily communicate with laboratories for COVID sting and access their test results directly online.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
         {
           id: "2",
@@ -145,12 +145,12 @@ export const casestudyList = [
   {
     id: "6",
     imgSrc: "/casestudy/jmatch/thumbnail.png",
-    name: "JMatch",
+    name: "JMatch (Jマッチ)",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "JMatch",
+      title: "JMatch (Jマッチ)",
       desc: "By inputting your business profile and current issues, the system can provide various recommendations, including implementing IT tools, employee training courses, and other tailored solutions. It also assists with financial strategies, such as accessing subsidies, loans, and investments. With an extensive network of over 13,000 companies, JMatch also promotes collaboration and partnerships among businesses that share common objectives and requirements.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -160,8 +160,8 @@ export const casestudyList = [
       label2: "Website",
       content2: "https://www.jmatch.jp/",
       image: ["/casestudy/jmatch/1.png"],
+      special: "#Top best systems for businesses in Japan",
     },
-    special: "#Top best systems for businesses in Japan",
     category: "web",
   },
   {
@@ -172,7 +172,7 @@ export const casestudyList = [
     detail: {
       title: "Video To Mp3 Converter",
       desc: "This app enables users to extract high-quality audio from videos and convert it into MP3 format. Once converted, users can easily save the MP3 file directly to their devices, set it as a personalized ringtone or simply enjoy it offline. Additionally, users can share the converted audio with others through various supported platforms.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -197,7 +197,7 @@ export const casestudyList = [
     detail: {
       title: "Interactive Elements Interact Elements",
       desc: "The project revolutionizes video watching experience by harnessing the power of Interactive Videos, aiming to elevate user engagement and interactivity. With its advanced editing features, seamless script integration, and interactive elements, creators can now craft immersive and captivating video experiences for diverse applications, pushing the boundaries of traditional video content.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -222,11 +222,11 @@ export const casestudyList = [
     detail: {
       title: "4E Kids",
       desc: "Learn, Play, and Grow! Our interactive app nurtures all-around thinking in children through a friendly interface that blends together learning and playing. With captivating games, puzzles, and interactive lessons, 4E Kids fosters critical thinking, creativity, and problem-solving skills. Our virtual teachers analyze and evaluate children's progress, frequently providing valuable feedback.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
         {
           id: "2",
@@ -242,6 +242,7 @@ export const casestudyList = [
       qr2: "/casestudy/4ekid/qr2.png",
       link1: "http://surl.li/ifxfz",
       link2: "http://surl.li/ifxfq",
+      isQRRight: true,
     },
     category: "blockchain",
   },
@@ -251,9 +252,9 @@ export const casestudyList = [
     name: "4E Hub",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "4E ",
+      title: "4E Hub",
       desc: "4E Hub is a mobile app designed to provide users with easy access to upto-date blockchain news (Web3) throughout the day. With comprehensive coverage and regular updates, it serves as a reliable and informative tool for staying informed about the latest market trends in the blockchain industry.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -273,6 +274,7 @@ export const casestudyList = [
       qr2: "/casestudy/4ehub/qr2.png",
       link1: "http://surl.li/iewho",
       link2: "http://surl.li/iewgz",
+      isQRRight: true,
     },
     category: "blockchain",
   },
@@ -284,11 +286,11 @@ export const casestudyList = [
     detail: {
       title: "CorgiSwap",
       desc: "CorgiSwap is a secure DEX on the Binance Smart Chain (BSC/BEP20) network. It allows seamless token swaping/trading and offers features like LP token farming and token staking for rewards.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
         {
           id: "2",
@@ -322,11 +324,11 @@ export const casestudyList = [
     detail: {
       title: "CorgiWallet",
       desc: "Belonging to CorgiDoge token ecosystem on the Binance Smart Chain (BSC) network, the app functions as a cryptocurrency wallet for creating/importing wallets, tracking assets, and trading/swapping tokens via smart contracts.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
         {
           id: "2",
@@ -357,11 +359,11 @@ export const casestudyList = [
     detail: {
       title: "CorgiSport",
       desc: "CorgiSport is a fitness application leveraging blockchain technology. It enables users to earn real money by participating in exercise activities and challenges. To join, users must possess a shoe NFT, which can be obtained through minting or purchasing from the marketplace. By merging blockchain, fitness, and financial incentives, CorgiSport offers a unique and rewarding experience in today's modern world.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
-          text: "ReactNative",
+          text: "React Native",
         },
         {
           id: "2",
@@ -396,7 +398,7 @@ export const casestudyList = [
     detail: {
       title: "AthenaAI",
       desc: "AthenaAI is an innovative platform powered by OpenAI models. It offers advanced features like content generation, AI chat, and AI image creation. With customizable templates, speech-to-text, and text-to-speech capabilities, it supports diverse projects. The platform also includes live chat support, a powerful admin panel for easy customizations, and multi-language support. Discover the future of content creation with AthenaAI and unlock limitless possibilities.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -409,17 +411,17 @@ export const casestudyList = [
       ],
       image: ["/casestudy/athena/1.png"],
     },
-    category: "app",
+    category: ["web", "ai"],
   },
   {
     id: "15",
     imgSrc: "/casestudy/nerusoku/thumbnail.png",
-    name: "Nerusoku",
+    name: "Nerusoku (寝るソク)",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "Nerusoku",
-      desc: "This app provides users with a seamless experience for ordering food from restaurants and food vendors. Once an order is placed, the app facilitates easy pickup and delivery right to your door. With the real-time order tracking feature, you can also monitor the status of your delivery. Moreover, the app offers a wide range of payment methods catering to the preferences of users.",
-      label: "Techniques",
+      title: "Nerusoku (寝るソク)",
+      desc: "NeruSoku is an app that can detect breathing abnormalities by registering your facial and mouth photos, answering questions about your health condition, and recording your respiratory sounds (such as snoring) during sleep.",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -431,24 +433,26 @@ export const casestudyList = [
         },
         {
           id: "3",
-          text: "AWS - S3",
+          text: "AWS (S3)",
         },
       ],
+      label2: "Download",
+      content2: "http://surl.li/ifwvy",
       image: ["/casestudy/nerusoku/1.png", "/casestudy/nerusoku/2.png"],
       qr: "/casestudy/nerusoku/qr.png",
-      qr2: "/casestudy/nerusoku/qr2.png",
+      isAppleStore: true,
     },
-    category: "app",
+    category: ["app", "ai"],
   },
   {
     id: "16",
     imgSrc: "/casestudy/aicartoon/thumbnail.png",
-    name: "AI Cartoon",
+    name: "AI Cartoon Face: Anime Filter",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "AI Cartoon",
+      title: "AI Cartoon Face: Anime Filter",
       desc: "Harnessing cutting-edge AI technology, this app allows users to transform real-life photos into captivating anime-style images within seconds. With a wide range of styles to choose from, users can easily find the perfect artistic expression that caters to their diverse creative desires.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -459,12 +463,12 @@ export const casestudyList = [
           text: "Tensorflow",
         },
       ],
-      label2: "Download",
       image: ["/casestudy/aicartoon/1.png", "/casestudy/aicartoon/2.png"],
+      label2: "Download",
+      content2: "http://surl.li/igahu",
       qr: "/casestudy/aicartoon/qr.png",
-      qr2: "/casestudy/aicartoon/qr2.png",
     },
-    category: "blockchain",
+    category: "ai",
   },
   {
     id: "17",
@@ -474,7 +478,7 @@ export const casestudyList = [
     detail: {
       title: "UAV Flight Log – Manage Drone Flight History",
       desc: "UAV Flight Log is a personal drone management app that assists users in keeping track of their drones. It helps with managing basic drone information, flight logs, information about inspections and maintenance. The app supports exporting  various reports (PDF) that meet Japanese Government standards (JCAB). Users are also informed about fly zones and no-fly areas, ensuring a hassle-free flying experience.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -488,6 +492,7 @@ export const casestudyList = [
       image: ["/casestudy/uavflightlog/1.png", "/casestudy/uavflightlog/2.png"],
       qr: "/casestudy/uavflightlog/qr.png",
       qr2: "/casestudy/uavflightlog/qr2.png",
+      isQRRight: true,
     },
     category: "app",
   },
@@ -499,7 +504,7 @@ export const casestudyList = [
     detail: {
       title: "Go japan partner",
       desc: "GO Japan is a company that provides communication solutions targeted towards foreigners living in Japan. They offer compact wireless WiFi hotspot devices and SIM cards. We developed a website for them, which includes a fully functional backend system for handling various management tasks. The website serves as both a homepage and an e-commerce platform, allowing users to explore the offered services and make purchases. The underlying system efficiently manages stock, orders, and product deliveries.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -518,7 +523,7 @@ export const casestudyList = [
     detail: {
       title: "FenceWorkshop",
       desc: "This is an e-commerce website for a business specializing in gate and fence products. The website provides detailed and visually appealing product information, ensuring a seamless browsing experience for customers. With comprehensive displays and easy navigation, customers can explore the available products and make informed purchasing decisions.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -535,12 +540,12 @@ export const casestudyList = [
   {
     id: "20",
     imgSrc: "/casestudy/bahada/thumbnail.png",
-    name: "Bihada salon",
+    name: "Bihada salon (美肌サロン)",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "Bihada salon",
+      title: "Bihada salon (美肌サロン)",
       desc: "A commercial website for a beauty salon in Japan. The web showcases various information about company overview, their beauty services, available products, employment opportunities, ... Visitors can also make an enquiry or schedule a reservation to visit a specific store.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -554,12 +559,12 @@ export const casestudyList = [
   {
     id: "21",
     imgSrc: "/casestudy/hiroshima/thumbnail.png",
-    name: "Hiroshima",
+    name: "Vietnamese Community in Hiroshima",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "Hiroshima",
+      title: "Vietnamese Community in Hiroshima",
       desc: "This app provides users with a seamless experience for ordering food from restaurants and food vendors. Once an order is placed, the app facilitates easy pickup and delivery right to your door. With the real-time order tracking feature, you can also monitor the status of your delivery. Moreover, the app offers a wide range of payment methods catering to the preferences of users.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -574,12 +579,12 @@ export const casestudyList = [
   {
     id: "22",
     imgSrc: "/casestudy/nooto/thumbnail.png",
-    name: "Medical Note",
+    name: "Medical Note (診察ノオト)",
     badge: ["v 1.32.1", "Zen Apps"],
     detail: {
-      title: "Medical Note",
+      title: "Medical Note (診察ノオト)",
       desc: "Medical Note is a comprehensive technical assistant designed for hospitals and clinics. With this app, you can record examination conversations and utilize advanced speech-to-text conversion technology for accurate transcriptions. Additionally, you can also take notes, attach relevant images such as prescriptions or receipts, import and export audio data, share your examination results with family and friends, and manage your appointment schedules.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",
@@ -602,8 +607,11 @@ export const casestudyList = [
       label2: "Download",
       qr: "/casestudy/nooto/qr.png",
       qr2: "/casestudy/nooto/qr2.png",
+      link1: "http://surl.li/ifypz",
+      link2: "http://surl.li/ifypk",
+      isQRRight: true,
     },
-    category: "web",
+    category: ["app", "ai"],
   },
   {
     id: "23",
@@ -613,7 +621,7 @@ export const casestudyList = [
     detail: {
       title: "SNS PDCA System",
       desc: "A web application to effectively manage posts on Instagram. By connecting your Instagram account, you can easily schedule pre-written posts complete with photos, videos, captions, and hashtags. Additionally, the app provides valuable tools for gaining insights into your posts and account performance, such as follower count, likes, comments, and community reach. These insights empower you to make informed decisions for further improving your Instagram presence.",
-      label: "Techniques",
+      label: "Techniques:",
       content: [
         {
           id: "1",

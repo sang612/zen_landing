@@ -21,6 +21,7 @@ export default async function Page({ params }) {
   const data = await getData();
   const { id } = params;
   const dataFilter = data.find((casestudy) => casestudy.id === id);
+
   return (
     <div>
       <CasestudyDetail
@@ -36,6 +37,8 @@ export default async function Page({ params }) {
         qr2={dataFilter?.detail?.qr2}
         link1={dataFilter?.detail?.link1}
         link2={dataFilter?.detail?.link2}
+        isAppleStore={dataFilter?.detail?.isAppleStore}
+        isQRRight={dataFilter?.detail?.isQRRight}
       />
     </div>
   );

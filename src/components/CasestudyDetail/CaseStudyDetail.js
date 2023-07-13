@@ -19,9 +19,9 @@ export const CasestudyDetail = ({
   link2,
   isAppleStore = false,
   isQRRight = false,
+  label3
 }) => {
   const { width, breakpoints } = useWidth();
-
   return (
     <div className="mx-[-80px] lg:-mx-6">
       <div
@@ -103,9 +103,9 @@ export const CasestudyDetail = ({
               content?.length > 1 ? "flex-col items-start" : "items-center"
             }  w-full justify-between my-[15px]`}
           >
-            <h4 className="text-sub2 font-bold text-[18px] w-1/2">{label}</h4>
+            <h4 className="text-sub2 font-bold text-[18px] w-2/5">{label}</h4>
             {content?.length === 1 ? (
-              <h5 className="w-1/2">{content[0]?.text}</h5>
+              <h5 className="w-3/5">{content[0]?.text}</h5>
             ) : (
               <div className="flex items-center flex-wrap mt-[15px]">
                 {content?.map((contentItem, i) => {
@@ -130,7 +130,7 @@ export const CasestudyDetail = ({
               Array.isArray(content2) ? "flex-col items-start" : "items-center"
             } flex-wrap  w-full justify-between my-[15px]`}
           >
-            <h4 className="text-sub2 font-bold text-[18px] w-1/2">{label2}</h4>
+            <h4 className="text-sub2 font-bold text-[18px] w-2/5">{label2}</h4>
             {Array.isArray(content2) ? (
               <div className="mt-[5px]">
                 {content2?.map((item) => {
@@ -148,7 +148,7 @@ export const CasestudyDetail = ({
             ) : (
               <>
                 {(label2 === "Download" || label2 === "Website") && content2 ? (
-                  <Link href={content2} className="w-1/2">
+                  <Link href={content2} className="w-3/5">
                     {content2}
                   </Link>
                 ) : (
@@ -156,6 +156,42 @@ export const CasestudyDetail = ({
                 )}
               </>
             )}
+            {isQRRight && !label3 && (
+              <div className="w-[40%] mx-auto mt-5">
+                {link1 && (
+                  <Link href={link1} className="block text-center">
+                    {link1}
+                  </Link>
+                )}
+                <img
+                  src="/casestudy/google-play.png"
+                  alt="1"
+                  className="w-full h-auto my-[10px]"
+                />
+                <img src={qr} alt="image" />
+              </div>
+            )}
+            {isQRRight && !label3 && (
+              <div className="w-[40%] mx-auto mt-5">
+                {link2 && (
+                  <Link href={link2} className="block text-center">
+                    {link2}
+                  </Link>
+                )}
+                <img
+                  src="/casestudy/app-store.png"
+                  alt="qr1"
+                  className="w-full h-auto my-[10px]"
+                />
+                <img src={qr2} alt="qr2" className="w-full h-auto" />
+              </div>
+            )}
+          </div>
+          {/*  */}
+          {label3 && (<div
+            className={`flex items-center flex-wrap w-full justify-between my-[15px]`}
+          >
+            <h4 className="text-sub2 font-bold text-[18px] w-full">{label3}</h4>
             {isQRRight && (
               <div className="w-[40%] mx-auto mt-5">
                 {link1 && (
@@ -186,14 +222,15 @@ export const CasestudyDetail = ({
                 <img src={qr2} alt="qr2" className="w-full h-auto" />
               </div>
             )}
-          </div>
+          </div>)}
+          {/*  */}
           <div
             className={`flex items-start w-full ${
               !special && "justify-center"
             } `}
           >
             {special && (
-              <div className="w-[60%] mt-[15px] p-[2px] text-center relative flex">
+              <div className="w-[45%] mt-[15px] p-[2px] text-center relative flex">
                 <div className="w-full h-auto bg-[#cccbc2] absolute left-[-8px] top-[10px] z-0 font-bold text-[#cccbc2]">
                   {special}
                 </div>

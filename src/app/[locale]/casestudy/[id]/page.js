@@ -39,6 +39,7 @@ export default async function Page({ params }) {
         link2={dataFilter?.detail?.link2}
         isAppleStore={dataFilter?.detail?.isAppleStore}
         isQRRight={dataFilter?.detail?.isQRRight}
+        label3={dataFilter?.detail?.label3}
       />
     </div>
   );

@@ -1,26 +1,30 @@
+"use client";
+
 import "@/pages/styles/globals.css";
 import { CasestudyDetail } from "@/components/CasestudyDetail/CaseStudyDetail";
+import { useEffect, useState } from "react";
 
-export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/casestudy`);
-  const casestudies = await res.json();
-  return casestudies.map((casestudy) => ({
-    id: casestudy.id.toString(),
-  }));
-}
-
-async function getData() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/casestudy`);
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
-
-export default async function Page({ params }) {
-  const data = await getData();
+export default function Page({ params }) {
+  const [data, setData] = useState();
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_URL}/api/casestudy`
+        );
+        const res = await response.json();
+        res && setData(res);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, []);
   const { id } = params;
-  const dataFilter = data.find((casestudy) => casestudy.id === id);
+  const [dataFilter, setDataFilter] = useState();
+  useEffect(() => {
+    data && id && setDataFilter(data?.find((casestudy) => casestudy.id === id));
+  }, [data, id]);
 
   return (
     <div>

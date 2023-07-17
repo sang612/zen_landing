@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 
 export default function CardCaseStudy({ casestudyListFiltered }) {
   const router = useRouter();
+  const t = useTranslations();
 
   return (
     <div className="flex flex-wrap lg:flex-col items-center justify-start gap-x-[40px]">
@@ -35,7 +37,7 @@ export default function CardCaseStudy({ casestudyListFiltered }) {
               {item.badge.map((e, i) => (
                 <span
                   key={i}
-                  className="mr-[8px] py-[6px] px-[8px] bg-[#F4F6F8] rounded-[8px] text-[11px] font-[400] leading-[20px] text-sub tracking-[0.01em]"
+                  className="first-line:mt-32 box-decoration-clone mr-[8px] py-[6px] px-[8px] bg-[#F4F6F8] rounded-[8px] text-[11px] font-[400] leading-[20px] text-sub tracking-[0.01em]"
                 >
                   {e}
                 </span>
@@ -45,7 +47,7 @@ export default function CardCaseStudy({ casestudyListFiltered }) {
         ))
       ) : (
         <h4 className="font-[400] text-[15px] leading-[22px] text-sub mt-[20px] mb-[12px] hover:text-sub">
-          Not found
+          {t("NotFound")}
         </h4>
       )}
     </div>

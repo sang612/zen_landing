@@ -162,8 +162,8 @@ export const BigHeader = ({ setHeaderLoaded }) => {
       {dom &&
         (pathName === `/casestudy/${params.id}` ||
           pathName === "/casestudy" ||
-          pathName === `jp/casestudy/` ||
-          pathName === `jp/casestudy/${params.id}`) && (
+          pathName === "/jp/casestudy" ||
+          pathName === `/jp/casestudy/${params.id}`) && (
           <Banner3 setOpenMobileNav={setOpenMobileNav} setOpen={setOpen} />
         )}
       {dom &&

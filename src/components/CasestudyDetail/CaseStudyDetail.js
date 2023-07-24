@@ -19,7 +19,7 @@ export const CasestudyDetail = ({
   link2,
   isAppleStore = false,
   isQRRight = false,
-  label3
+  label3,
 }) => {
   const { width, breakpoints } = useWidth();
   return (
@@ -100,7 +100,7 @@ export const CasestudyDetail = ({
           <p className="my-[20px]">{desc}</p>
           <div
             className={`flex flex-wrap ${
-              content?.length > 1 ? "flex-col items-start" : "items-center"
+              content?.length > 1 ? "flex-col items-start" : "items-baseline"
             }  w-full justify-between my-[15px]`}
           >
             <h4 className="text-sub2 font-bold text-[18px] w-2/5">{label}</h4>
@@ -127,7 +127,9 @@ export const CasestudyDetail = ({
           </div>
           <div
             className={`flex ${
-              Array.isArray(content2) ? "flex-col items-start" : "items-center"
+              Array.isArray(content2)
+                ? "flex-col items-start"
+                : "items-baseline"
             } flex-wrap  w-full justify-between my-[15px]`}
           >
             <h4 className="text-sub2 font-bold text-[18px] w-2/5">{label2}</h4>
@@ -187,43 +189,45 @@ export const CasestudyDetail = ({
               </div>
             )}
           </div>
-          {/*  */}
-          {label3 && (<div
-            className={`flex items-center flex-wrap w-full justify-between my-[15px]`}
-          >
-            <h4 className="text-sub2 font-bold text-[18px] w-full">{label3}</h4>
-            {isQRRight && (
-              <div className="w-[40%] mx-auto mt-5">
-                {link1 && (
-                  <Link href={link1} className="block text-center">
-                    {link1}
-                  </Link>
-                )}
-                <img
-                  src="/casestudy/google-play.png"
-                  alt="1"
-                  className="w-full h-auto my-[10px]"
-                />
-                <img src={qr} alt="image" />
-              </div>
-            )}
-            {isQRRight && (
-              <div className="w-[40%] mx-auto mt-5">
-                {link2 && (
-                  <Link href={link2} className="block text-center">
-                    {link2}
-                  </Link>
-                )}
-                <img
-                  src="/casestudy/app-store.png"
-                  alt="qr1"
-                  className="w-full h-auto my-[10px]"
-                />
-                <img src={qr2} alt="qr2" className="w-full h-auto" />
-              </div>
-            )}
-          </div>)}
-          {/*  */}
+          {label3 && (
+            <div
+              className={`flex items-center flex-wrap w-full justify-between my-[15px]`}
+            >
+              <h4 className="text-sub2 font-bold text-[18px] w-full">
+                {label3}
+              </h4>
+              {isQRRight && (
+                <div className="w-[40%] mx-auto mt-5">
+                  {link1 && (
+                    <Link href={link1} className="block text-center">
+                      {link1}
+                    </Link>
+                  )}
+                  <img
+                    src="/casestudy/google-play.png"
+                    alt="1"
+                    className="w-full h-auto my-[10px]"
+                  />
+                  <img src={qr} alt="image" />
+                </div>
+              )}
+              {isQRRight && (
+                <div className="w-[40%] mx-auto mt-5">
+                  {link2 && (
+                    <Link href={link2} className="block text-center">
+                      {link2}
+                    </Link>
+                  )}
+                  <img
+                    src="/casestudy/app-store.png"
+                    alt="qr1"
+                    className="w-full h-auto my-[10px]"
+                  />
+                  <img src={qr2} alt="qr2" className="w-full h-auto" />
+                </div>
+              )}
+            </div>
+          )}
           <div
             className={`flex items-start w-full ${
               !special && "justify-center"

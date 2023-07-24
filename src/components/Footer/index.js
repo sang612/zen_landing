@@ -114,13 +114,23 @@ export const Footer = () => {
                 <div className="mt-[12px]">
                   <div className="flex flex-row items-center">
                     <MapPinIcon width={20} height={20} />
-                    <Link
-                      className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub hover:text-sub"
-                      href="https://www.google.com/maps/place/C%C3%B4ng+ty+c%E1%BB%95+ph%E1%BA%A7n+c%C3%B4ng+ngh%E1%BB%87+ZenS/@10.8354372,106.6675287,18z/data=!3m1!4b1!4m6!3m5!1s0x31752910902df7b1:0x92e7a55bfae26cb6!8m2!3d10.8354346!4d106.669771!16s%2Fg%2F11rt_wdk_q"
-                    >
-                      No. 59, Road 06, Cityland Park Hills, 10, Go Vap, Ho Chi
-                      Minh
-                    </Link>
+                    <div>
+                      <Link
+                        className="font-[400] text-[14px] ml-[12px] text-sub hover:text-sub block"
+                        href="https://goo.gl/maps/3YCQJswd9vf6C4VT9"
+                      >
+                        Headquarter: No. 59, Road 06, Cityland Park Hills, 10,
+                        Go Vap, Ho Chi Minh
+                      </Link>
+                      <Link
+                        className="font-[400] text-[14px] ml-[12px] text-sub hover:text-sub block"
+                        href="https://goo.gl/maps/utSFuUnWFdbCcqiF8"
+                      >
+                        Branch Company: No 20, Street 34, Van Phuc City,
+                        National Road #13, Hiep Binh Phuoc Ward, Thu Duc City,
+                        Ho Chi Minh City
+                      </Link>
+                    </div>
                   </div>
                   <div className="flex flex-row items-center mt-[8px]">
                     <PhoneIcon width={20} height={20} />
@@ -141,7 +151,7 @@ export const Footer = () => {
                 <div className="mt-[12px]">
                   <div className="flex flex-row items-center">
                     <MapPinIcon width={20} height={20} />
-                    <h5 className="font-[400] text-[14px] leading-[20px] ml-[12px] text-sub hover:text-sub">
+                    <h5 className="font-[400] text-[14px] ml-[12px] text-sub hover:text-sub">
                       〒110-0005 東京都台東区上野7丁目3-9アルベルゴ上野511
                     </h5>
                   </div>
